@@ -1,43 +1,34 @@
-from playwright.sync_api import sync_playwright
+"""imax.com — weakest source: it does not sell tickets directly and isn't
+reliably date-filterable, so it mostly tells us a film is *coming* to the
+Lincoln Square IMAX rather than that tickets are on sale. Kept because you
+asked to keep all three sources."""
 
-URL = "https://www.imax.com/movies"
+from config import MOVIES, imax_url
+from dates import target_dates
+from scrape import fetch, find_earliest_show
 
 
-def check_imax():
-
-    results = []
-
-    with sync_playwright() as p:
-
-        browser = p.chromium.launch(
-            headless=True
-        )
-
-        page = browser.new_page()
-
-        page.goto(
-            URL,
-            wait_until="networkidle",
-            timeout=60000
-        )
-
-        html = page.content()
-
-        browser.close()
-
-    targets = [
-        "Odyssey",
-        "The Odyssey",
-        "Dune",
-        "Dune Messiah"
-    ]
-
-    for movie in targets:
-        if movie.lower() in html.lower():
-            results.append({
-                "source": "IMAX",
-                "movie": movie,
-                "url": URL
-            })
-
+def check_imax(debug: bool = False) -> list[dict]:
+    results: list[dict] = []
+    # imax.com isn't date-parameterized, so fetch once and test each date.
+    dates = target_dates()
+    if not dates:
+        return results
+    url = imax_url(dates[0].isoformat())
+    dump = "debug_imax.html" if debug else None
+    html, text = fetch(url, debug_dump=dump)
+    for d in dates:
+        date_iso = d.isoformat()
+        for movie, aliases in MOVIES.items():
+            show = find_earliest_show(html, text, aliases, date_iso)
+            if show:
+                results.append({
+                    "source": "IMAX",
+                    "movie": movie,
+                    "date": date_iso,
+                    "weekday": d.strftime("%A"),
+                    "first_show": show["time"],
+                    "show_count": show["shows"],
+                    "url": url,
+                })
     return results

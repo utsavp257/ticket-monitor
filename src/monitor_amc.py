@@ -1,48 +1,28 @@
-from playwright.sync_api import sync_playwright
+"""AMC Lincoln Square 13 — the real Lincoln Square IMAX, and the source that
+actually sells the tickets you want."""
 
-AMC_URL = (
-    "https://www.amctheatres.com/"
-    "movie-theatres/new-york-city/"
-    "amc-lincoln-square-13"
-)
+from config import MOVIES, amc_url
+from dates import target_dates
+from scrape import fetch, find_earliest_show
 
 
-def check_amc():
-
-    results = []
-
-    with sync_playwright() as p:
-
-        browser = p.chromium.launch(
-            headless=True
-        )
-
-        page = browser.new_page()
-
-        page.goto(
-            AMC_URL,
-            wait_until="networkidle",
-            timeout=60000
-        )
-
-        html = page.content()
-
-        browser.close()
-
-    movies = [
-        "Odyssey",
-        "The Odyssey",
-        "Dune",
-        "Dune: Messiah",
-        "Dune Messiah"
-    ]
-
-    for movie in movies:
-        if movie.lower() in html.lower():
-            results.append({
-                "source": "AMC",
-                "movie": movie,
-                "url": AMC_URL
-            })
-
+def check_amc(debug: bool = False) -> list[dict]:
+    results: list[dict] = []
+    for d in target_dates():
+        date_iso = d.isoformat()
+        url = amc_url(date_iso)
+        dump = f"debug_amc_{date_iso}.html" if debug else None
+        html, text = fetch(url, debug_dump=dump)
+        for movie, aliases in MOVIES.items():
+            show = find_earliest_show(html, text, aliases, date_iso)
+            if show:
+                results.append({
+                    "source": "AMC",
+                    "movie": movie,
+                    "date": date_iso,
+                    "weekday": d.strftime("%A"),
+                    "first_show": show["time"],
+                    "show_count": show["shows"],
+                    "url": url,
+                })
     return results

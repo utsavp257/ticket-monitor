@@ -1,43 +1,28 @@
-from playwright.sync_api import sync_playwright
+"""Fandango — resells the same AMC Lincoln Square 13 showtimes. Redundant with
+AMC but kept as a cross-check / fallback if AMC blocks us."""
 
-URL = "https://www.fandango.com"
+from config import MOVIES, fandango_url
+from dates import target_dates
+from scrape import fetch, find_earliest_show
 
 
-def check_fandango():
-
-    results = []
-
-    with sync_playwright() as p:
-
-        browser = p.chromium.launch(
-            headless=True
-        )
-
-        page = browser.new_page()
-
-        page.goto(
-            URL,
-            wait_until="networkidle",
-            timeout=60000
-        )
-
-        html = page.content()
-
-        browser.close()
-
-    targets = [
-        "Odyssey",
-        "The Odyssey",
-        "Dune",
-        "Dune Messiah"
-    ]
-
-    for movie in targets:
-        if movie.lower() in html.lower():
-            results.append({
-                "source": "Fandango",
-                "movie": movie,
-                "url": URL
-            })
-
+def check_fandango(debug: bool = False) -> list[dict]:
+    results: list[dict] = []
+    for d in target_dates():
+        date_iso = d.isoformat()
+        url = fandango_url(date_iso)
+        dump = f"debug_fandango_{date_iso}.html" if debug else None
+        html, text = fetch(url, debug_dump=dump)
+        for movie, aliases in MOVIES.items():
+            show = find_earliest_show(html, text, aliases, date_iso)
+            if show:
+                results.append({
+                    "source": "Fandango",
+                    "movie": movie,
+                    "date": date_iso,
+                    "weekday": d.strftime("%A"),
+                    "first_show": show["time"],
+                    "show_count": show["shows"],
+                    "url": url,
+                })
     return results

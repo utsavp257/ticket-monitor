@@ -2,20 +2,31 @@ name: Ticket Monitor
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    # Every 30 minutes. GitHub's scheduler is best-effort and often delays
+    # runs by several minutes under load, so going lower than this buys little
+    # and risks getting the runner IP bot-blocked by AMC/Fandango faster.
+    - cron: "*/30 * * * *"
 
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (check sites, send no alerts)"
+        type: boolean
+        default: false
+
+# Avoid overlapping runs stepping on the committed state file.
+concurrency:
+  group: ticket-monitor
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
   monitor:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -23,29 +34,34 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
-      - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: Install Playwright
-        run: |
-          playwright install chromium
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
 
-      - name: Run Monitor
+      - name: Run monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python src/main.py
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python src/main.py --dry-run
+          else
+            python src/main.py
+          fi
 
-      - name: Commit State
+      - name: Commit updated state
+        if: ${{ github.event_name == 'schedule' || inputs.dry_run != true }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-
           git add state/seen.json
-
-          git diff --cached --quiet || git commit -m "update state"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "update state [skip ci]"
+            git push
+          fi
