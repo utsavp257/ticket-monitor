@@ -1,8 +1,10 @@
-"""Tracks which alerts we've already sent so we don't spam on every run.
+"""Remembers the showtimes (and their sold-out status) we've already seen, so
+we can alert only on *changes*: new showtimes appearing, or a sold-out show
+freeing up.
 
-The dedup *key* (built in main.py) deliberately includes the date and the
-first-show time, so if an earlier show gets added we'll alert again — but a
-steady-state listing won't re-notify.
+state/seen.json shape:
+    {"shows": {"The Odyssey|2026-07-21": {"11:00pm": false, "10:30am": false}}}
+where the bool is sold_out.
 """
 
 import json
@@ -15,13 +17,14 @@ STATE_FILE = Path(__file__).resolve().parent.parent / "state" / "seen.json"
 
 def load_state() -> dict:
     if not STATE_FILE.exists():
-        return {"seen": []}
+        return {"shows": {}}
     try:
         with open(STATE_FILE) as f:
-            return json.load(f)
+            data = json.load(f)
     except (json.JSONDecodeError, OSError):
-        # Corrupt/empty file shouldn't wedge the monitor.
-        return {"seen": []}
+        return {"shows": {}}
+    data.setdefault("shows", {})  # tolerate older/empty files
+    return data
 
 
 def save_state(state: dict) -> None:
@@ -35,14 +38,3 @@ def save_state(state: dict) -> None:
     finally:
         if os.path.exists(tmp):
             os.remove(tmp)
-
-
-def already_seen(key: str) -> bool:
-    return key in load_state()["seen"]
-
-
-def mark_seen(key: str) -> None:
-    state = load_state()
-    if key not in state["seen"]:
-        state["seen"].append(key)
-    save_state(state)

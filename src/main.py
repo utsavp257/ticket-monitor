@@ -1,125 +1,132 @@
 """Ticket monitor entry point.
 
+Watches AMC Lincoln Square 13 for the configured movies' Tuesday/Wednesday
+shows and alerts on CHANGES: a new showtime appears, or a sold-out show frees
+up. It does not re-alert on shows you've already been told about.
+
 Usage:
-  python src/main.py                 # normal run: check sites, send alerts
-  python src/main.py --dry-run       # check sites, print matches, send nothing
+  python src/main.py                 # normal run: check, alert on changes
+  python src/main.py --dry-run       # check + print changes, send nothing
   python src/main.py --debug         # also dump fetched HTML to debug_*.html
   python src/main.py --test-telegram # send one test message and exit
-  python src/main.py --dates         # print which dates will be checked
+  python src/main.py --dates         # print which dates each movie watches
   python src/main.py --probe "Masters of the Universe"
-                                     # end-to-end test using a movie that is
-                                     # ON SALE NOW: parse it + send a real
-                                     # alert so you can confirm the whole
-                                     # pipeline (add --dry-run to not send).
+                                     # end-to-end test using a movie on sale
+                                     # NOW: parse it + send a real alert so you
+                                     # can confirm the pipeline (--dry-run to
+                                     # print instead of send).
 
 Flags can be combined, e.g. `--dry-run --debug`.
 """
 
 import sys
+from datetime import date
 
 from monitor_amc import check_amc
-from dates import target_dates
+from dates import watch_dates, movie_start
+from config import MOVIES
 import telegram
-from state import already_seen, mark_seen
-
-# AMC Lincoln Square 13 is the real Lincoln Square IMAX and the authoritative
-# ticket source. Fandango/IMAX were dropped: redundant, and neither exposed
-# usable showtimes (widget / Cloudflare block).
-SOURCES = [
-    ("AMC", check_amc),
-]
+from state import load_state, save_state
 
 
-def alert_key(item: dict) -> str:
-    # Include date + first show time so a *new earlier* show re-alerts, but a
-    # stable listing doesn't notify on every run.
-    return f"{item['source']}|{item['movie']}|{item['date']}|{item['first_show']}"
+def _ordered(shows: dict, times: list[str]) -> list[str]:
+    return sorted(times, key=lambda t: shows[t]["minutes"])
 
 
-def format_alert(item: dict) -> str:
-    return (
-        "🎬 Ticket Alert — first show is up!\n\n"
-        f"Movie: {item['movie']}\n"
-        f"Day:   {item['weekday']} {item['date']}\n"
-        f"First show: {item['first_show']}  "
-        f"({item['show_count']} showtime(s) listed)\n"
-        f"Source: {item['source']}\n"
-        f"Book: {item['url']}"
-    )
+def compose_alert(item: dict, new_times: list[str], freed: list[str]) -> str:
+    shows = item["shows"]
+    lines = [f"🎬 {item['movie']} — {item['weekday']} {item['date']}"]
+    if new_times:
+        parts = [
+            t + (" (sold out)" if shows[t]["sold_out"] else "")
+            for t in _ordered(shows, new_times)
+        ]
+        lines.append("🆕 New showtime(s): " + ", ".join(parts))
+    if freed:
+        lines.append("🎟️ Seats opened up: " + ", ".join(_ordered(shows, freed)))
+    available = [t for t in shows if not shows[t]["sold_out"]]
+    if available:
+        lines.append(f"Earliest available: {_ordered(shows, available)[0]}")
+    else:
+        lines.append("⚠️ All listed shows currently sold out.")
+    lines.append(f"Book: {item['url']}")
+    return "\n".join(lines)
 
 
-def process(results: list[dict], dry_run: bool) -> int:
+def diff_and_alert(results: list[dict], dry_run: bool) -> int:
+    """Compare current showtimes against saved state; alert on changes."""
+    state = load_state()
+    saved = state["shows"]  # {"movie|date": {time: sold_out}}
     sent = 0
     for item in results:
-        key = alert_key(item)
-        if already_seen(key):
-            print(f"  · already alerted: {key}")
+        key = f"{item['movie']}|{item['date']}"
+        prev = saved.get(key, {})
+        cur = {t: v["sold_out"] for t, v in item["shows"].items()}
+
+        new_times = [t for t in cur if t not in prev]
+        freed = [t for t in cur if t in prev and prev[t] and not cur[t]]
+
+        if not new_times and not freed:
+            saved[key] = cur  # keep status fresh (e.g. a show that sold out)
             continue
-        message = format_alert(item)
+
+        message = compose_alert(item, new_times, freed)
         if dry_run:
             print("  --- would send ---")
             print(message)
             print("  ------------------")
+            continue
+        if telegram.send_message(message):
+            saved[key] = cur  # only commit state once the alert is delivered
+            sent += 1
+            print(f"  ✓ alerted: {key} (+{len(new_times)} new, "
+                  f"{len(freed)} freed)")
         else:
-            if telegram.send_message(message):
-                mark_seen(key)
-                sent += 1
-                print(f"  ✓ alerted + saved: {key}")
-            else:
-                # Don't mark seen if the notification failed — retry next run.
-                print(f"  ! send failed, will retry: {key}")
+            print(f"  ! send failed, will retry next run: {key}")
+    if not dry_run:
+        save_state(state)
     return sent
 
 
 def probe(title: str, dry_run: bool) -> None:
-    """Run the full pipeline against a movie that's on sale NOW, to prove
-    parsing + notification work end to end. Bypasses dedup so it's repeatable.
-    """
+    """End-to-end test using a movie on sale now. Bypasses saved state, so it
+    treats every current showtime as new and (really) sends an alert."""
     movies = {f"{title} (PROBE)": [title.lower()]}
     print(f"PROBE: testing pipeline with currently-showing title {title!r}\n")
-    any_found = False
-    for name, check in SOURCES:
-        print(f"Checking {name}...")
-        try:
-            results = check(debug=False, movies=movies)
-        except Exception as e:
-            print(f"  ! {name} check failed: {e}")
-            continue
-        if not results:
-            print(f"  · not found on {name}")
-        for item in results:
-            any_found = True
-            message = format_alert(item)
-            if dry_run:
-                print("  --- would send ---")
-                print(message)
-                print("  ------------------")
-            elif telegram.send_message(message):
-                print(f"  ✓ sent: {item['source']} {item['date']} "
-                      f"{item['first_show']}")
-            else:
-                print("  ! send failed (check Telegram creds)")
-    if not any_found:
-        print("\nMovie not found on any source — pick a title that's "
-              "currently showing (see the theater's site) and try again.")
+    try:
+        results = check_amc(movies=movies)
+    except Exception as e:
+        print(f"  ! check failed: {e}")
+        return
+    if not results:
+        print("Not found on the watched dates — pick a title currently showing "
+              "at AMC Lincoln Square and try again.")
+        return
+    for item in results:
+        message = compose_alert(item, list(item["shows"].keys()), [])
+        if dry_run:
+            print("  --- would send ---")
+            print(message)
+            print("  ------------------")
+        elif telegram.send_message(message):
+            print(f"  ✓ sent: {item['date']}")
+        else:
+            print("  ! send failed (check Telegram creds)")
 
 
 def run(dry_run: bool, debug: bool) -> None:
     if dry_run:
         print("DRY RUN — no messages will be sent.\n")
-    total = 0
-    for name, check in SOURCES:
-        print(f"Checking {name}...")
-        try:
-            results = check(debug=debug)
-        except Exception as e:
-            # Isolate failures: one source breaking must not stop the others.
-            print(f"  ! {name} check failed: {e}")
-            continue
-        if not results:
-            print(f"  · no matching showtimes found on {name}")
-        total += process(results, dry_run)
-    print(f"\nDone. {total} new alert(s) sent.")
+    print("Checking AMC Lincoln Square...")
+    try:
+        results = check_amc(debug=debug)
+    except Exception as e:
+        print(f"  ! AMC check failed: {e}")
+        return
+    if not results:
+        print("  · no showtimes yet on any watched date")
+    total = diff_and_alert(results, dry_run)
+    print(f"\nDone. {total} alert(s) sent.")
 
 
 def main() -> None:
@@ -127,8 +134,11 @@ def main() -> None:
     args = set(argv)
 
     if "--dates" in args:
-        for d in target_dates():
-            print(d.isoformat(), d.strftime("%A"))
+        today = date.today()
+        for movie, spec in MOVIES.items():
+            print(f"{movie} (watching):")
+            for d in watch_dates(movie_start(spec, today)):
+                print("  ", d.isoformat(), d.strftime("%A"))
         return
 
     if "--probe" in argv:

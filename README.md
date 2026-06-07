@@ -1,15 +1,24 @@
 # Lincoln Square IMAX ticket monitor
 
-Watches **AMC Lincoln Square 13** (the "Lincoln Square IMAX") for **Dune 3** and
-**Odyssey**, and pings you on Telegram when the **first show on the upcoming
-Tuesday and Wednesday** is listed.
+Watches **AMC Lincoln Square 13** (the "Lincoln Square IMAX") for
+**Dune: Part Three** and **The Odyssey**, and pings you on Telegram when their
+**Tuesday/Wednesday** showtimes change — a **new showtime is added** or a
+**sold-out show frees up**.
 
 ## What it actually does
 
-For each upcoming Tuesday and Wednesday it loads that theater's *date-specific*
-showtimes page, looks for real showtimes (a movie title tied to a clock time on
-that date), and reports the **earliest** one. It only alerts when an actual
-showtime is found — not merely when the movie's name appears on a page.
+Each movie has a `from_date` in `src/config.py` (around its release). The
+monitor checks the first couple of Tuesdays/Wednesdays on/after that date, reads
+the real showtimes for each, and records each showtime's **sold-out status**. On
+every run it diffs against what it saw last time and alerts only on *changes*:
+
+- 🆕 **New showtime(s)** — a time that wasn't listed before (this also covers
+  the very first time a date goes on sale).
+- 🎟️ **Seats opened up** — a showtime that was *sold out* now has availability.
+
+It never re-alerts on shows you've already been told about, and it only ever
+fires on a real showtime tied to the movie — never on a stray title mention
+(e.g. a "The Odyssey Bundle" promo).
 
 > **Why only AMC?** AMC Lincoln Square 13 *is* the Lincoln Square IMAX and is
 > where you actually book — validated against live showtimes. Fandango and
@@ -46,22 +55,20 @@ For the GitHub Action, add the same two as repo secrets
 ## How to check it's working (do these in order)
 
 ```bash
-# 1. Which dates will it check? Should print the next Tue and Wed.
+# 1. Which dates does each movie watch? (from its from_date in config.py)
 python src/main.py --dates
 
 # 2. Does Telegram work? Should land a message in your chat.
 python src/main.py --test-telegram
 
-# 3. Does scraping/detection work, without sending anything?
-#    Prints any matches it would alert on.
+# 3. What changes would it alert on right now, without sending anything?
 python src/main.py --dry-run
 
-# 4. Inspect what the sites actually returned (writes debug_*.html):
+# 4. Inspect what AMC actually returned (writes debug_*.html):
 python src/main.py --dry-run --debug
 
 # 5. SEE THE WHOLE THING WORK NOW, end to end, including a real Telegram
-#    message — using a movie that's currently on sale as a stand-in for
-#    Dune 3/Odyssey. Pick any title showing at AMC Lincoln Square today:
+#    message — using a movie that's currently on sale as a stand-in:
 python src/main.py --probe "Masters of the Universe"
 #    (add --dry-run to print the alert instead of sending it)
 ```
@@ -89,30 +96,30 @@ python src/main.py
 - **Selectors/URLs can drift.** The AMC URL and the showtime extraction logic
   live in `src/config.py` and `src/scrape.py`. If AMC changes its layout, the
   `--debug` HTML dump is how you (or I) refine them.
-- **Titles aren't confirmed yet.** "Dune 3" / "Odyssey" will be listed under
-  official titles ("Dune: Part Three", "The Odyssey", etc.). Edit the alias
-  lists in `src/config.py` once the real titles are known.
-- **This monitors; it does not buy.** It tells you the moment the first show is
-  live so you can book it yourself. Auto-purchasing requires logging into your
-  account and handling payment/CAPTCHA, which is a different (and riskier)
-  project — say the word if you want to explore it.
+- **Each movie's `from_date` matters.** It tells the monitor where to start
+  looking (verified against AMC: The Odyssey ~Jul 21 2026, Dune: Part Three
+  opens Dec 18 2026 — its Tue/Wed go on sale closer to release). If a release
+  shifts, just edit `from_date` in `src/config.py`.
+- **This monitors; it does not buy.** It tells you when showtimes change so you
+  can book yourself. Auto-purchasing requires logging into your account and
+  handling payment/CAPTCHA — a different (and riskier) project; say the word.
 
 ## Tuning
 
-In `src/config.py`: movie aliases, target weekdays, how many weeks ahead, the
-AMC URL, page timeout, and retries. If the runner keeps timing out, the most
-reliable fix is to run the monitor on your own machine (residential IP) on a
-cron/launchd timer instead of GitHub Actions.
+In `src/config.py`: per-movie aliases + `from_date`, `WATCH_WEEKS` (how many
+Tue/Wed per movie), target weekdays, the AMC URL, page timeout, and retries. If
+the runner keeps timing out, the most reliable fix is to run the monitor on your
+own machine (residential IP) on a cron/launchd timer instead of GitHub Actions.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `src/config.py` | Movies, dates, AMC URL, scraper knobs |
-| `src/dates.py` | Computes upcoming Tue/Wed |
-| `src/scrape.py` | Fetch + showtime extraction (the core) |
+| `src/config.py` | Movies + from_dates, watch window, AMC URL, scraper knobs |
+| `src/dates.py` | Per-movie Tue/Wed watch dates |
+| `src/scrape.py` | Fetch + showtime/sold-out extraction (the core) |
 | `src/monitor_amc.py` | AMC Lincoln Square source |
 | `src/telegram.py` | Notifications |
-| `src/state.py` | Dedup so you aren't spammed |
-| `src/main.py` | Entry point + CLI flags |
+| `src/state.py` | Remembers seen showtimes so you only get changes |
+| `src/main.py` | Entry point, change-diffing, CLI flags |
 | `.github/workflows/monitor.yml` | Runs it every 30 min |

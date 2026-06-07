@@ -233,23 +233,49 @@ def _fmt(minutes: int) -> str:
     return f"{hour12}:{m:02d}{suffix}"
 
 
+def find_shows(text: str, aliases: list[str]) -> dict:
+    """All showtimes for a movie with availability, keyed by time string.
+
+    Returns e.g. {"10:30am": {"minutes": 630, "sold_out": False}, ...}.
+
+    On AMC, a sold-out showtime is immediately followed by "Sold Out" in the
+    rendered text, so we mark a time sold out when "sold out" appears in the gap
+    between it and the next time. A time shown under multiple formats counts as
+    available if *any* instance has seats.
+    """
+    shows: dict[str, dict] = {}
+    for title, body in _segment_blocks(text):
+        if not any(a in title.lower() for a in aliases):
+            continue
+        matches = list(TIME_RE.finditer(body))
+        for i, m in enumerate(matches):
+            gap_end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
+            sold_out = "sold out" in body[m.end():gap_end].lower()
+            minutes = _to_minutes(int(m.group(1)), int(m.group(2)), m.group(3))
+            t = _fmt(minutes)
+            if t not in shows:
+                shows[t] = {"minutes": minutes, "sold_out": sold_out}
+            else:
+                shows[t]["sold_out"] = shows[t]["sold_out"] and sold_out
+    return shows
+
+
 def find_earliest_show(
     html: str, text: str, aliases: list[str], date_iso: str
 ) -> dict | None:
-    """Return the earliest showtime for a movie on a date, or None.
+    """Earliest showtime for a movie on a date, or None (used by --probe).
 
-    Returns e.g. {"time": "10:30am", "minutes": 630, "shows": 4}.
+    Prefers the earliest *available* show, falling back to earliest overall.
     """
-    # 1) JSON-LD if present (some sites embed ScreeningEvents).
-    shows = _from_jsonld(html, aliases, date_iso)
-    # 2) Per-movie blocks anchored on the runtime line (AMC-style — reliable).
-    if not shows:
-        shows = _from_blocks(text, aliases)
-    # 3) Window heuristic ONLY when the page has no anchored listings at all,
-    #    so it can't clobber correct block parsing with mis-bound times.
-    if not shows and not _segment_blocks(text):
-        shows = _from_text_window(text, aliases)
+    shows = find_shows(text, aliases)
     if not shows:
         return None
-    earliest = min(shows, key=lambda s: s["minutes"])
-    return {**earliest, "shows": len(shows)}
+    ordered = sorted(shows.items(), key=lambda kv: kv[1]["minutes"])
+    available = [(t, v) for t, v in ordered if not v["sold_out"]]
+    t, v = (available or ordered)[0]
+    return {
+        "time": t,
+        "minutes": v["minutes"],
+        "shows": len(shows),
+        "sold_out": v["sold_out"],
+    }

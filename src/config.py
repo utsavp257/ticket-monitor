@@ -10,27 +10,32 @@ through the scraping code.
 # "Dune 3" will almost certainly be listed as "Dune: Part Three" or
 # "Dune Messiah", and "Odyssey" as "The Odyssey". Add/remove aliases here as
 # the official titles get confirmed. Matching is case-insensitive.
+#
+# `aliases`   : case-insensitive title fragments to match against AMC listings.
+# `from_date` : don't bother checking before this date (keeps us from scanning
+#               months of empty Tuesdays/Wednesdays every run). Set it to around
+#               each movie's release; the monitor watches the first WATCH_WEEKS
+#               Tuesdays/Wednesdays on/after it. Verified against live AMC:
+#               The Odyssey first plays Tue Jul 21 2026; Dune: Part Three opens
+#               Fri Dec 18 2026 (its first Tue/Wed = Dec 22/23, not yet on sale).
 MOVIES = {
-    "Dune 3": [
-        "dune 3",
-        "dune: part three",
-        "dune part three",
-        "dune messiah",
-        "dune: messiah",
-    ],
-    "Odyssey": [
-        "the odyssey",
-        "odyssey",
-    ],
+    "Dune: Part Three": {
+        "aliases": ["dune: part three", "dune part three"],
+        "from_date": "2026-12-15",
+    },
+    "The Odyssey": {
+        "aliases": ["the odyssey"],
+        "from_date": "2026-07-14",
+    },
 }
 
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday
 
-# How many upcoming occurrences of each target weekday to check.
-# 1 = just the very next Tuesday and next Wednesday.
-WEEKS_AHEAD = 1
+# How many of each target weekday to watch per movie, starting at its from_date.
+# 2 = the first two Tuesdays and first two Wednesdays (a little fallback buffer).
+WATCH_WEEKS = 2
 
 # --- Where do we look? -------------------------------------------------------
 # Each source builds a *date-specific* showtimes URL via a function that takes
