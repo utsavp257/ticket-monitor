@@ -233,49 +233,74 @@ def _fmt(minutes: int) -> str:
     return f"{hour12}:{m:02d}{suffix}"
 
 
-def find_shows(text: str, aliases: list[str]) -> dict:
+# Within a movie block, showtimes are grouped under format headers like
+# "IMAX 70MM", "IMAX WITH LASER AT AMC", "DOLBY CINEMA AT AMC", "LASER AT AMC".
+# A premium-format header is followed by a ":" tagline line. Experience-only
+# headers (open caption / dubbed) have no tagline but still start a new group.
+_EXPERIENCE_HEADER_RE = re.compile(
+    r"(open caption|english language|dubbed|subtitles)", re.IGNORECASE
+)
+
+
+def _block_shows(body: str, imax_only: bool) -> dict:
+    """Parse one movie block's lines, tracking the current format section.
+
+    Returns {time: {"minutes", "sold_out"}}. When imax_only is set, only times
+    under an IMAX-format header are kept.
+    """
+    lines = body.splitlines()
+
+    def next_nonempty(i: int) -> str:
+        j = i + 1
+        while j < len(lines) and not lines[j].strip():
+            j += 1
+        return lines[j].strip() if j < len(lines) else ""
+
+    is_imax = False           # current format section's IMAX-ness
+    pending: list[tuple] = []  # (minutes, time_str, is_imax, line_index)
+
+    for i, raw in enumerate(lines):
+        s = raw.strip()
+        if not s:
+            continue
+        if next_nonempty(i) == ":":          # premium-format header w/ tagline
+            is_imax = "imax" in s.lower()
+            continue
+        if _EXPERIENCE_HEADER_RE.search(s) and s.upper() == s:
+            is_imax = False                  # open-caption / dubbed group
+            continue
+        m = TIME_RE.match(s)
+        if m:
+            minutes = _to_minutes(int(m.group(1)), int(m.group(2)), m.group(3))
+            pending.append((minutes, _fmt(minutes), is_imax, i))
+
+    shows: dict[str, dict] = {}
+    for k, (minutes, t, imax, idx) in enumerate(pending):
+        if imax_only and not imax:
+            continue
+        # sold out if "Sold Out" appears before the next showtime line
+        end = pending[k + 1][3] if k + 1 < len(pending) else len(lines)
+        sold_out = any("sold out" in lines[j].lower() for j in range(idx + 1, end))
+        if t not in shows:
+            shows[t] = {"minutes": minutes, "sold_out": sold_out}
+        else:  # same time under two formats: available if any instance has seats
+            shows[t]["sold_out"] = shows[t]["sold_out"] and sold_out
+    return shows
+
+
+def find_shows(text: str, aliases: list[str], imax_only: bool = False) -> dict:
     """All showtimes for a movie with availability, keyed by time string.
 
     Returns e.g. {"10:30am": {"minutes": 630, "sold_out": False}, ...}.
-
-    On AMC, a sold-out showtime is immediately followed by "Sold Out" in the
-    rendered text, so we mark a time sold out when "sold out" appears in the gap
-    between it and the next time. A time shown under multiple formats counts as
-    available if *any* instance has seats.
+    With imax_only=True, only IMAX-format showtimes are returned.
     """
     shows: dict[str, dict] = {}
     for title, body in _segment_blocks(text):
         if not any(a in title.lower() for a in aliases):
             continue
-        matches = list(TIME_RE.finditer(body))
-        for i, m in enumerate(matches):
-            gap_end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
-            sold_out = "sold out" in body[m.end():gap_end].lower()
-            minutes = _to_minutes(int(m.group(1)), int(m.group(2)), m.group(3))
-            t = _fmt(minutes)
+        for t, v in _block_shows(body, imax_only).items():
             if t not in shows:
-                shows[t] = {"minutes": minutes, "sold_out": sold_out}
+                shows[t] = v
             else:
-                shows[t]["sold_out"] = shows[t]["sold_out"] and sold_out
+                shows[t]["sold_out"] = shows[t]["sold_out"] and v["sold_out"]
     return shows
-
-
-def find_earliest_show(
-    html: str, text: str, aliases: list[str], date_iso: str
-) -> dict | None:
-    """Earliest showtime for a movie on a date, or None (used by --probe).
-
-    Prefers the earliest *available* show, falling back to earliest overall.
-    """
-    shows = find_shows(text, aliases)
-    if not shows:
-        return None
-    ordered = sorted(shows.items(), key=lambda kv: kv[1]["minutes"])
-    available = [(t, v) for t, v in ordered if not v["sold_out"]]
-    t, v = (available or ordered)[0]
-    return {
-        "time": t,
-        "minutes": v["minutes"],
-        "shows": len(shows),
-        "sold_out": v["sold_out"],
-    }

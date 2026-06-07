@@ -1,30 +1,3 @@
 {
-  "shows": {
-    "The Odyssey|2026-07-21": {
-      "10:00am": false,
-      "2:00pm": false,
-      "6:00pm": false,
-      "10:00pm": false,
-      "11:00am": false,
-      "3:00pm": false,
-      "7:00pm": false,
-      "11:00pm": false,
-      "12:30pm": false,
-      "4:30pm": false,
-      "8:30pm": false
-    },
-    "The Odyssey|2026-07-22": {
-      "10:00am": false,
-      "2:00pm": false,
-      "6:00pm": false,
-      "10:00pm": false,
-      "11:00am": false,
-      "3:00pm": false,
-      "7:00pm": false,
-      "11:00pm": false,
-      "12:30pm": false,
-      "4:30pm": false,
-      "8:30pm": false
-    }
-  }
+  "shows": {}
 }

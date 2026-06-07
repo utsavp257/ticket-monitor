@@ -29,6 +29,10 @@ MOVIES = {
     },
 }
 
+# Only alert on IMAX-format showtimes (IMAX 70mm / IMAX with Laser). Set to
+# False to include all formats (Dolby, Laser, standard, etc.).
+IMAX_ONLY = True
+
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday

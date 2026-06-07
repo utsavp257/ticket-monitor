@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from datetime import date
 
-from config import MOVIES, amc_url
+from config import MOVIES, IMAX_ONLY, amc_url
 from dates import watch_dates, movie_start
 from scrape import fetch, find_shows
 
@@ -35,7 +35,7 @@ def check_amc(debug: bool = False, movies: dict | None = None) -> list[dict]:
             if cache[iso] is None:
                 continue
             _html, text = cache[iso]
-            shows = find_shows(text, aliases)
+            shows = find_shows(text, aliases, imax_only=IMAX_ONLY)
             if shows:
                 results.append({
                     "movie": movie,
