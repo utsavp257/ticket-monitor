@@ -18,16 +18,15 @@ Flags can be combined, e.g. `--dry-run --debug`.
 import sys
 
 from monitor_amc import check_amc
-from monitor_fandango import check_fandango
-from monitor_imax import check_imax
 from dates import target_dates
 import telegram
 from state import already_seen, mark_seen
 
+# AMC Lincoln Square 13 is the real Lincoln Square IMAX and the authoritative
+# ticket source. Fandango/IMAX were dropped: redundant, and neither exposed
+# usable showtimes (widget / Cloudflare block).
 SOURCES = [
     ("AMC", check_amc),
-    ("Fandango", check_fandango),
-    ("IMAX", check_imax),
 ]
 
 

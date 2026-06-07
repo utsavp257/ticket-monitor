@@ -26,7 +26,7 @@ from playwright.sync_api import sync_playwright
 from config import PAGE_TIMEOUT_MS, SETTLE_MS, MAX_RETRIES
 
 # A real-ish browser fingerprint. Headless Chromium with the default UA gets
-# bot-challenged on AMC/Fandango far more often.
+# bot-challenged by AMC far more often.
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "

@@ -37,33 +37,15 @@ WEEKS_AHEAD = 1
 # an ISO date string (YYYY-MM-DD). These are the parts most likely to need a
 # tweak if a site changes its URL scheme — see README for how to verify them.
 
-# AMC Lincoln Square 13 is the real "Lincoln Square IMAX". This is the source
-# that actually drives alerts.
+# AMC Lincoln Square 13 is the real "Lincoln Square IMAX" and the authoritative
+# ticket source. (Fandango/IMAX were dropped — redundant, and neither exposed
+# usable showtimes to the scraper.)
 def amc_url(date_iso: str) -> str:
     return (
         "https://www.amctheatres.com/movie-theatres/new-york-city/"
         "amc-lincoln-square-13/showtimes/all/"
         f"{date_iso}/amc-lincoln-square-13/all"
     )
-
-
-# Fandango resells the same AMC Lincoln Square showtimes. The slug "aabqi" is
-# Fandango's code for AMC Lincoln Square 13; Fandango wants the date as
-# M/D/YYYY, not ISO.
-def fandango_url(date_iso: str) -> str:
-    y, m, d = date_iso.split("-")
-    return (
-        "https://www.fandango.com/amc-lincoln-square-13-aabqi/"
-        f"theater-page?date={int(m)}/{int(d)}/{y}"
-    )
-
-
-# imax.com does not sell tickets directly (it deep-links to AMC/Fandango), so
-# this is the weakest source. We point it at the NYC Lincoln Square page.
-def imax_url(date_iso: str) -> str:
-    # imax.com is not date-parameterized in a stable way; date is unused but
-    # kept for a uniform interface.
-    return "https://www.imax.com/theatres/amc-lincoln-square-13"
 
 
 # --- Scraper behavior --------------------------------------------------------

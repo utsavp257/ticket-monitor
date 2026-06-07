@@ -1,8 +1,8 @@
 # Lincoln Square IMAX ticket monitor
 
-Watches AMC Lincoln Square 13 (the "Lincoln Square IMAX"), Fandango, and
-imax.com for **Dune 3** and **Odyssey**, and pings you on Telegram when the
-**first show on the upcoming Tuesday and Wednesday** is listed.
+Watches **AMC Lincoln Square 13** (the "Lincoln Square IMAX") for **Dune 3** and
+**Odyssey**, and pings you on Telegram when the **first show on the upcoming
+Tuesday and Wednesday** is listed.
 
 ## What it actually does
 
@@ -11,17 +11,11 @@ showtimes page, looks for real showtimes (a movie title tied to a clock time on
 that date), and reports the **earliest** one. It only alerts when an actual
 showtime is found — not merely when the movie's name appears on a page.
 
-> **Source status (verified June 2026):**
-> - **AMC** — ✅ works and is validated against live showtimes. This *is* the
->   Lincoln Square IMAX and where you actually book. **Trust this one.**
-> - **Fandango** — ⚠️ reaches the theater page but its showtimes render in an
->   interactive widget the scraper can't read, so it currently returns nothing.
->   It's redundant with AMC anyway (same shows). Left in but best-effort.
-> - **imax.com** — ❌ Cloudflare bot-block, and it doesn't sell tickets. The run
->   logs the block and moves on.
->
-> Bottom line: AMC fully covers the goal. Fandango/IMAX are bonus coverage that
-> may need more work (or removal) — see the open question at the bottom.
+> **Why only AMC?** AMC Lincoln Square 13 *is* the Lincoln Square IMAX and is
+> where you actually book — validated against live showtimes. Fandango and
+> imax.com were tried and dropped: Fandango renders showtimes in an interactive
+> widget the scraper can't read (and is redundant with AMC), and imax.com is
+> Cloudflare bot-blocked and doesn't sell tickets. AMC fully covers the goal.
 
 ## Setup
 
@@ -86,12 +80,15 @@ python src/main.py
 
 ## Real-world caveats (please read)
 
-- **Bot protection.** AMC and Fandango sit behind Cloudflare. Headless Chromium
-  is sometimes served a challenge page instead of showtimes; the scraper detects
-  this and prints a warning. If it happens consistently, see *Tuning* below.
-- **Selectors/URLs can drift.** The site URLs and the showtime extraction logic
-  live in `src/config.py` and `src/scrape.py`. If a site changes its layout,
-  the `--debug` HTML dump is how you (or I) refine them.
+- **Bot protection / datacenter IPs.** AMC sits behind anti-bot protection. It
+  loads reliably from a residential IP, but from GitHub Actions' datacenter IPs
+  it *intermittently* times out. The fetch retries with backoff, and since the
+  job runs every 30 min and a new showtime listing stays up for days, an
+  occasional missed cycle self-heals. For rock-solid timing, run it on your own
+  machine (cron/launchd) instead — see *Tuning*.
+- **Selectors/URLs can drift.** The AMC URL and the showtime extraction logic
+  live in `src/config.py` and `src/scrape.py`. If AMC changes its layout, the
+  `--debug` HTML dump is how you (or I) refine them.
 - **Titles aren't confirmed yet.** "Dune 3" / "Odyssey" will be listed under
   official titles ("Dune: Part Three", "The Odyssey", etc.). Edit the alias
   lists in `src/config.py` once the real titles are known.
@@ -103,18 +100,18 @@ python src/main.py
 ## Tuning
 
 In `src/config.py`: movie aliases, target weekdays, how many weeks ahead, the
-per-source URLs, page timeout, and retries. If you hit persistent bot blocks,
-options are increasing `SETTLE_MS`, running non-headless locally, or routing
-through a residential proxy / a paid showtimes API.
+AMC URL, page timeout, and retries. If the runner keeps timing out, the most
+reliable fix is to run the monitor on your own machine (residential IP) on a
+cron/launchd timer instead of GitHub Actions.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `src/config.py` | Movies, dates, URLs, scraper knobs |
+| `src/config.py` | Movies, dates, AMC URL, scraper knobs |
 | `src/dates.py` | Computes upcoming Tue/Wed |
 | `src/scrape.py` | Fetch + showtime extraction (the core) |
-| `src/monitor_*.py` | Per-source wrappers (AMC / Fandango / IMAX) |
+| `src/monitor_amc.py` | AMC Lincoln Square source |
 | `src/telegram.py` | Notifications |
 | `src/state.py` | Dedup so you aren't spammed |
 | `src/main.py` | Entry point + CLI flags |
