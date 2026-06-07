@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import re
+import time
 
 from playwright.sync_api import sync_playwright
 
@@ -73,7 +74,10 @@ def fetch(url: str, debug_dump: str | None = None) -> tuple[str, str]:
             print(f"  ! {e}")
         except Exception as e:  # network, timeout, etc. — retry
             last_err = e
-            print(f"  ! fetch error on {url} (attempt {attempt}): {e}")
+            print(f"  ! fetch error on {url} (attempt {attempt}): "
+                  f"{str(e).splitlines()[0]}")
+        if attempt < MAX_RETRIES:
+            time.sleep(5 * attempt)  # back off; gives throttling a moment
     raise last_err if last_err else RuntimeError(f"failed to fetch {url}")
 
 
@@ -87,11 +91,21 @@ def _fetch_once(url: str) -> tuple[str, str]:
         )
         page = context.new_page()
         try:
-            # "networkidle" is unreliable on ad/analytics-heavy sites and is
-            # discouraged by Playwright. Load the DOM, then give JS time to
-            # render showtimes.
-            page.goto(url, wait_until="domcontentloaded", timeout=PAGE_TIMEOUT_MS)
-            page.wait_for_timeout(SETTLE_MS)
+            # "commit" returns as soon as the server responds, rather than
+            # waiting for DOMContentLoaded — which can hang (and time out) when
+            # an anti-bot layer slow-walks the connection (e.g. AMC from
+            # datacenter IPs). "networkidle" is even worse on ad-heavy sites.
+            page.goto(url, wait_until="commit", timeout=PAGE_TIMEOUT_MS)
+            # Poll until showtimes have actually rendered (a clock time appears)
+            # instead of a fixed sleep — faster on the happy path, and gives
+            # slow renders room without a hard fail.
+            deadline = SETTLE_MS + 12_000
+            waited = 0
+            while waited < deadline:
+                page.wait_for_timeout(1000)
+                waited += 1000
+                if waited >= SETTLE_MS and TIME_RE.search(page.inner_text("body")):
+                    break
             html = page.content()
             text = page.inner_text("body")
             return html, text

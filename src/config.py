@@ -70,5 +70,5 @@ def imax_url(date_iso: str) -> str:
 PAGE_TIMEOUT_MS = 60_000
 # Extra settle time after load for JS-rendered showtimes (milliseconds).
 SETTLE_MS = 4_000
-# Retries per source on transient failures / bot challenges.
-MAX_RETRIES = 2
+# Retries per source on transient failures / bot challenges (with backoff).
+MAX_RETRIES = 3
