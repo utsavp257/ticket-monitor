@@ -10,7 +10,7 @@
       "10:00am": false,
       "2:00pm": false,
       "6:00pm": false,
-      "10:00pm": false
+      "10:00pm": true
     }
   }
 }
