@@ -38,6 +38,9 @@ TIME_RE = re.compile(r"\b(\d{1,2}):(\d{2})\s*([ap]\.?m\.?)", re.IGNORECASE)
 BLOCK_MARKERS = [
     "just a moment",
     "verify you are human",
+    "verify you are not a bot",
+    "performing security verification",
+    "security service to protect",
     "are you a robot",
     "access denied",
     "enable javascript and cookies",
@@ -135,17 +138,62 @@ def _from_jsonld(html: str, aliases: list[str], date_iso: str) -> list[dict]:
     return found
 
 
-def _from_text(text: str, aliases: list[str]) -> list[dict]:
-    """Heuristic fallback: clock times appearing near the movie title."""
+# A movie's real listing on AMC (and similar sites) is anchored by a runtime
+# line right under the title, e.g. "2 HR 20 MIN" or "1 HR 36 MIN". The same
+# title also appears in a filter/nav list with NO runtime under it — which is
+# why a naive "title then nearby times" search binds the wrong showtimes.
+RUNTIME_RE = re.compile(r"^\d+\s*HR(\s+\d+\s*MIN)?$", re.IGNORECASE)
+
+
+def _segment_blocks(text: str) -> list[tuple[str, str]]:
+    """Split rendered text into (title, block_text) per movie listing.
+
+    A title is a non-empty line whose next non-empty line is a runtime
+    ("2 HR 20 MIN"). Each block runs until the next such anchor, so the times
+    inside a block belong to that movie only.
+    """
+    lines = [ln.strip() for ln in text.splitlines()]
+
+    def next_nonempty(i: int) -> int:
+        j = i + 1
+        while j < len(lines) and not lines[j]:
+            j += 1
+        return j
+
+    anchors = [
+        i for i, ln in enumerate(lines)
+        if ln and (j := next_nonempty(i)) < len(lines) and RUNTIME_RE.match(lines[j])
+    ]
+    blocks: list[tuple[str, str]] = []
+    for idx, start in enumerate(anchors):
+        end = anchors[idx + 1] if idx + 1 < len(anchors) else len(lines)
+        blocks.append((lines[start], "\n".join(lines[start:end])))
+    return blocks
+
+
+def _from_blocks(text: str, aliases: list[str]) -> list[dict]:
+    """Times scoped to the matching movie's listing block (the reliable path
+    for AMC-style pages)."""
+    found: list[dict] = []
+    for title, body in _segment_blocks(text):
+        if not any(a in title.lower() for a in aliases):
+            continue
+        for m in TIME_RE.finditer(body):
+            minutes = _to_minutes(int(m.group(1)), int(m.group(2)), m.group(3))
+            found.append({"time": _fmt(minutes), "minutes": minutes})
+    return found
+
+
+def _from_text_window(text: str, aliases: list[str]) -> list[dict]:
+    """Last-resort heuristic for pages with no runtime-anchored listings:
+    clock times in a window after the title mention."""
     lowered = text.lower()
-    # Only proceed if the title is actually present.
     positions = [lowered.find(a) for a in aliases if a in lowered]
     if not positions:
         return []
     found: list[dict] = []
-    # Look in a window of text following each title mention.
     for pos in positions:
-        window = text[pos: pos + 1500]
+        window = text[pos: pos + 1200]
         for m in TIME_RE.finditer(window):
             minutes = _to_minutes(int(m.group(1)), int(m.group(2)), m.group(3))
             found.append({"time": _fmt(minutes), "minutes": minutes})
@@ -178,9 +226,15 @@ def find_earliest_show(
 
     Returns e.g. {"time": "10:30am", "minutes": 630, "shows": 4}.
     """
+    # 1) JSON-LD if present (some sites embed ScreeningEvents).
     shows = _from_jsonld(html, aliases, date_iso)
+    # 2) Per-movie blocks anchored on the runtime line (AMC-style — reliable).
     if not shows:
-        shows = _from_text(text, aliases)
+        shows = _from_blocks(text, aliases)
+    # 3) Window heuristic ONLY when the page has no anchored listings at all,
+    #    so it can't clobber correct block parsing with mis-bound times.
+    if not shows and not _segment_blocks(text):
+        shows = _from_text_window(text, aliases)
     if not shows:
         return None
     earliest = min(shows, key=lambda s: s["minutes"])

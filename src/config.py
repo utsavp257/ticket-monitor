@@ -47,13 +47,14 @@ def amc_url(date_iso: str) -> str:
     )
 
 
-# Fandango resells the same AMC Lincoln Square showtimes. The theater slug
-# (aanyc) is Fandango's code for AMC Lincoln Square 13 — verify per README if
-# you get no results.
+# Fandango resells the same AMC Lincoln Square showtimes. The slug "aabqi" is
+# Fandango's code for AMC Lincoln Square 13; Fandango wants the date as
+# M/D/YYYY, not ISO.
 def fandango_url(date_iso: str) -> str:
+    y, m, d = date_iso.split("-")
     return (
-        "https://www.fandango.com/amc-lincoln-square-13-aanyc/"
-        f"theater-page?date={date_iso}"
+        "https://www.fandango.com/amc-lincoln-square-13-aabqi/"
+        f"theater-page?date={int(m)}/{int(d)}/{y}"
     )
 
 

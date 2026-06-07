@@ -6,6 +6,11 @@ Usage:
   python src/main.py --debug         # also dump fetched HTML to debug_*.html
   python src/main.py --test-telegram # send one test message and exit
   python src/main.py --dates         # print which dates will be checked
+  python src/main.py --probe "Masters of the Universe"
+                                     # end-to-end test using a movie that is
+                                     # ON SALE NOW: parse it + send a real
+                                     # alert so you can confirm the whole
+                                     # pipeline (add --dry-run to not send).
 
 Flags can be combined, e.g. `--dry-run --debug`.
 """
@@ -67,6 +72,39 @@ def process(results: list[dict], dry_run: bool) -> int:
     return sent
 
 
+def probe(title: str, dry_run: bool) -> None:
+    """Run the full pipeline against a movie that's on sale NOW, to prove
+    parsing + notification work end to end. Bypasses dedup so it's repeatable.
+    """
+    movies = {f"{title} (PROBE)": [title.lower()]}
+    print(f"PROBE: testing pipeline with currently-showing title {title!r}\n")
+    any_found = False
+    for name, check in SOURCES:
+        print(f"Checking {name}...")
+        try:
+            results = check(debug=False, movies=movies)
+        except Exception as e:
+            print(f"  ! {name} check failed: {e}")
+            continue
+        if not results:
+            print(f"  · not found on {name}")
+        for item in results:
+            any_found = True
+            message = format_alert(item)
+            if dry_run:
+                print("  --- would send ---")
+                print(message)
+                print("  ------------------")
+            elif telegram.send_message(message):
+                print(f"  ✓ sent: {item['source']} {item['date']} "
+                      f"{item['first_show']}")
+            else:
+                print("  ! send failed (check Telegram creds)")
+    if not any_found:
+        print("\nMovie not found on any source — pick a title that's "
+              "currently showing (see the theater's site) and try again.")
+
+
 def run(dry_run: bool, debug: bool) -> None:
     if dry_run:
         print("DRY RUN — no messages will be sent.\n")
@@ -86,11 +124,21 @@ def run(dry_run: bool, debug: bool) -> None:
 
 
 def main() -> None:
-    args = set(sys.argv[1:])
+    argv = sys.argv[1:]
+    args = set(argv)
 
     if "--dates" in args:
         for d in target_dates():
             print(d.isoformat(), d.strftime("%A"))
+        return
+
+    if "--probe" in argv:
+        i = argv.index("--probe")
+        title = argv[i + 1] if i + 1 < len(argv) else ""
+        if not title:
+            print('Usage: python src/main.py --probe "Movie Title"')
+            return
+        probe(title, dry_run="--dry-run" in args)
         return
 
     if "--test-telegram" in args:

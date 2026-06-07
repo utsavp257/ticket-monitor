@@ -11,11 +11,17 @@ showtimes page, looks for real showtimes (a movie title tied to a clock time on
 that date), and reports the **earliest** one. It only alerts when an actual
 showtime is found — not merely when the movie's name appears on a page.
 
-> **Note on sources:** AMC Lincoln Square 13 *is* the Lincoln Square IMAX and is
-> what actually sells the tickets. Fandango resells the same AMC showtimes
-> (cross-check / fallback). imax.com doesn't sell tickets and isn't reliably
-> date-filterable, so treat its alerts as "the film is coming", not "tickets are
-> live". AMC is the one to trust.
+> **Source status (verified June 2026):**
+> - **AMC** — ✅ works and is validated against live showtimes. This *is* the
+>   Lincoln Square IMAX and where you actually book. **Trust this one.**
+> - **Fandango** — ⚠️ reaches the theater page but its showtimes render in an
+>   interactive widget the scraper can't read, so it currently returns nothing.
+>   It's redundant with AMC anyway (same shows). Left in but best-effort.
+> - **imax.com** — ❌ Cloudflare bot-block, and it doesn't sell tickets. The run
+>   logs the block and moves on.
+>
+> Bottom line: AMC fully covers the goal. Fandango/IMAX are bonus coverage that
+> may need more work (or removal) — see the open question at the bottom.
 
 ## Setup
 
@@ -58,7 +64,16 @@ python src/main.py --dry-run
 
 # 4. Inspect what the sites actually returned (writes debug_*.html):
 python src/main.py --dry-run --debug
+
+# 5. SEE THE WHOLE THING WORK NOW, end to end, including a real Telegram
+#    message — using a movie that's currently on sale as a stand-in for
+#    Dune 3/Odyssey. Pick any title showing at AMC Lincoln Square today:
+python src/main.py --probe "Masters of the Universe"
+#    (add --dry-run to print the alert instead of sending it)
 ```
+
+You can also run the probe from **Actions → Ticket Monitor → Run workflow** by
+filling in the *probe_movie* box — handy since the Telegram secrets live there.
 
 If `--dry-run` finds nothing, that's expected until showtimes are posted — the
 useful check is step 4: open the `debug_*.html` files and confirm you're seeing

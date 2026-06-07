@@ -13,6 +13,10 @@ on:
         description: "Dry run (check sites, send no alerts)"
         type: boolean
         default: false
+      probe_movie:
+        description: "Probe: send a real test alert for a movie on sale NOW (e.g. Masters of the Universe). Leave blank for a normal run."
+        type: string
+        default: ""
 
 # Avoid overlapping runs stepping on the committed state file.
 concurrency:
@@ -47,7 +51,9 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
+          if [ -n "${{ inputs.probe_movie }}" ]; then
+            python src/main.py --probe "${{ inputs.probe_movie }}"
+          elif [ "${{ inputs.dry_run }}" = "true" ]; then
             python src/main.py --dry-run
           else
             python src/main.py
