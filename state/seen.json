@@ -1,18 +1,5 @@
 {
-  "shows": {
-    "The Odyssey|2026-07-21": {
-      "10:00am": false,
-      "2:00pm": false,
-      "6:00pm": false,
-      "10:00pm": false
-    },
-    "The Odyssey|2026-07-22": {
-      "10:00am": false,
-      "2:00pm": false,
-      "6:00pm": false,
-      "10:00pm": true
-    }
-  },
+  "shows": {},
   "ig_seen": [
     "DV_e2b7DTtl",
     "DW0E6XKDsXL",
