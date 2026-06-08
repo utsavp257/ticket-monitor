@@ -11,6 +11,14 @@
       "2:00pm": false,
       "6:00pm": false,
       "10:00pm": true
+    },
+    "Dune: Part Three|2026-12-18": {
+      "7:00pm": true,
+      "11:00pm": true
+    },
+    "Dune: Part Three|2026-12-19": {
+      "7:00pm": true,
+      "11:00pm": false
     }
   },
   "ig_seen": [
