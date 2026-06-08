@@ -26,7 +26,7 @@ from datetime import date
 from monitor_amc import check_amc
 from monitor_instagram import check_instagram
 from dates import movie_watch_dates
-from config import MOVIES, IG_CHECK_EVERY_HOURS
+from config import MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS
 import telegram
 from state import load_state, save_state
 
@@ -96,7 +96,7 @@ def probe(title: str, dry_run: bool) -> None:
     movies = {f"{title} (PROBE)": [title.lower()]}
     print(f"PROBE: testing pipeline with currently-showing title {title!r}\n")
     try:
-        results = check_amc(movies=movies)
+        results, _health = check_amc(movies=movies)
     except Exception as e:
         print(f"  ! check failed: {e}")
         return
@@ -162,6 +162,30 @@ def ig_diff_and_alert(posts: list[dict], dry_run: bool) -> int:
     return sent
 
 
+def alert_failure(reason: str, dry_run: bool) -> None:
+    """Telegram alert when the monitor looks broken (e.g. AMC URL/layout change
+    or outage), throttled so a persistent problem doesn't spam every run."""
+    if dry_run:
+        print(f"  ! would send FAILURE alert: {reason}")
+        return
+    state = load_state()
+    last = state.get("last_failure_alert", 0)
+    if time.time() - last < FAILURE_ALERT_COOLDOWN_HOURS * 3600:
+        print(f"  ! problem (alert throttled): {reason}")
+        return
+    message = (
+        "⚠️ Ticket monitor problem\n\n"
+        f"{reason}\n\n"
+        "It may be missing showtimes until this is looked at."
+    )
+    if telegram.send_message(message):
+        state["last_failure_alert"] = time.time()
+        save_state(state)
+        print(f"  ! FAILURE alert sent: {reason}")
+    else:
+        print(f"  ! could not send failure alert: {reason}")
+
+
 def run(dry_run: bool, debug: bool) -> None:
     if dry_run:
         print("DRY RUN — no messages will be sent.\n")
@@ -169,12 +193,22 @@ def run(dry_run: bool, debug: bool) -> None:
 
     print("Checking AMC Lincoln Square...")
     try:
-        results = check_amc(debug=debug)
+        results, health = check_amc(debug=debug)
         if not results:
             print("  · no showtimes yet on any watched date")
         total += diff_and_alert(results, dry_run)
+        # Health checks: distinguish "nothing on sale" from "scraper is broken".
+        if health["dates_total"] and health["dates_fetched"] == 0:
+            alert_failure(
+                "AMC was unreachable — every page fetch failed (IP block or "
+                "outage).", dry_run)
+        elif health["dates_fetched"] and health["total_listings"] == 0:
+            alert_failure(
+                "AMC pages returned no movie listings at all — the showtimes "
+                "URL or page layout has likely changed.", dry_run)
     except Exception as e:
         print(f"  ! AMC check failed: {e}")
+        alert_failure(f"AMC check crashed: {e}", dry_run)
 
     print("Checking Instagram...")
     last = load_state().get("ig_last_check", 0)

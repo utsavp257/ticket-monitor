@@ -24,6 +24,15 @@ It never re-alerts on shows you've already been told about, and it only ever
 fires on a real showtime tied to the movie — never on a stray title mention
 (e.g. a "The Odyssey Bundle" promo).
 
+**Failure alerts.** Silent breakage is the real danger — if AMC changes its URL
+or layout, you'd just see "no alerts" and assume no tickets. So the monitor also
+pings you on Telegram if it looks broken: AMC unreachable (every fetch failed)
+or pages that parse to **zero** movie listings (URL/layout changed). These are
+throttled to once per `FAILURE_ALERT_COOLDOWN_HOURS`. Separately, a workflow
+step fires a Telegram alert if a run fails outright (a crash, or pip/Playwright
+install breaking). Instagram's intermittent blocks are *expected* and not
+alerted on.
+
 It also watches the Instagram accounts in `INSTAGRAM_ACCOUNTS` (e.g.
 `@dunemovie`) and pings you on **new posts** — these studios often post when
 tickets go live. The first run records existing posts silently (baseline), then

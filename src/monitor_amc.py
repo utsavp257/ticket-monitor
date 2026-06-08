@@ -13,10 +13,16 @@ from datetime import date
 
 from config import MOVIES, IMAX_ONLY, amc_url
 from dates import movie_watch_dates
-from scrape import fetch, find_shows
+from scrape import fetch, find_shows, count_listings
 
 
-def check_amc(debug: bool = False, movies: dict | None = None) -> list[dict]:
+def check_amc(debug: bool = False, movies: dict | None = None):
+    """Returns (results, health).
+
+    health = {dates_total, dates_fetched, total_listings} lets the caller detect
+    a broken scraper: every fetch failing (unreachable) or pages with zero movie
+    listings (URL/layout changed).
+    """
     movies = movies or MOVIES
     today = date.today()
     cache: dict[str, tuple] = {}
@@ -45,4 +51,11 @@ def check_amc(debug: bool = False, movies: dict | None = None) -> list[dict]:
                     "url": amc_url(iso),
                     "shows": shows,  # {time: {minutes, sold_out}}
                 })
-    return results
+
+    fetched = [v for v in cache.values() if v is not None]
+    health = {
+        "dates_total": len(cache),
+        "dates_fetched": len(fetched),
+        "total_listings": sum(count_listings(text) for _html, text in fetched),
+    }
+    return results, health

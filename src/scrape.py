@@ -185,6 +185,13 @@ def _segment_blocks(text: str) -> list[tuple[str, str]]:
     return blocks
 
 
+def count_listings(text: str) -> int:
+    """How many movie listings the page rendered. Zero across all pages is a
+    strong sign AMC's URL or layout changed (a real theater page always lists
+    current movies)."""
+    return len(_segment_blocks(text))
+
+
 def _from_blocks(text: str, aliases: list[str]) -> list[dict]:
     """Times scoped to the matching movie's listing block (the reliable path
     for AMC-style pages)."""

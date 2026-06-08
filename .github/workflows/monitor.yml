@@ -96,3 +96,18 @@ jobs:
           done
           echo "WARN: could not persist state after retries; next run reconciles."
           exit 0
+
+      # Telegram ping if ANY step above failed (a crash, or pip/Playwright
+      # install breaking) — so an infrastructure-level failure isn't silent.
+      # App-level problems (AMC unreachable / layout changed) are alerted from
+      # within the monitor itself; this is the catch-all backstop.
+      - name: Notify on failure
+        if: failure()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            --data-urlencode chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=⚠️ ticket-monitor run FAILED (infrastructure/step error). Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            >/dev/null || true

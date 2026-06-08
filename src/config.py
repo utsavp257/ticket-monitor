@@ -49,6 +49,11 @@ INSTAGRAM_ACCOUNTS = ["dunemovie"]
 APIFY_ACTOR = "apify~instagram-scraper"
 IG_CHECK_EVERY_HOURS = 6
 
+# Send a Telegram alert if the monitor looks broken — AMC unreachable, or its
+# pages parse to zero movie listings (a sign the URL/layout changed). Throttled
+# to this many hours so a persistent outage doesn't spam every run.
+FAILURE_ALERT_COOLDOWN_HOURS = 3
+
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday

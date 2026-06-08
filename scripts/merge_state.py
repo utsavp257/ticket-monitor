@@ -38,9 +38,12 @@ def main() -> None:
     seen = set(remote.get("ig_seen", [])) | set(our.get("ig_seen", []))
     if seen:
         merged["ig_seen"] = sorted(seen)
-    last_check = max(remote.get("ig_last_check", 0), our.get("ig_last_check", 0))
-    if last_check:
-        merged["ig_last_check"] = last_check
+
+    # Scalar "most recent wins" fields.
+    for field in ("ig_last_check", "last_failure_alert"):
+        val = max(remote.get(field, 0), our.get(field, 0))
+        if val:
+            merged[field] = val
 
     with open("state/seen.json", "w") as f:
         json.dump(merged, f, indent=2)
