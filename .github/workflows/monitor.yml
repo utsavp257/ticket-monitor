@@ -43,13 +43,27 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # Cache the downloaded Chromium so 5-min runs don't re-download it (~120MB).
+      - name: Cache Playwright browser
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
       - name: Install Playwright browser
-        run: python -m playwright install --with-deps chromium
+        run: |
+          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then
+            python -m playwright install chromium        # binary cached; skip download
+          else
+            python -m playwright install --with-deps chromium
+          fi
 
       - name: Run monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
           if [ -n "${{ inputs.probe_movie }}" ]; then
             python src/main.py --probe "${{ inputs.probe_movie }}"

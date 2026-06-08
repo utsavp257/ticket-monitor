@@ -60,6 +60,18 @@ For the GitHub Action, add the same two as repo secrets
 (Settings → Secrets and variables → Actions): `TELEGRAM_TOKEN`,
 `TELEGRAM_CHAT_ID`.
 
+### Instagram (Apify) — optional but needed for IG alerts on CI
+
+Instagram blocks GitHub's IPs, so IG alerts on the Action go through Apify:
+
+1. Create a free account at <https://console.apify.com>.
+2. Settings → Integrations → copy your **API token**.
+3. Add it as a repo secret named `APIFY_TOKEN`.
+
+Without `APIFY_TOKEN` the IG check falls back to the free direct endpoint (works
+locally, usually blocked on CI). The check runs at most every
+`IG_CHECK_EVERY_HOURS` hours to stay within Apify's free credits.
+
 ## How to check it's working (do these in order)
 
 ```bash

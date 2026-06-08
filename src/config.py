@@ -37,6 +37,13 @@ IMAX_ONLY = True
 # live). Add more, e.g. the Odyssey film's account, as needed.
 INSTAGRAM_ACCOUNTS = ["dunemovie"]
 
+# Instagram blocks datacenter IPs, so on CI we go through Apify (residential
+# proxies) when an APIFY_TOKEN is set; otherwise we try the free direct endpoint
+# (works locally, usually 429s on CI). Free Apify credits are limited, so we
+# only actually hit Instagram every IG_CHECK_EVERY_HOURS hours.
+APIFY_ACTOR = "apify~instagram-scraper"
+IG_CHECK_EVERY_HOURS = 6
+
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday

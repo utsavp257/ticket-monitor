@@ -9,9 +9,11 @@ isolated and logged; they never crash the rest of the monitor.
 
 from __future__ import annotations
 
+import os
+
 import requests
 
-from config import INSTAGRAM_ACCOUNTS
+from config import INSTAGRAM_ACCOUNTS, APIFY_ACTOR
 
 # Public web app id Instagram's own site sends with this endpoint.
 IG_APP_ID = "936619743392459"
@@ -23,7 +25,18 @@ UA = (
 
 
 def fetch_posts(username: str) -> list[dict]:
-    """Recent posts for a username: [{shortcode, timestamp, caption}]."""
+    """Recent posts for a username: [{shortcode, timestamp, caption}].
+
+    Uses Apify (residential proxies) when APIFY_TOKEN is set — required from CI,
+    since Instagram blocks datacenter IPs. Falls back to Instagram's free direct
+    endpoint otherwise (fine locally, usually blocked on CI).
+    """
+    if os.environ.get("APIFY_TOKEN"):
+        return _fetch_via_apify(username)
+    return _fetch_direct(username)
+
+
+def _fetch_direct(username: str) -> list[dict]:
     resp = requests.get(
         "https://www.instagram.com/api/v1/users/web_profile_info/",
         params={"username": username},
@@ -47,6 +60,36 @@ def fetch_posts(username: str) -> list[dict]:
             "shortcode": node["shortcode"],
             "timestamp": node["taken_at_timestamp"],
             "caption": caption,
+        })
+    return posts
+
+
+def _fetch_via_apify(username: str) -> list[dict]:
+    token = os.environ["APIFY_TOKEN"]
+    resp = requests.post(
+        f"https://api.apify.com/v2/acts/{APIFY_ACTOR}/run-sync-get-dataset-items",
+        params={"token": token},
+        json={
+            "directUrls": [f"https://www.instagram.com/{username}/"],
+            "resultsType": "posts",
+            "resultsLimit": 12,
+            "addParentData": False,
+        },
+        timeout=180,
+    )
+    if resp.status_code not in (200, 201):
+        raise RuntimeError(f"Apify HTTP {resp.status_code}: {resp.text[:200]}")
+    posts = []
+    for item in resp.json():
+        # Field names vary slightly across actor versions — be tolerant.
+        shortcode = item.get("shortCode") or item.get("shortcode")
+        if not shortcode:
+            continue
+        posts.append({
+            "username": username,
+            "shortcode": shortcode,
+            "timestamp": item.get("timestamp") or item.get("takenAt") or "",
+            "caption": item.get("caption") or "",
         })
     return posts
 

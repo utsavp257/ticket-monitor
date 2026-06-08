@@ -20,12 +20,13 @@ Flags can be combined, e.g. `--dry-run --debug`.
 """
 
 import sys
+import time
 from datetime import date
 
 from monitor_amc import check_amc
 from monitor_instagram import check_instagram
 from dates import watch_dates, movie_start
-from config import MOVIES
+from config import MOVIES, IG_CHECK_EVERY_HOURS
 import telegram
 from state import load_state, save_state
 
@@ -176,10 +177,20 @@ def run(dry_run: bool, debug: bool) -> None:
         print(f"  ! AMC check failed: {e}")
 
     print("Checking Instagram...")
-    try:
-        total += ig_diff_and_alert(check_instagram(), dry_run)
-    except Exception as e:
-        print(f"  ! Instagram check failed: {e}")
+    last = load_state().get("ig_last_check", 0)
+    if not dry_run and time.time() - last < IG_CHECK_EVERY_HOURS * 3600:
+        hrs = round((time.time() - last) / 3600, 1)
+        print(f"  · skipped (last checked {hrs}h ago; "
+              f"every {IG_CHECK_EVERY_HOURS}h to spare Apify credits)")
+    else:
+        try:
+            total += ig_diff_and_alert(check_instagram(), dry_run)
+        except Exception as e:
+            print(f"  ! Instagram check failed: {e}")
+        if not dry_run:
+            st = load_state()
+            st["ig_last_check"] = time.time()
+            save_state(st)
 
     print(f"\nDone. {total} alert(s) sent.")
 
