@@ -118,6 +118,12 @@ def probe(title: str, dry_run: bool) -> None:
 def ig_diff_and_alert(posts: list[dict], dry_run: bool) -> int:
     """Alert on new Instagram posts. On the first run we just record what's
     already there (baseline) so we don't blast a backlog of old posts."""
+    if not posts:
+        # Fetch failed (e.g. IP-blocked) — do nothing rather than baseline an
+        # empty set, which would later flag every real post as "new".
+        print("  · no posts retrieved; skipping")
+        return 0
+
     state = load_state()
     if "ig_seen" not in state:
         state["ig_seen"] = sorted({p["shortcode"] for p in posts})
