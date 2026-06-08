@@ -44,20 +44,16 @@ jobs:
         run: pip install -r requirements.txt
 
       # Cache the downloaded Chromium so 5-min runs don't re-download it (~120MB).
+      # Runners are fresh each run, so we always (re)install the system libs via
+      # --with-deps; the cache only skips the browser download itself.
       - name: Cache Playwright browser
-        id: pw-cache
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
           key: playwright-chromium-${{ runner.os }}
 
       - name: Install Playwright browser
-        run: |
-          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then
-            python -m playwright install chromium        # binary cached; skip download
-          else
-            python -m playwright install --with-deps chromium
-          fi
+        run: python -m playwright install --with-deps chromium
 
       - name: Run monitor
         env:
