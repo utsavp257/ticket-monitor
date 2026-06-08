@@ -33,6 +33,10 @@ MOVIES = {
 # False to include all formats (Dolby, Laser, standard, etc.).
 IMAX_ONLY = True
 
+# Instagram handles to watch for new posts (they often post when tickets go
+# live). Add more, e.g. the Odyssey film's account, as needed.
+INSTAGRAM_ACCOUNTS = ["dunemovie"]
+
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday

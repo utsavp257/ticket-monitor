@@ -21,6 +21,13 @@ It never re-alerts on shows you've already been told about, and it only ever
 fires on a real showtime tied to the movie — never on a stray title mention
 (e.g. a "The Odyssey Bundle" promo).
 
+It also watches the Instagram accounts in `INSTAGRAM_ACCOUNTS` (e.g.
+`@dunemovie`) and pings you on **new posts** — these studios often post when
+tickets go live. The first run records existing posts silently (baseline), then
+alerts only on new ones. Heads-up: Instagram blocks datacenter IPs hard, so this
+check is best-effort from GitHub Actions and may intermittently fail (it's
+isolated, so it never affects the AMC check).
+
 > **Why only AMC?** AMC Lincoln Square 13 *is* the Lincoln Square IMAX and is
 > where you actually book — validated against live showtimes. Fandango and
 > imax.com were tried and dropped: Fandango renders showtimes in an interactive

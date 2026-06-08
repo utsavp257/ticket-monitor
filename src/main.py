@@ -23,6 +23,7 @@ import sys
 from datetime import date
 
 from monitor_amc import check_amc
+from monitor_instagram import check_instagram
 from dates import watch_dates, movie_start
 from config import MOVIES
 import telegram
@@ -114,18 +115,66 @@ def probe(title: str, dry_run: bool) -> None:
             print("  ! send failed (check Telegram creds)")
 
 
+def ig_diff_and_alert(posts: list[dict], dry_run: bool) -> int:
+    """Alert on new Instagram posts. On the first run we just record what's
+    already there (baseline) so we don't blast a backlog of old posts."""
+    state = load_state()
+    if "ig_seen" not in state:
+        state["ig_seen"] = sorted({p["shortcode"] for p in posts})
+        if not dry_run:
+            save_state(state)
+        print(f"  · baseline set ({len(posts)} existing posts, no alert)")
+        return 0
+
+    seen = set(state["ig_seen"])
+    new = sorted((p for p in posts if p["shortcode"] not in seen),
+                 key=lambda p: p["timestamp"])
+    sent = 0
+    for p in new:
+        caption = p["caption"].strip()
+        if len(caption) > 300:
+            caption = caption[:300] + "…"
+        message = (
+            f"📸 New @{p['username']} Instagram post\n\n"
+            f"{caption}\n\n"
+            f"https://www.instagram.com/p/{p['shortcode']}/"
+        )
+        if dry_run:
+            print("  --- would send ---")
+            print(message)
+            print("  ------------------")
+        elif telegram.send_message(message):
+            sent += 1
+            print(f"  ✓ alerted: IG {p['shortcode']}")
+        else:
+            print(f"  ! send failed, will retry next run: IG {p['shortcode']}")
+    if posts and not dry_run:
+        # Remember the current window (bounded — IG returns ~12 recent posts).
+        state["ig_seen"] = sorted({p["shortcode"] for p in posts})
+        save_state(state)
+    return sent
+
+
 def run(dry_run: bool, debug: bool) -> None:
     if dry_run:
         print("DRY RUN — no messages will be sent.\n")
+    total = 0
+
     print("Checking AMC Lincoln Square...")
     try:
         results = check_amc(debug=debug)
+        if not results:
+            print("  · no showtimes yet on any watched date")
+        total += diff_and_alert(results, dry_run)
     except Exception as e:
         print(f"  ! AMC check failed: {e}")
-        return
-    if not results:
-        print("  · no showtimes yet on any watched date")
-    total = diff_and_alert(results, dry_run)
+
+    print("Checking Instagram...")
+    try:
+        total += ig_diff_and_alert(check_instagram(), dry_run)
+    except Exception as e:
+        print(f"  ! Instagram check failed: {e}")
+
     print(f"\nDone. {total} alert(s) sent.")
 
 
