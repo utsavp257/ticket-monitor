@@ -18,10 +18,14 @@ def next_occurrence(weekday: int, start: date) -> date:
     return start + timedelta(days=days_ahead)
 
 
-def watch_dates(start: date, weeks: int = WATCH_WEEKS) -> list[date]:
-    """First `weeks` occurrences of each TARGET_WEEKDAY on/after `start`."""
+def watch_dates(start: date, weekdays=None, weeks: int = WATCH_WEEKS) -> list[date]:
+    """First `weeks` occurrences of each watched weekday on/after `start`.
+
+    `weekdays` defaults to the global TARGET_WEEKDAYS (Tue/Wed).
+    """
+    weekdays = TARGET_WEEKDAYS if weekdays is None else weekdays
     dates: list[date] = []
-    for weekday in TARGET_WEEKDAYS:
+    for weekday in weekdays:
         first = next_occurrence(weekday, start)
         for week in range(weeks):
             dates.append(first + timedelta(weeks=week))
@@ -36,10 +40,20 @@ def movie_start(spec, today: date) -> date:
     return today
 
 
+def movie_weekdays(spec):
+    """Per-movie weekday override, or None to use the global default."""
+    return spec.get("weekdays") if isinstance(spec, dict) else None
+
+
+def movie_watch_dates(spec, today: date) -> list[date]:
+    """All dates to watch for one movie (from_date + per-movie weekdays)."""
+    return watch_dates(movie_start(spec, today), movie_weekdays(spec))
+
+
 if __name__ == "__main__":
     # Quick sanity check: `python src/dates.py`
     today = date.today()
     for movie, spec in MOVIES.items():
         print(movie + ":")
-        for d in watch_dates(movie_start(spec, today)):
+        for d in movie_watch_dates(spec, today):
             print("  ", d.isoformat(), d.strftime("%A"))

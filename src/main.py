@@ -25,7 +25,7 @@ from datetime import date
 
 from monitor_amc import check_amc
 from monitor_instagram import check_instagram
-from dates import watch_dates, movie_start
+from dates import movie_watch_dates
 from config import MOVIES, IG_CHECK_EVERY_HOURS
 import telegram
 from state import load_state, save_state
@@ -203,7 +203,7 @@ def main() -> None:
         today = date.today()
         for movie, spec in MOVIES.items():
             print(f"{movie} (watching):")
-            for d in watch_dates(movie_start(spec, today)):
+            for d in movie_watch_dates(spec, today):
                 print("  ", d.isoformat(), d.strftime("%A"))
         return
 

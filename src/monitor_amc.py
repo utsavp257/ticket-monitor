@@ -1,9 +1,10 @@
 """AMC Lincoln Square 13 — the real Lincoln Square IMAX, and the authoritative
 ticket source.
 
-For each watched movie we check only the first WATCH_WEEKS Tuesdays/Wednesdays
-on/after its from_date (so we don't scan months of empty dates). Pages are
-cached per date within a run so two movies sharing a date fetch once.
+For each watched movie we check only the first WATCH_WEEKS occurrences of its
+watched weekdays on/after its from_date (so we don't scan months of empty
+dates). Pages are cached per date within a run so two movies sharing a date
+fetch once.
 """
 
 from __future__ import annotations
@@ -11,7 +12,7 @@ from __future__ import annotations
 from datetime import date
 
 from config import MOVIES, IMAX_ONLY, amc_url
-from dates import watch_dates, movie_start
+from dates import movie_watch_dates
 from scrape import fetch, find_shows
 
 
@@ -23,7 +24,7 @@ def check_amc(debug: bool = False, movies: dict | None = None) -> list[dict]:
 
     for movie, spec in movies.items():
         aliases = spec["aliases"] if isinstance(spec, dict) else spec
-        for d in watch_dates(movie_start(spec, today)):
+        for d in movie_watch_dates(spec, today):
             iso = d.isoformat()
             if iso not in cache:
                 dump = f"debug_amc_{iso}.html" if debug else None

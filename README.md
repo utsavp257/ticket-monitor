@@ -2,9 +2,12 @@
 
 Watches **AMC Lincoln Square 13** (the "Lincoln Square IMAX") for
 **Dune: Part Three** and **The Odyssey**, and pings you on Telegram when their
-**IMAX** **Tuesday/Wednesday** showtimes change — a **new showtime is added** or
-a **sold-out show frees up**. Only IMAX-format shows count (set `IMAX_ONLY` in
-`src/config.py` to `False` to include Dolby/Laser/standard too).
+**IMAX** showtimes change — a **new showtime is added** or a **sold-out show
+frees up**. Only IMAX-format shows count (set `IMAX_ONLY` in `src/config.py` to
+`False` to include Dolby/Laser/standard too).
+
+Which days each movie is watched is configurable per movie (`weekdays` in
+`MOVIES`): Dune is watched **every day**, The Odyssey **Tue/Wed** only.
 
 ## What it actually does
 

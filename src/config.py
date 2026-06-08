@@ -18,14 +18,19 @@ through the scraping code.
 #               Tuesdays/Wednesdays on/after it. Verified against live AMC:
 #               The Odyssey first plays Tue Jul 21 2026; Dune: Part Three opens
 #               Fri Dec 18 2026 (its first Tue/Wed = Dec 22/23, not yet on sale).
+#
+# `weekdays`  : optional per-movie override of which days to watch
+#               (Mon=0 .. Sun=6). Omit to use the global TARGET_WEEKDAYS.
 MOVIES = {
     "Dune: Part Three": {
         "aliases": ["dune: part three", "dune part three"],
         "from_date": "2026-12-15",
+        "weekdays": [0, 1, 2, 3, 4, 5, 6],  # every day, not just Tue/Wed
     },
     "The Odyssey": {
         "aliases": ["the odyssey"],
         "from_date": "2026-07-14",
+        # no "weekdays" -> uses TARGET_WEEKDAYS (Tue/Wed)
     },
 }
 
