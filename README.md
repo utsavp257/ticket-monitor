@@ -24,6 +24,13 @@ It never re-alerts on shows you've already been told about, and it only ever
 fires on a real showtime tied to the movie — never on a stray title mention
 (e.g. a "The Odyssey Bundle" promo).
 
+**Can't-miss escalation.** For the buy-now moment — a *new IMAX showtime going
+on sale* (full house, you pick your seat) — it also fires a **Pushover emergency
+alert**, which re-sirens every 30s (overriding silent/DND) until you acknowledge
+in the app. Deliberately *not* triggered by seat-frees on a sold-out show (could
+be a single bad seat) or new-but-sold-out shows — those stay quiet Telegram. If
+`PUSHOVER_TOKEN`/`PUSHOVER_USER` aren't set, escalation is skipped silently.
+
 **Failure alerts.** Silent breakage is the real danger — if AMC changes its URL
 or layout, you'd just see "no alerts" and assume no tickets. So the monitor also
 pings you on Telegram if it looks broken: AMC unreachable (every fetch failed)
@@ -83,6 +90,19 @@ Instagram blocks GitHub's IPs, so IG alerts on the Action go through Apify:
 Without `APIFY_TOKEN` the IG check falls back to the free direct endpoint (works
 locally, usually blocked on CI). The check runs at most every
 `IG_CHECK_EVERY_HOURS` hours to stay within Apify's free credits.
+
+### Pushover (can't-miss escalation)
+
+For the siren-until-acknowledged alert when tickets go on sale:
+
+1. Install the **Pushover** app and create an account (one-time ~$5 per platform
+   after a 30-day trial; messages are then free).
+2. Your **User Key** is on the dashboard at <https://pushover.net>.
+3. Create an Application/API Token there ("Create an Application/API Token").
+4. Add both as repo secrets: `PUSHOVER_USER` and `PUSHOVER_TOKEN`.
+
+Test it from **Actions → Run workflow → test_pushover ✓**, or locally:
+`python src/main.py --test-pushover` (sends a 2-minute emergency test).
 
 ## How to check it's working (do these in order)
 

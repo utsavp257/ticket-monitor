@@ -28,6 +28,7 @@ from monitor_instagram import check_instagram
 from dates import movie_watch_dates
 from config import MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS
 import telegram
+import pushover
 from state import load_state, save_state
 
 
@@ -72,17 +73,34 @@ def diff_and_alert(results: list[dict], dry_run: bool) -> int:
             saved[key] = cur  # keep status fresh (e.g. a show that sold out)
             continue
 
+        # Escalate (Pushover siren) ONLY for the buy-now moment: a brand-new
+        # showtime that is actually available — full house, you pick your seat.
+        # Not seat-frees (could be one bad seat) and not new-but-sold-out shows.
+        escalate = _ordered(item["shows"],
+                            [t for t in new_times if not cur[t]])
+
         message = compose_alert(item, new_times, freed)
         if dry_run:
             print("  --- would send ---")
             print(message)
+            if escalate:
+                print(f"  --- would ESCALATE (Pushover): on sale {', '.join(escalate)}")
             print("  ------------------")
             continue
-        if telegram.send_message(message):
+        ok = telegram.send_message(message)
+        if escalate:
+            pushover.send_emergency(
+                message=(f"{item['movie']} IMAX — {item['weekday']} "
+                         f"{item['date']}\nOn sale now: {', '.join(escalate)}"),
+                title="🎟️ IMAX tickets ON SALE",
+                url=item["url"],
+                url_title="Book on AMC",
+            )
+        if ok:
             saved[key] = cur  # only commit state once the alert is delivered
             sent += 1
             print(f"  ✓ alerted: {key} (+{len(new_times)} new, "
-                  f"{len(freed)} freed)")
+                  f"{len(freed)} freed, {len(escalate)} escalated)")
         else:
             print(f"  ! send failed, will retry next run: {key}")
     if not dry_run:
@@ -256,6 +274,17 @@ def main() -> None:
         else:
             print("Failed — see error above. Check TELEGRAM_TOKEN / "
                   "TELEGRAM_CHAT_ID.")
+        return
+
+    if "--test-pushover" in args:
+        ok = pushover.send_emergency(
+            message="If your phone is sirening, escalation works. Tap to "
+                    "acknowledge to stop it.",
+            title="🎟️ Ticket monitor — TEST",
+            expire=120,  # auto-stops after 2 min even if not acknowledged
+        )
+        print("Sent (emergency, ~2 min). It should siren until you acknowledge."
+              if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
         return
 
     run(dry_run="--dry-run" in args, debug="--debug" in args)

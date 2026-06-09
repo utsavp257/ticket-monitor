@@ -54,6 +54,13 @@ IG_CHECK_EVERY_HOURS = 6
 # to this many hours so a persistent outage doesn't spam every run.
 FAILURE_ALERT_COOLDOWN_HOURS = 3
 
+# Pushover "emergency" escalation for the buy-now moment only (a NEW *available*
+# showtime going on sale — not seat-frees, which could be one bad seat). Pushover
+# re-sirens every PUSHOVER_RETRY sec until you acknowledge in the app, for up to
+# PUSHOVER_EXPIRE sec. Needs PUSHOVER_TOKEN / PUSHOVER_USER in the environment.
+PUSHOVER_RETRY = 30       # seconds between re-alerts (Pushover minimum is 30)
+PUSHOVER_EXPIRE = 1800    # give up re-alerting after 30 min if not acknowledged
+
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
 TARGET_WEEKDAYS = [1, 2]  # Tuesday, Wednesday
