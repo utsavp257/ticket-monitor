@@ -45,6 +45,11 @@ def main() -> None:
         if val:
             merged[field] = val
 
+    # This run's view of the consecutive-failure streak is authoritative.
+    if "amc_fail_streak" in our or "amc_fail_streak" in remote:
+        merged["amc_fail_streak"] = our.get(
+            "amc_fail_streak", remote.get("amc_fail_streak", 0))
+
     with open("state/seen.json", "w") as f:
         json.dump(merged, f, indent=2)
 

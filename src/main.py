@@ -26,7 +26,8 @@ from datetime import date
 from monitor_amc import check_amc
 from monitor_instagram import check_instagram
 from dates import movie_watch_dates
-from config import MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS
+from config import (MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS,
+                    AMC_FAIL_STREAK_FOR_ALERT)
 import telegram
 import pushover
 from state import load_state, save_state
@@ -210,23 +211,37 @@ def run(dry_run: bool, debug: bool) -> None:
     total = 0
 
     print("Checking AMC Lincoln Square...")
+    broken = None  # set to a reason string if this run looks broken
     try:
         results, health = check_amc(debug=debug)
         if not results:
             print("  · no showtimes yet on any watched date")
         total += diff_and_alert(results, dry_run)
-        # Health checks: distinguish "nothing on sale" from "scraper is broken".
+        # Distinguish "nothing on sale" from "scraper is broken".
         if health["dates_total"] and health["dates_fetched"] == 0:
-            alert_failure(
-                "AMC was unreachable — every page fetch failed (IP block or "
-                "outage).", dry_run)
+            broken = ("AMC was unreachable — every page fetch failed (IP block "
+                      "or outage).")
         elif health["dates_fetched"] and health["total_listings"] == 0:
-            alert_failure(
-                "AMC pages returned no movie listings at all — the showtimes "
-                "URL or page layout has likely changed.", dry_run)
+            broken = ("AMC pages returned no movie listings at all — the "
+                      "showtimes URL or page layout has likely changed.")
     except Exception as e:
         print(f"  ! AMC check failed: {e}")
-        alert_failure(f"AMC check crashed: {e}", dry_run)
+        broken = f"AMC check crashed: {e}"
+
+    # Debounce: only alert after AMC_FAIL_STREAK_FOR_ALERT consecutive failures,
+    # so a single transient timeout (self-recovers next run) doesn't cry wolf.
+    if not dry_run:
+        st = load_state()
+        streak = st.get("amc_fail_streak", 0) + 1 if broken else 0
+        st["amc_fail_streak"] = streak
+        save_state(st)
+        if broken and streak >= AMC_FAIL_STREAK_FOR_ALERT:
+            alert_failure(f"{broken} (failed {streak} runs in a row)", dry_run)
+        elif broken:
+            print(f"  · AMC problem (streak {streak}/"
+                  f"{AMC_FAIL_STREAK_FOR_ALERT}; alerting only if it persists)")
+    elif broken:
+        print(f"  ! would track AMC problem: {broken}")
 
     print("Checking Instagram...")
     last = load_state().get("ig_last_check", 0)
