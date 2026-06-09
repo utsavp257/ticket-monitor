@@ -16,7 +16,7 @@ import os
 
 import requests
 
-from config import PUSHOVER_RETRY, PUSHOVER_EXPIRE
+from config import PUSHOVER_RETRY, PUSHOVER_EXPIRE, PUSHOVER_SOUND
 
 
 def _creds() -> tuple[str | None, str | None]:
@@ -51,6 +51,7 @@ def send_emergency(
         "priority": 2,
         "retry": PUSHOVER_RETRY,
         "expire": expire,
+        "sound": PUSHOVER_SOUND,
     }
     if title:
         data["title"] = title

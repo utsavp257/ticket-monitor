@@ -60,6 +60,7 @@ FAILURE_ALERT_COOLDOWN_HOURS = 3
 # PUSHOVER_EXPIRE sec. Needs PUSHOVER_TOKEN / PUSHOVER_USER in the environment.
 PUSHOVER_RETRY = 30       # seconds between re-alerts (Pushover minimum is 30)
 PUSHOVER_EXPIRE = 1800    # give up re-alerting after 30 min if not acknowledged
+PUSHOVER_SOUND = "siren"  # built-in Pushover sound; "siren"/"persistent"/"alien"
 
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.
