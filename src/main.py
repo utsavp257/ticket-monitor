@@ -332,6 +332,23 @@ def main() -> None:
               if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
         return
 
+    if "--test-escalation" in args:
+        # Fire the exact siren a real "Dune new showtime on sale" would produce,
+        # so you can see/hear it. Touches no state (doesn't arm Dune).
+        ok = pushover.send_emergency(
+            message="Dune: Part Three IMAX — Tuesday 2026-12-22\n"
+                    "Grab now: 10:30am, 7:00pm",
+            title="🎟️ IMAX seats available",
+            url=("https://www.amctheatres.com/movie-theatres/new-york-city/"
+                 "amc-lincoln-square-13/showtimes/all/2026-12-22/"
+                 "amc-lincoln-square-13/all"),
+            url_title="Book on AMC",
+            expire=300,
+        )
+        print("Sent the Dune new-show escalation (emergency, ~5 min)."
+              if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
+        return
+
     run(dry_run="--dry-run" in args, debug="--debug" in args)
 
 

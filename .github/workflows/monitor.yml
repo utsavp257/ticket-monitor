@@ -21,6 +21,10 @@ on:
         description: "Send a test Pushover emergency alert and exit"
         type: boolean
         default: false
+      test_escalation:
+        description: "Send the exact 'Dune new showtime on sale' siren and exit"
+        type: boolean
+        default: false
 
 # Avoid overlapping runs stepping on the committed state file.
 concurrency:
@@ -69,6 +73,8 @@ jobs:
         run: |
           if [ "${{ inputs.test_pushover }}" = "true" ]; then
             python src/main.py --test-pushover
+          elif [ "${{ inputs.test_escalation }}" = "true" ]; then
+            python src/main.py --test-escalation
           elif [ -n "${{ inputs.probe_movie }}" ]; then
             python src/main.py --probe "${{ inputs.probe_movie }}"
           elif [ "${{ inputs.dry_run }}" = "true" ]; then
