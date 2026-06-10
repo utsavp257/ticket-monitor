@@ -50,6 +50,14 @@ def main() -> None:
         merged["amc_fail_streak"] = our.get(
             "amc_fail_streak", remote.get("amc_fail_streak", 0))
 
+    # Escalation-armed flags: once armed, stay armed (OR across both sides).
+    armed = {}
+    for src in (remote.get("escalation_armed", {}), our.get("escalation_armed", {})):
+        for movie, flag in src.items():
+            armed[movie] = armed.get(movie, False) or bool(flag)
+    if armed:
+        merged["escalation_armed"] = armed
+
     with open("state/seen.json", "w") as f:
         json.dump(merged, f, indent=2)
 

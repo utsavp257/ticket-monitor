@@ -21,16 +21,23 @@ through the scraping code.
 #
 # `weekdays`  : optional per-movie override of which days to watch
 #               (Mon=0 .. Sun=6). Omit to use the global TARGET_WEEKDAYS.
+# `escalate`  : Pushover-siren policy (default "new"):
+#                 "never"          - never siren (Telegram only)
+#                 "new"            - siren on a new available showtime
+#                 "new_then_seats" - siren on new available showtimes; once a new
+#                                    show has appeared, also siren on seat-frees
 MOVIES = {
     "Dune: Part Three": {
         "aliases": ["dune: part three", "dune part three"],
         "from_date": "2026-12-15",
         "weekdays": [0, 1, 2, 3, 4, 5, 6],  # every day, not just Tue/Wed
+        "escalate": "new_then_seats",       # siren on new shows, then seat-frees
     },
     "The Odyssey": {
         "aliases": ["the odyssey"],
         "from_date": "2026-07-14",
         # no "weekdays" -> uses TARGET_WEEKDAYS (Tue/Wed)
+        "escalate": "never",                # Telegram only, no siren ever
     },
 }
 

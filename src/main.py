@@ -57,10 +57,44 @@ def compose_alert(item: dict, new_times: list[str], freed: list[str]) -> str:
     return "\n".join(lines)
 
 
+def _escalate_policy(movie: str) -> str:
+    """Per-movie Pushover policy from MOVIES (default 'new')."""
+    spec = MOVIES.get(movie)
+    return spec.get("escalate", "new") if isinstance(spec, dict) else "new"
+
+
+def _escalation_times(item, cur, new_times, freed, armed_map) -> list[str]:
+    """Which showtimes (if any) should fire a Pushover siren, per policy.
+
+    - 'never': never escalate (e.g. The Odyssey).
+    - 'new':   escalate on a new *available* showtime (buy-now moment).
+    - 'new_then_seats': escalate on new available showtimes; a new show of any
+      kind 'arms' the movie, after which seat-frees (sold-out -> available) also
+      escalate. Before it's armed, nothing escalates.
+    """
+    movie = item["movie"]
+    policy = _escalate_policy(movie)
+    if policy == "never":
+        return []
+    new_available = [t for t in new_times if not cur[t]]
+    if policy == "new":
+        times = new_available
+    elif policy == "new_then_seats":
+        if new_times:                      # a new show "opened up" -> arm it
+            armed_map[movie] = True
+        times = list(new_available)
+        if armed_map.get(movie) and freed:  # only siren seat-frees once armed
+            times += freed
+    else:
+        times = new_available
+    return _ordered(item["shows"], list(dict.fromkeys(times)))
+
+
 def diff_and_alert(results: list[dict], dry_run: bool) -> int:
     """Compare current showtimes against saved state; alert on changes."""
     state = load_state()
     saved = state["shows"]  # {"movie|date": {time: sold_out}}
+    armed_map = state.setdefault("escalation_armed", {})  # {movie: True}
     sent = 0
     for item in results:
         key = f"{item['movie']}|{item['date']}"
@@ -74,26 +108,22 @@ def diff_and_alert(results: list[dict], dry_run: bool) -> int:
             saved[key] = cur  # keep status fresh (e.g. a show that sold out)
             continue
 
-        # Escalate (Pushover siren) ONLY for the buy-now moment: a brand-new
-        # showtime that is actually available — full house, you pick your seat.
-        # Not seat-frees (could be one bad seat) and not new-but-sold-out shows.
-        escalate = _ordered(item["shows"],
-                            [t for t in new_times if not cur[t]])
+        escalate = _escalation_times(item, cur, new_times, freed, armed_map)
 
         message = compose_alert(item, new_times, freed)
         if dry_run:
             print("  --- would send ---")
             print(message)
             if escalate:
-                print(f"  --- would ESCALATE (Pushover): on sale {', '.join(escalate)}")
+                print(f"  --- would ESCALATE (Pushover): {', '.join(escalate)}")
             print("  ------------------")
             continue
         ok = telegram.send_message(message)
         if escalate:
             pushover.send_emergency(
                 message=(f"{item['movie']} IMAX — {item['weekday']} "
-                         f"{item['date']}\nOn sale now: {', '.join(escalate)}"),
-                title="🎟️ IMAX tickets ON SALE",
+                         f"{item['date']}\nGrab now: {', '.join(escalate)}"),
+                title="🎟️ IMAX seats available",
                 url=item["url"],
                 url_title="Book on AMC",
             )
@@ -296,9 +326,9 @@ def main() -> None:
             message="If your phone is sirening, escalation works. Tap to "
                     "acknowledge to stop it.",
             title="🎟️ Ticket monitor — TEST",
-            expire=120,  # auto-stops after 2 min even if not acknowledged
+            expire=300,  # auto-stops after 5 min even if not acknowledged
         )
-        print("Sent (emergency, ~2 min). It should siren until you acknowledge."
+        print("Sent (emergency, ~5 min). It should siren until you acknowledge."
               if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
         return
 

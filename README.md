@@ -24,12 +24,17 @@ It never re-alerts on shows you've already been told about, and it only ever
 fires on a real showtime tied to the movie — never on a stray title mention
 (e.g. a "The Odyssey Bundle" promo).
 
-**Can't-miss escalation.** For the buy-now moment — a *new IMAX showtime going
-on sale* (full house, you pick your seat) — it also fires a **Pushover emergency
-alert**, which re-sirens every 30s (overriding silent/DND) until you acknowledge
-in the app. Deliberately *not* triggered by seat-frees on a sold-out show (could
-be a single bad seat) or new-but-sold-out shows — those stay quiet Telegram. If
-`PUSHOVER_TOKEN`/`PUSHOVER_USER` aren't set, escalation is skipped silently.
+**Can't-miss escalation.** A **Pushover emergency alert** (re-sirens every 30s,
+overriding silent/DND, until acknowledged) fires per the movie's `escalate`
+policy in `MOVIES`:
+- `"never"` — Telegram only, no siren (**The Odyssey**).
+- `"new"` — siren when a new *available* showtime goes on sale.
+- `"new_then_seats"` — siren on new available showtimes; once a new show has
+  appeared (it "arms" the movie), also siren on **seat-frees** (a sold-out show
+  freeing a seat). **Dune: Part Three** uses this — so you're sirened when its
+  shows open *and* every time a seat later opens up on a sold-out Dune show.
+
+If `PUSHOVER_TOKEN`/`PUSHOVER_USER` aren't set, escalation is skipped silently.
 
 **Failure alerts.** Silent breakage is the real danger — if AMC changes its URL
 or layout, you'd just see "no alerts" and assume no tickets. So the monitor also
