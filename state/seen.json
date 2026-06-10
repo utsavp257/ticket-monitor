@@ -9,7 +9,7 @@
     "The Odyssey|2026-07-22": {
       "10:00am": false,
       "2:00pm": false,
-      "6:00pm": true,
+      "6:00pm": false,
       "10:00pm": true
     },
     "Dune: Part Three|2026-12-18": {
@@ -41,5 +41,5 @@
   ],
   "ig_last_check": 1781097615.419575,
   "last_failure_alert": 1781047517.260396,
-  "amc_fail_streak": 1
+  "amc_fail_streak": 0
 }
