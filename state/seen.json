@@ -3,7 +3,7 @@
     "The Odyssey|2026-07-21": {
       "10:00am": false,
       "2:00pm": false,
-      "6:00pm": true,
+      "6:00pm": false,
       "10:00pm": true
     },
     "The Odyssey|2026-07-22": {
