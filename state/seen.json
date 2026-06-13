@@ -3,7 +3,7 @@
     "The Odyssey|2026-07-21": {
       "10:00am": false,
       "2:00pm": false,
-      "6:00pm": false,
+      "6:00pm": true,
       "10:00pm": true
     },
     "The Odyssey|2026-07-22": {
@@ -39,7 +39,7 @@
     "DXuTa9vFIJ_",
     "DZGW7NpJOMY"
   ],
-  "ig_last_check": 1781317823.3809977,
+  "ig_last_check": 1781318122.6119716,
   "last_failure_alert": 1781047517.260396,
   "amc_fail_streak": 0
 }
