@@ -30,6 +30,7 @@ from config import (MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS,
                     AMC_FAIL_STREAK_FOR_ALERT)
 import telegram
 import pushover
+import healthcheck
 from state import load_state, save_state
 
 
@@ -347,6 +348,11 @@ def main() -> None:
         )
         print("Sent the Dune new-show escalation (emergency, ~5 min)."
               if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
+        return
+
+    if "--health-check" in args:
+        # exit 0 even on failure — the alert is the Telegram, not a red run
+        healthcheck.run_and_notify(announce="--announce" in args)
         return
 
     run(dry_run="--dry-run" in args, debug="--debug" in args)

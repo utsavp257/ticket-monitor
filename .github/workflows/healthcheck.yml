@@ -1,0 +1,68 @@
+name: Health Check
+
+on:
+  schedule:
+    # Every 6 hours — verifies the whole pipeline and Telegrams you if broken.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      announce:
+        description: "Also send a Telegram even when healthy (confirmation)"
+        type: boolean
+        default: false
+
+# Separate group from the monitor so they don't cancel each other.
+concurrency:
+  group: ticket-monitor-healthcheck
+  cancel-in-progress: false
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Cache Playwright browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run health check
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+        run: |
+          if [ "${{ inputs.announce }}" = "true" ]; then
+            python src/main.py --health-check --announce
+          else
+            python src/main.py --health-check
+          fi
+
+      # If the health check itself crashed (couldn't even run), Telegram that too.
+      - name: Notify on workflow failure
+        if: failure()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            --data-urlencode chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=🩺 ticket-monitor HEALTH CHECK workflow crashed — ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            >/dev/null || true
