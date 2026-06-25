@@ -9,8 +9,8 @@
     "The Odyssey|2026-07-22": {
       "10:00am": false,
       "2:00pm": false,
-      "6:00pm": true,
-      "10:00pm": true
+      "6:00pm": false,
+      "10:00pm": false
     },
     "Dune: Part Three|2026-12-18": {
       "7:00pm": true,
@@ -41,7 +41,7 @@
   ],
   "ig_last_check": 1782409384.2599826,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1782428457.1485736,
+  "amc_last_check": 1782428609.851749,
   "amc_fail_streak": 0,
   "amc_api_confirmed": true,
   "amc_theatre_id": 2116
