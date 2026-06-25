@@ -21,10 +21,17 @@ import amc_api
 
 def check_amc(debug: bool = False, movies: dict | None = None):
     """Returns (results, health). Uses the official AMC API when AMC_VENDOR_KEY
-    is set (reliable, unblocked), else falls back to HTML scraping."""
+    is set (reliable, unblocked), else falls back to HTML scraping. If the API
+    key is rejected/unavailable (e.g. not activated yet), fall back to scraping
+    so the monitor keeps working."""
+    movies = movies or MOVIES
     if amc_api.is_configured():
-        return _check_via_api(movies or MOVIES)
-    return _check_via_scrape(debug, movies or MOVIES)
+        try:
+            return _check_via_api(movies)
+        except Exception as e:
+            print(f"  ! AMC API unavailable ({str(e).splitlines()[0]}); "
+                  "falling back to scrape")
+    return _check_via_scrape(debug, movies)
 
 
 def _check_via_api(movies: dict):
