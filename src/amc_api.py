@@ -39,6 +39,15 @@ def _get(path: str, params: dict | None = None) -> dict:
     return r.json()
 
 
+def ping() -> bool:
+    """One cheap authed call — True if the vendor key is authorized."""
+    try:
+        _get("theatres", {"page-size": 1})
+        return True
+    except Exception:
+        return False
+
+
 def resolve_theatre_id() -> tuple[int, str]:
     """Find AMC Lincoln Square 13's numeric id by its slug.
 

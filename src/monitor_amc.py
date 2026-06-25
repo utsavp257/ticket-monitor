@@ -16,6 +16,7 @@ from collections import defaultdict
 from config import MOVIES, IMAX_ONLY, AMC_THEATRE_ID, amc_url
 from dates import movie_watch_dates
 from scrape import fetch, find_shows, count_listings
+from state import load_state, save_state
 import amc_api
 
 
@@ -38,7 +39,14 @@ def _check_via_api(movies: dict):
     """Official API path — lightweight JSON, no Cloudflare wall. Each date is
     fetched once and matched against every movie watching it."""
     today = date.today()
-    tid = AMC_THEATRE_ID or amc_api.resolve_theatre_id()[0]
+    tid = AMC_THEATRE_ID
+    if not tid:
+        st = load_state()
+        tid = st.get("amc_theatre_id")
+        if not tid:
+            tid = amc_api.resolve_theatre_id()[0]
+            st["amc_theatre_id"] = tid
+            save_state(st)
 
     # date -> [(movie, aliases)] for the movies watching that date
     date_movies: dict[str, list] = defaultdict(list)

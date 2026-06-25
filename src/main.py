@@ -31,6 +31,7 @@ from config import (MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS,
 import telegram
 import pushover
 import healthcheck
+import amc_api
 from state import load_state, save_state
 
 
@@ -236,14 +237,43 @@ def alert_failure(reason: str, dry_run: bool) -> None:
         print(f"  ! could not send failure alert: {reason}")
 
 
+def check_api_activation(dry_run: bool) -> None:
+    """One-time: when the AMC API key first authorizes, send a Telegram. Also
+    flips amc_api_confirmed in state, which lifts the scrape throttle (→ 5-min)."""
+    if not amc_api.is_configured():
+        return
+    state = load_state()
+    if state.get("amc_api_confirmed"):
+        return
+    if not amc_api.ping():
+        print("  · AMC API key not authorized yet")
+        return
+    print("  ✓ AMC API key is now authorized!")
+    if dry_run:
+        return
+    if telegram.send_message(
+            "✅ AMC API key is LIVE\n\nThe monitor just switched to AMC's "
+            "official API — no more datacenter-IP blocking — and is now checking "
+            "every 5 minutes."):
+        state["amc_api_confirmed"] = True
+        save_state(state)
+
+
 def run(dry_run: bool, debug: bool) -> None:
     if dry_run:
         print("DRY RUN — no messages will be sent.\n")
     total = 0
 
+    # Detect first-time API activation (and notify); lifts the throttle below.
+    check_api_activation(dry_run)
+    api_live = amc_api.is_configured() and load_state().get("amc_api_confirmed")
+
     print("Checking AMC Lincoln Square...")
     amc_last = load_state().get("amc_last_check", 0)
-    if not dry_run and time.time() - amc_last < AMC_CHECK_EVERY_MINUTES * 60:
+    # The throttle exists to avoid AMC blocking the scraper IP. The official API
+    # doesn't block, so when it's live we check every run (5-min cron).
+    if (not dry_run and not api_live
+            and time.time() - amc_last < AMC_CHECK_EVERY_MINUTES * 60):
         mins = round((time.time() - amc_last) / 60)
         print(f"  · skipped (checked {mins}m ago; every "
               f"{AMC_CHECK_EVERY_MINUTES}m to avoid AMC rate-limiting our IP)")

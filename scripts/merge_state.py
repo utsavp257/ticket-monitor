@@ -58,6 +58,14 @@ def main() -> None:
     if armed:
         merged["escalation_armed"] = armed
 
+    # Once the AMC API key is confirmed live, it stays live (OR).
+    if remote.get("amc_api_confirmed") or our.get("amc_api_confirmed"):
+        merged["amc_api_confirmed"] = True
+    # Cached theatre id — keep whichever side has it.
+    tid = our.get("amc_theatre_id") or remote.get("amc_theatre_id")
+    if tid:
+        merged["amc_theatre_id"] = tid
+
     with open("state/seen.json", "w") as f:
         json.dump(merged, f, indent=2)
 
