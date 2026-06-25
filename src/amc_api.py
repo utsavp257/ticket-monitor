@@ -85,12 +85,25 @@ def _is_imax(showtime: dict) -> bool:
 
 
 def iter_showtimes(theatre_id: int, date_iso: str) -> list[dict]:
-    """All showtime objects for a theatre+date (follows pagination)."""
+    """All showtime objects for a theatre+date (follows pagination).
+
+    AMC returns 404 ("No showtimes found.") for a date with nothing scheduled —
+    that's a valid empty result, not an error, so we return []. Other non-200s
+    (auth, server errors) still raise.
+    """
     out: list[dict] = []
     page = 1
     while page <= 20:  # safety cap
-        data = _get(f"theatres/{theatre_id}/showtimes/{date_iso}",
-                    {"page-size": 100, "page-number": page})
+        r = requests.get(
+            f"{API}/theatres/{theatre_id}/showtimes/{date_iso}",
+            params={"page-size": 100, "page-number": page},
+            headers=_headers(), timeout=25)
+        if r.status_code == 404:
+            break  # no showtimes for this date — empty, not an error
+        if r.status_code != 200:
+            raise RuntimeError(
+                f"AMC API {r.status_code} on showtimes/{date_iso}: {r.text[:160]}")
+        data = r.json()
         showtimes = data.get("_embedded", {}).get("showtimes", [])
         out.extend(showtimes)
         if not data.get("_links", {}).get("next") or not showtimes:
