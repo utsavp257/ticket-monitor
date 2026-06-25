@@ -11,19 +11,61 @@ from __future__ import annotations
 
 from datetime import date
 
-from config import MOVIES, IMAX_ONLY, amc_url
+from collections import defaultdict
+
+from config import MOVIES, IMAX_ONLY, AMC_THEATRE_ID, amc_url
 from dates import movie_watch_dates
 from scrape import fetch, find_shows, count_listings
+import amc_api
 
 
 def check_amc(debug: bool = False, movies: dict | None = None):
-    """Returns (results, health).
+    """Returns (results, health). Uses the official AMC API when AMC_VENDOR_KEY
+    is set (reliable, unblocked), else falls back to HTML scraping."""
+    if amc_api.is_configured():
+        return _check_via_api(movies or MOVIES)
+    return _check_via_scrape(debug, movies or MOVIES)
 
-    health = {dates_total, dates_fetched, total_listings} lets the caller detect
-    a broken scraper: every fetch failing (unreachable) or pages with zero movie
-    listings (URL/layout changed).
-    """
-    movies = movies or MOVIES
+
+def _check_via_api(movies: dict):
+    """Official API path — lightweight JSON, no Cloudflare wall. Each date is
+    fetched once and matched against every movie watching it."""
+    today = date.today()
+    tid = AMC_THEATRE_ID or amc_api.resolve_theatre_id()[0]
+
+    # date -> [(movie, aliases)] for the movies watching that date
+    date_movies: dict[str, list] = defaultdict(list)
+    for movie, spec in movies.items():
+        aliases = spec["aliases"] if isinstance(spec, dict) else spec
+        for d in movie_watch_dates(spec, today):
+            date_movies[d.isoformat()].append((movie, aliases))
+
+    results: list[dict] = []
+    ok = 0
+    total = 0
+    for iso in sorted(date_movies):
+        try:
+            showtimes = amc_api.iter_showtimes(tid, iso)
+        except Exception as e:
+            print(f"  ! AMC API {iso} failed: {str(e).splitlines()[0]}")
+            continue
+        ok += 1
+        total += len(showtimes)
+        wd = date.fromisoformat(iso).strftime("%A")
+        for movie, aliases in date_movies[iso]:
+            shows = amc_api.match_shows(showtimes, aliases, imax_only=IMAX_ONLY)
+            if shows:
+                results.append({"movie": movie, "date": iso, "weekday": wd,
+                                "url": amc_url(iso), "shows": shows})
+    # source=api: 0 matching shows on far-future dates is normal, NOT "broken";
+    # only all-calls-failing (ok==0) signals a problem.
+    health = {"source": "api", "dates_total": len(date_movies),
+              "dates_fetched": ok, "total_listings": total}
+    return results, health
+
+
+def _check_via_scrape(debug: bool, movies: dict):
+    """Fallback: scrape the consumer site (subject to IP blocking)."""
     today = date.today()
     cache: dict[str, tuple] = {}
     results: list[dict] = []
@@ -54,6 +96,7 @@ def check_amc(debug: bool = False, movies: dict | None = None):
 
     fetched = [v for v in cache.values() if v is not None]
     health = {
+        "source": "scrape",
         "dates_total": len(cache),
         "dates_fetched": len(fetched),
         "total_listings": sum(count_listings(text) for _html, text in fetched),

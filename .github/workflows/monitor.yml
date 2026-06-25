@@ -25,6 +25,10 @@ on:
         description: "Send the exact 'Dune new showtime on sale' siren and exit"
         type: boolean
         default: false
+      discover_amc:
+        description: "Print AMC API theatre id + sample showtimes and exit"
+        type: boolean
+        default: false
 
 # Avoid overlapping runs stepping on the committed state file.
 concurrency:
@@ -70,8 +74,11 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
           PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+          AMC_VENDOR_KEY: ${{ secrets.AMC_VENDOR_KEY }}
         run: |
-          if [ "${{ inputs.test_pushover }}" = "true" ]; then
+          if [ "${{ inputs.discover_amc }}" = "true" ]; then
+            python src/main.py --discover-amc
+          elif [ "${{ inputs.test_pushover }}" = "true" ]; then
             python src/main.py --test-pushover
           elif [ "${{ inputs.test_escalation }}" = "true" ]; then
             python src/main.py --test-escalation

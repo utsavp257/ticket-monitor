@@ -48,6 +48,7 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
           PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+          AMC_VENDOR_KEY: ${{ secrets.AMC_VENDOR_KEY }}
         run: |
           if [ "${{ inputs.announce }}" = "true" ]; then
             python src/main.py --health-check --announce

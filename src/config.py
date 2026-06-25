@@ -74,6 +74,13 @@ AMC_FAIL_STREAK_FOR_ALERT = 2
 # block cool off. Drop toward 5 as Jul (Odyssey) / Dec (Dune) approach.
 AMC_CHECK_EVERY_MINUTES = 30
 
+# AMC Lincoln Square 13 slug — used to resolve its numeric id via the official
+# API (api.amctheatres.com). The API is used when AMC_VENDOR_KEY is set; it's
+# lightweight JSON, not behind Cloudflare, so it doesn't block our IP.
+AMC_THEATRE_SLUG = "amc-lincoln-square-13"
+# Filled in after discovery (the numeric theatre id) to skip per-run lookup.
+AMC_THEATRE_ID = None
+
 # Pushover "emergency" escalation for the buy-now moment only (a NEW *available*
 # showtime going on sale — not seat-frees, which could be one bad seat). Pushover
 # re-sirens every PUSHOVER_RETRY sec until you acknowledge in the app, for up to

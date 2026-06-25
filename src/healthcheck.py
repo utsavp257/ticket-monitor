@@ -23,10 +23,12 @@ import requests
 
 import telegram
 import pushover
-from config import MOVIES, amc_url
+import amc_api
+from config import MOVIES, AMC_THEATRE_ID, amc_url
 from dates import movie_watch_dates
 from scrape import fetch, find_shows, count_listings
 from state import load_state
+from datetime import timedelta
 
 TIME_TOKEN = re.compile(r"\b\d{1,2}:\d{2}\s*[ap]\.?m\.?", re.IGNORECASE)
 
@@ -78,40 +80,56 @@ def run() -> tuple[list[str], list[str], list[str]]:
     dates = sorted({d.isoformat()
                     for spec in MOVIES.values()
                     for d in movie_watch_dates(spec, today)})
-    fetched = 0
-    total_listings = 0
-    total_times = 0
     per_movie = {m: 0 for m in MOVIES}
-    for iso in dates:
-        try:
-            _html, text = fetch(amc_url(iso))
-        except Exception as e:
-            report.append(f"  AMC {iso}: fetch FAIL ({str(e).splitlines()[0]})")
-            continue
-        fetched += 1
-        total_listings += count_listings(text)
-        total_times += len(TIME_TOKEN.findall(text))
-        for movie, spec in MOVIES.items():
-            aliases = spec["aliases"] if isinstance(spec, dict) else spec
-            if find_shows(text, aliases):
-                per_movie[movie] += 1
 
-    report.append(f"AMC: fetched {fetched}/{len(dates)} dates | "
-                  f"{total_listings} listings | {total_times} showtimes parsed")
+    if amc_api.is_configured():
+        # Official API path. A near date proves the API works (theatre is open),
+        # since far-future watched dates legitimately have no showtimes.
+        try:
+            tid = AMC_THEATRE_ID or amc_api.resolve_theatre_id()[0]
+            near = (today + timedelta(days=2)).isoformat()
+            near_count = len(amc_api.iter_showtimes(tid, near))
+            report.append(f"AMC API: OK (theatre {tid}, {near_count} showtimes "
+                          f"on {near})")
+            if near_count == 0:
+                failures.append("AMC API returned 0 showtimes for a near date "
+                                "— key or endpoint problem")
+            for iso in dates:
+                showtimes = amc_api.iter_showtimes(tid, iso)
+                for movie, spec in MOVIES.items():
+                    aliases = spec["aliases"] if isinstance(spec, dict) else spec
+                    if amc_api.match_shows(showtimes, aliases, False):
+                        per_movie[movie] += 1
+        except Exception as e:
+            failures.append(f"AMC API failed: {str(e).splitlines()[0]}")
+    else:
+        # Fallback: scrape the consumer site (subject to IP blocking).
+        fetched = 0
+        total_listings = 0
+        for iso in dates:
+            try:
+                _html, text = fetch(amc_url(iso))
+            except Exception as e:
+                report.append(f"  AMC {iso}: fetch FAIL ({str(e).splitlines()[0]})")
+                continue
+            fetched += 1
+            total_listings += count_listings(text)
+            for movie, spec in MOVIES.items():
+                aliases = spec["aliases"] if isinstance(spec, dict) else spec
+                if find_shows(text, aliases):
+                    per_movie[movie] += 1
+        report.append(f"AMC (scrape): fetched {fetched}/{len(dates)} dates | "
+                      f"{total_listings} listings")
+        if dates and fetched == 0:
+            failures.append("AMC unreachable — every page fetch failed")
+        elif fetched and total_listings == 0:
+            failures.append("AMC returned zero listings — IP blocked or layout changed")
+
     for movie, count in per_movie.items():
         report.append(f"  {movie}: found on {count}/{len(dates)} watched dates")
-
-    if dates and fetched == 0:
-        failures.append("AMC unreachable — every page fetch failed")
-    elif fetched and total_listings == 0:
-        failures.append("AMC returned zero movie listings — URL/layout changed")
-    elif fetched and total_times == 0:
-        failures.append("AMC pages parsed no showtimes — parser likely broken")
-    else:
-        for movie, count in per_movie.items():
-            if count == 0:
-                warnings.append(f"{movie} not found on any watched date "
-                                "(off-sale, or its title/alias changed?)")
+        if not failures and count == 0:
+            warnings.append(f"{movie} not found on any watched date "
+                            "(off-sale, or its title/alias changed?)")
 
     # --- Instagram (best-effort; never a hard failure) ---
     try:

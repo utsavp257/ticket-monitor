@@ -256,13 +256,15 @@ def run(dry_run: bool, debug: bool) -> None:
             total += diff_and_alert(results, dry_run)
             # Distinguish "nothing on sale" from "scraper is broken".
             if health["dates_total"] and health["dates_fetched"] == 0:
-                broken = ("AMC was unreachable — every page fetch failed "
-                          "(IP block or outage).")
-            elif health["dates_fetched"] and health["total_listings"] == 0:
+                broken = ("AMC was unreachable — every fetch failed "
+                          "(IP block, bad API key, or outage).")
+            elif (health.get("source") == "scrape"
+                  and health["dates_fetched"] and health["total_listings"] == 0):
+                # Only meaningful when scraping — the API legitimately returns
+                # no matches for far-future dates.
                 broken = ("AMC returned pages with zero movie listings — likely "
                           "our datacenter IP is being rate-limited/blocked (it "
-                          "works from a normal connection), or the page layout "
-                          "changed.")
+                          "works from a normal connection), or the layout changed.")
         except Exception as e:
             print(f"  ! AMC check failed: {e}")
             broken = f"AMC check crashed: {e}"
@@ -358,6 +360,15 @@ def main() -> None:
         )
         print("Sent the Dune new-show escalation (emergency, ~5 min)."
               if ok else "Failed — check PUSHOVER_TOKEN / PUSHOVER_USER.")
+        return
+
+    if "--discover-amc" in argv:
+        import amc_api
+        from datetime import date, timedelta
+        if not amc_api.is_configured():
+            print("AMC_VENDOR_KEY not set.")
+            return
+        amc_api.discover((date.today() + timedelta(days=2)).isoformat())
         return
 
     if "--health-check" in args:
