@@ -40,7 +40,7 @@ def main() -> None:
         merged["ig_seen"] = sorted(seen)
 
     # Scalar "most recent wins" fields.
-    for field in ("ig_last_check", "last_failure_alert"):
+    for field in ("ig_last_check", "last_failure_alert", "amc_last_check"):
         val = max(remote.get(field, 0), our.get(field, 0))
         if val:
             merged[field] = val

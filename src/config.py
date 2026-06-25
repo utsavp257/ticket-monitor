@@ -66,6 +66,12 @@ FAILURE_ALERT_COOLDOWN_HOURS = 3
 # wolf. 2 ≈ a sustained ~10-min outage before you're pinged.
 AMC_FAIL_STREAK_FOR_ALERT = 2
 
+# AMC rate-limits/blocks datacenter IPs under load. Even if the cron fires more
+# often, only actually hit AMC this often — keeps our footprint low so the
+# shared GitHub-runner IP doesn't get blocked. Lower it when a release is
+# imminent and you need tighter timing (accepting more block risk).
+AMC_CHECK_EVERY_MINUTES = 15
+
 # Pushover "emergency" escalation for the buy-now moment only (a NEW *available*
 # showtime going on sale — not seat-frees, which could be one bad seat). Pushover
 # re-sirens every PUSHOVER_RETRY sec until you acknowledge in the app, for up to

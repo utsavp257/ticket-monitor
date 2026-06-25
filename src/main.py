@@ -27,7 +27,7 @@ from monitor_amc import check_amc
 from monitor_instagram import check_instagram
 from dates import movie_watch_dates
 from config import (MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS,
-                    AMC_FAIL_STREAK_FOR_ALERT)
+                    AMC_FAIL_STREAK_FOR_ALERT, AMC_CHECK_EVERY_MINUTES)
 import telegram
 import pushover
 import healthcheck
@@ -242,37 +242,47 @@ def run(dry_run: bool, debug: bool) -> None:
     total = 0
 
     print("Checking AMC Lincoln Square...")
-    broken = None  # set to a reason string if this run looks broken
-    try:
-        results, health = check_amc(debug=debug)
-        if not results:
-            print("  · no showtimes yet on any watched date")
-        total += diff_and_alert(results, dry_run)
-        # Distinguish "nothing on sale" from "scraper is broken".
-        if health["dates_total"] and health["dates_fetched"] == 0:
-            broken = ("AMC was unreachable — every page fetch failed (IP block "
-                      "or outage).")
-        elif health["dates_fetched"] and health["total_listings"] == 0:
-            broken = ("AMC pages returned no movie listings at all — the "
-                      "showtimes URL or page layout has likely changed.")
-    except Exception as e:
-        print(f"  ! AMC check failed: {e}")
-        broken = f"AMC check crashed: {e}"
+    amc_last = load_state().get("amc_last_check", 0)
+    if not dry_run and time.time() - amc_last < AMC_CHECK_EVERY_MINUTES * 60:
+        mins = round((time.time() - amc_last) / 60)
+        print(f"  · skipped (checked {mins}m ago; every "
+              f"{AMC_CHECK_EVERY_MINUTES}m to avoid AMC rate-limiting our IP)")
+    else:
+        broken = None  # set to a reason string if this run looks broken
+        try:
+            results, health = check_amc(debug=debug)
+            if not results:
+                print("  · no showtimes yet on any watched date")
+            total += diff_and_alert(results, dry_run)
+            # Distinguish "nothing on sale" from "scraper is broken".
+            if health["dates_total"] and health["dates_fetched"] == 0:
+                broken = ("AMC was unreachable — every page fetch failed "
+                          "(IP block or outage).")
+            elif health["dates_fetched"] and health["total_listings"] == 0:
+                broken = ("AMC returned pages with zero movie listings — likely "
+                          "our datacenter IP is being rate-limited/blocked (it "
+                          "works from a normal connection), or the page layout "
+                          "changed.")
+        except Exception as e:
+            print(f"  ! AMC check failed: {e}")
+            broken = f"AMC check crashed: {e}"
 
-    # Debounce: only alert after AMC_FAIL_STREAK_FOR_ALERT consecutive failures,
-    # so a single transient timeout (self-recovers next run) doesn't cry wolf.
-    if not dry_run:
-        st = load_state()
-        streak = st.get("amc_fail_streak", 0) + 1 if broken else 0
-        st["amc_fail_streak"] = streak
-        save_state(st)
-        if broken and streak >= AMC_FAIL_STREAK_FOR_ALERT:
-            alert_failure(f"{broken} (failed {streak} runs in a row)", dry_run)
+        # Debounce: alert only after AMC_FAIL_STREAK_FOR_ALERT consecutive
+        # failures, so a single transient blip doesn't cry wolf.
+        if not dry_run:
+            st = load_state()
+            st["amc_last_check"] = time.time()
+            st["amc_fail_streak"] = st.get("amc_fail_streak", 0) + 1 if broken else 0
+            streak = st["amc_fail_streak"]
+            save_state(st)
+            if broken and streak >= AMC_FAIL_STREAK_FOR_ALERT:
+                alert_failure(f"{broken} (failed {streak} checks in a row)",
+                              dry_run)
+            elif broken:
+                print(f"  · AMC problem (streak {streak}/"
+                      f"{AMC_FAIL_STREAK_FOR_ALERT}; alerting only if it persists)")
         elif broken:
-            print(f"  · AMC problem (streak {streak}/"
-                  f"{AMC_FAIL_STREAK_FOR_ALERT}; alerting only if it persists)")
-    elif broken:
-        print(f"  ! would track AMC problem: {broken}")
+            print(f"  ! would track AMC problem: {broken}")
 
     print("Checking Instagram...")
     last = load_state().get("ig_last_check", 0)
