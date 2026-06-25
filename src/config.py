@@ -70,7 +70,9 @@ AMC_FAIL_STREAK_FOR_ALERT = 2
 # often, only actually hit AMC this often — keeps our footprint low so the
 # shared GitHub-runner IP doesn't get blocked. Lower it when a release is
 # imminent and you need tighter timing (accepting more block risk).
-AMC_CHECK_EVERY_MINUTES = 15
+# Set to 30 while the movies are months out — minimal footprint to let AMC's
+# block cool off. Drop toward 5 as Jul (Odyssey) / Dec (Dune) approach.
+AMC_CHECK_EVERY_MINUTES = 30
 
 # Pushover "emergency" escalation for the buy-now moment only (a NEW *available*
 # showtime going on sale — not seat-frees, which could be one bad seat). Pushover
