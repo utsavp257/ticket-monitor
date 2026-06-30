@@ -55,8 +55,15 @@ INSTAGRAM_ACCOUNTS = ["dunemovie"]
 # only actually hit Instagram every IG_CHECK_EVERY_HOURS hours, and we rotate
 # across up to three keys (APIFY_TOKEN, APIFY_TOKEN_2, APIFY_TOKEN_3) to spread
 # the load — see monitor_instagram.check_instagram.
+#
+# Cost budget: the actor (apify/instagram-scraper) is pay-per-result at
+# $2.70 / 1,000 results; one scrape = 1 account x 12 results. So monthly spend
+# ~= (730 / IG_CHECK_EVERY_HOURS) * 12 * $0.0027. At 1.9h that's ~384 scrapes/mo
+# ~= $12.4, which split across the 3 rotating keys is ~$4.15 each — under every
+# key's $5/mo free credit (and ~$12.4 of the combined $15 free). Raise this
+# number to spend less; lower it (more frequent checks) to spend more.
 APIFY_ACTOR = "apify~instagram-scraper"
-IG_CHECK_EVERY_HOURS = 6
+IG_CHECK_EVERY_HOURS = 1.9
 
 # Send a Telegram alert if the monitor looks broken — AMC unreachable, or its
 # pages parse to zero movie listings (a sign the URL/layout changed). Throttled
