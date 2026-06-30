@@ -52,7 +52,9 @@ INSTAGRAM_ACCOUNTS = ["dunemovie"]
 # Instagram blocks datacenter IPs, so on CI we go through Apify (residential
 # proxies) when an APIFY_TOKEN is set; otherwise we try the free direct endpoint
 # (works locally, usually 429s on CI). Free Apify credits are limited, so we
-# only actually hit Instagram every IG_CHECK_EVERY_HOURS hours.
+# only actually hit Instagram every IG_CHECK_EVERY_HOURS hours, and we rotate
+# across up to three keys (APIFY_TOKEN, APIFY_TOKEN_2, APIFY_TOKEN_3) to spread
+# the load — see monitor_instagram.check_instagram.
 APIFY_ACTOR = "apify~instagram-scraper"
 IG_CHECK_EVERY_HOURS = 6
 

@@ -14,6 +14,7 @@ import os
 import requests
 
 from config import INSTAGRAM_ACCOUNTS, APIFY_ACTOR
+from state import load_state, save_state
 
 # Public web app id Instagram's own site sends with this endpoint.
 IG_APP_ID = "936619743392459"
@@ -24,15 +25,32 @@ UA = (
 )
 
 
-def fetch_posts(username: str) -> list[dict]:
+def _apify_tokens() -> list[str]:
+    """Apify API tokens in env-var order: APIFY_TOKEN, APIFY_TOKEN_2,
+    APIFY_TOKEN_3. Supplying several free-tier keys lets us rotate across them
+    (see check_instagram) and roughly triples our monthly credits. Empty/unset
+    vars and duplicates are dropped; a lone APIFY_TOKEN still works as before.
+    """
+    tokens: list[str] = []
+    for name in ("APIFY_TOKEN", "APIFY_TOKEN_2", "APIFY_TOKEN_3"):
+        tok = os.environ.get(name, "").strip()
+        if tok and tok not in tokens:
+            tokens.append(tok)
+    return tokens
+
+
+def fetch_posts(username: str, tokens: list[str] | None = None) -> list[dict]:
     """Recent posts for a username: [{shortcode, timestamp, caption}].
 
-    Uses Apify (residential proxies) when APIFY_TOKEN is set — required from CI,
-    since Instagram blocks datacenter IPs. Falls back to Instagram's free direct
-    endpoint otherwise (fine locally, usually blocked on CI).
+    Uses Apify (residential proxies) when any APIFY_TOKEN* is set — required
+    from CI, since Instagram blocks datacenter IPs. Falls back to Instagram's
+    free direct endpoint otherwise (fine locally, usually blocked on CI).
+    `tokens` is the rotated key order to try; defaults to env order.
     """
-    if os.environ.get("APIFY_TOKEN"):
-        return _fetch_via_apify(username)
+    if tokens is None:
+        tokens = _apify_tokens()
+    if tokens:
+        return _fetch_via_apify(username, tokens)
     return _fetch_direct(username)
 
 
@@ -64,8 +82,24 @@ def _fetch_direct(username: str) -> list[dict]:
     return posts
 
 
-def _fetch_via_apify(username: str) -> list[dict]:
-    token = os.environ["APIFY_TOKEN"]
+def _fetch_via_apify(username: str, tokens: list[str]) -> list[dict]:
+    """Try each token in order until one succeeds, so a single exhausted /
+    rate-limited free-tier key falls through to the next instead of failing the
+    whole scrape. `tokens` is already rotated by check_instagram so the starting
+    key varies per run (load spreads evenly across all keys)."""
+    last_err: Exception = RuntimeError("no Apify tokens configured")
+    for i, token in enumerate(tokens):
+        try:
+            return _apify_call(username, token)
+        except Exception as e:
+            last_err = e
+            if i < len(tokens) - 1:
+                print(f"  · Apify key {i + 1}/{len(tokens)} failed ({e}); "
+                      f"trying next")
+    raise last_err
+
+
+def _apify_call(username: str, token: str) -> list[dict]:
     resp = requests.post(
         f"https://api.apify.com/v2/acts/{APIFY_ACTOR}/run-sync-get-dataset-items",
         params={"token": token},
@@ -96,11 +130,27 @@ def _fetch_via_apify(username: str) -> list[dict]:
 
 def check_instagram() -> list[dict]:
     """Posts across all configured accounts. One account failing doesn't stop
-    the others."""
+    the others.
+
+    Rotates the Apify key each run when several are configured: a monotonic
+    counter in state picks the starting key, so consecutive runs lead with
+    different keys and the (limited free-tier) credit load spreads evenly.
+    Remaining keys act as fallbacks within the run (see _fetch_via_apify).
+    """
+    tokens = _apify_tokens()
+    if len(tokens) > 1:
+        st = load_state()
+        counter = st.get("apify_token_index", 0)
+        idx = counter % len(tokens)
+        tokens = tokens[idx:] + tokens[:idx]  # rotate so key #idx leads
+        st["apify_token_index"] = counter + 1  # monotonic; merge keeps the max
+        save_state(st)
+        print(f"  · using Apify key {idx + 1}/{len(tokens)} (rotating)")
+
     out: list[dict] = []
     for username in INSTAGRAM_ACCOUNTS:
         try:
-            out.extend(fetch_posts(username))
+            out.extend(fetch_posts(username, tokens))
         except Exception as e:
             print(f"  ! Instagram @{username} failed: {e}")
     return out

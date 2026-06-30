@@ -39,8 +39,10 @@ def main() -> None:
     if seen:
         merged["ig_seen"] = sorted(seen)
 
-    # Scalar "most recent wins" fields.
-    for field in ("ig_last_check", "last_failure_alert", "amc_last_check"):
+    # Scalar "most recent wins" fields. apify_token_index is a monotonic
+    # counter (never reset), so max() keeps the rotation advancing across runs.
+    for field in ("ig_last_check", "last_failure_alert", "amc_last_check",
+                  "apify_token_index"):
         val = max(remote.get(field, 0), our.get(field, 0))
         if val:
             merged[field] = val
