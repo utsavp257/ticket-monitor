@@ -64,7 +64,13 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-chromium-${{ runner.os }}
 
+      # Non-fatal: Playwright/Chromium is only used by the HTML-scraper fallback.
+      # With the official AMC API live, the monitor doesn't need it, so a
+      # transient apt/mirror flake here must NOT fail the run (which would fire a
+      # false "run FAILED" alert). If the API ever falls back to scraping while
+      # the browser is missing, the monitor's own AMC-unreachable alert covers it.
       - name: Install Playwright browser
+        continue-on-error: true
         run: python -m playwright install --with-deps chromium
 
       - name: Run monitor

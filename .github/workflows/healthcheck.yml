@@ -38,7 +38,11 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-chromium-${{ runner.os }}
 
+      # Non-fatal: only the HTML-scraper fallback uses Chromium. With the AMC API
+      # live the health check doesn't need it, so a transient apt/mirror flake
+      # here must not crash the check (and fire a false failure Telegram).
       - name: Install Playwright browser
+        continue-on-error: true
         run: python -m playwright install --with-deps chromium
 
       - name: Run health check
