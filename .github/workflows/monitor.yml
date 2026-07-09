@@ -55,24 +55,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Cache the downloaded Chromium so 5-min runs don't re-download it (~120MB).
-      # Runners are fresh each run, so we always (re)install the system libs via
-      # --with-deps; the cache only skips the browser download itself.
-      - name: Cache Playwright browser
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-chromium-${{ runner.os }}
-
-      # Non-fatal: Playwright/Chromium is only used by the HTML-scraper fallback.
-      # With the official AMC API live, the monitor doesn't need it, so a
-      # transient apt/mirror flake here must NOT fail the run (which would fire a
-      # false "run FAILED" alert). If the API ever falls back to scraping while
-      # the browser is missing, the monitor's own AMC-unreachable alert covers it.
-      - name: Install Playwright browser
-        continue-on-error: true
-        run: python -m playwright install --with-deps chromium
-
       - name: Run monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -126,8 +108,8 @@ jobs:
           echo "WARN: could not persist state after retries; next run reconciles."
           exit 0
 
-      # Telegram ping if ANY step above failed (a crash, or pip/Playwright
-      # install breaking) — so an infrastructure-level failure isn't silent.
+      # Telegram ping if ANY step above failed (a crash, or the pip install
+      # breaking) — so an infrastructure-level failure isn't silent.
       # App-level problems (AMC unreachable / layout changed) are alerted from
       # within the monitor itself; this is the catch-all backstop.
       - name: Notify on failure
