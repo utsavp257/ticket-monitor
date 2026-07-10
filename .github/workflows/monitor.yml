@@ -25,6 +25,10 @@ on:
         description: "Send the exact 'Dune new showtime on sale' siren and exit"
         type: boolean
         default: false
+      test_email:
+        description: "Print what the Dune Insider Gmail watch matches now, and exit (sends nothing)"
+        type: boolean
+        default: false
       discover_amc:
         description: "Print AMC API theatre id + sample showtimes and exit"
         type: boolean
@@ -65,6 +69,8 @@ jobs:
           PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
           PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
           AMC_VENDOR_KEY: ${{ secrets.AMC_VENDOR_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           if [ "${{ inputs.discover_amc }}" = "true" ]; then
             python src/main.py --discover-amc
@@ -72,6 +78,8 @@ jobs:
             python src/main.py --test-pushover
           elif [ "${{ inputs.test_escalation }}" = "true" ]; then
             python src/main.py --test-escalation
+          elif [ "${{ inputs.test_email }}" = "true" ]; then
+            python src/main.py --test-email
           elif [ -n "${{ inputs.probe_movie }}" ]; then
             python src/main.py --probe "${{ inputs.probe_movie }}"
           elif [ "${{ inputs.dry_run }}" = "true" ]; then

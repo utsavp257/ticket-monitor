@@ -65,6 +65,34 @@ INSTAGRAM_ACCOUNTS = ["dunemovie"]
 APIFY_ACTOR = "apify~instagram-scraper"
 IG_CHECK_EVERY_HOURS = 1.9
 
+# --- Dune Insider email watch ------------------------------------------------
+# Warner Bros sends the "Dune Insider" newsletter — and, we expect, ticket
+# on-sale announcements — from EMAIL_SENDER. We read the mailbox over IMAP
+# (free, stdlib) using a Gmail App Password in GMAIL_USER / GMAIL_APP_PASSWORD;
+# without those set the email check is skipped. See monitor_email.py.
+EMAIL_IMAP_HOST = "imap.gmail.com"
+# "[Gmail]/All Mail" catches messages even if a Gmail filter skips the inbox.
+# Change to "INBOX" if you'd rather only watch the inbox.
+EMAIL_FOLDER = '"[Gmail]/All Mail"'
+# Match mail FROM this sender OR whose text contains EMAIL_TEXT_MATCH.
+EMAIL_SENDER = "warnerbros@updates.warnerbros.com"
+EMAIL_TEXT_MATCH = "Dune Insider"
+# Only search the last N days (dedup by Message-ID handles re-alerts; this just
+# bounds how much we scan/fetch each run) and cap how many we pull per run.
+EMAIL_SINCE_DAYS = 7
+EMAIL_MAX_FETCH = 30
+# Task 2 (keyword parse): if any of these appear in a matching email, also fire
+# the Pushover siren — a ticket on-sale signal. TUNE THIS once we've seen a real
+# WB on-sale email (run `python src/main.py --test-email` to dump the format).
+# Bias toward recall: Telegram forwards every email regardless, so a missed
+# phrase still reaches you, while a false hit is only one extra siren.
+EMAIL_ONSALE_PHRASES = [
+    "on sale now", "now on sale", "tickets are now available",
+    "tickets are available", "tickets available now", "tickets are live",
+    "get tickets", "buy tickets", "book now", "book your tickets",
+    "presale", "pre-sale", "tickets on sale", "on sale",
+]
+
 # Send a Telegram alert if the monitor looks broken — AMC unreachable, or its
 # pages parse to zero movie listings (a sign the URL/layout changed). Throttled
 # to this many hours so a persistent outage doesn't spam every run.

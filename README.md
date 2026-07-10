@@ -115,6 +115,28 @@ For the siren-until-acknowledged alert when tickets go on sale:
 Test it from **Actions → Run workflow → test_pushover ✓**, or locally:
 `python src/main.py --test-pushover` (sends a 2-minute emergency test).
 
+### Dune Insider email (Gmail) — optional
+
+Watches a Gmail mailbox for Warner Bros' "Dune Insider" mail (from
+`warnerbros@updates.warnerbros.com`, or anything containing "Dune Insider") and
+forwards each new one to Telegram. If the email contains an on-sale phrase (see
+`EMAIL_ONSALE_PHRASES` in `config.py`) it also fires a Pushover siren. Reading
+is free and stdlib-only (IMAP) — no third party, nothing metered — so it checks
+every run.
+
+1. Turn on 2-Step Verification on the Google account, then create an **App
+   Password** at <https://myaccount.google.com/apppasswords> (a 16-char code).
+2. Add two repo secrets: `GMAIL_USER` (the full address) and
+   `GMAIL_APP_PASSWORD` (the app password, spaces removed).
+
+Without those set, the email check is skipped silently. Inspect what it matches
+(and see a real email's format, to tune the on-sale keywords) with
+`python src/main.py --test-email` — it prints matches and sends nothing.
+
+Note: the on-sale keyword list is a first cut. Telegram forwards every matching
+email regardless, so you never miss one; the keywords only decide the extra
+siren. Tune `EMAIL_ONSALE_PHRASES` once a real WB on-sale email has arrived.
+
 ## How to check it's working (do these in order)
 
 ```bash

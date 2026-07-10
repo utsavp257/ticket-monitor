@@ -39,6 +39,13 @@ def main() -> None:
     if seen:
         merged["ig_seen"] = sorted(seen)
 
+    # Emails we've already alerted on (Dune Insider watch). Union like ig_seen
+    # so a racing run's sends aren't dropped; both sides are bounded to the
+    # recent search window, so the union stays bounded too.
+    email_seen = set(remote.get("email_seen", [])) | set(our.get("email_seen", []))
+    if email_seen:
+        merged["email_seen"] = sorted(email_seen)
+
     # Scalar "most recent wins" fields. apify_token_index is a monotonic
     # counter (never reset), so max() keeps the rotation advancing across runs.
     for field in ("ig_last_check", "last_failure_alert", "amc_last_check",

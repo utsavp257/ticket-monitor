@@ -22,9 +22,11 @@ Flags can be combined, e.g. `--dry-run --debug`.
 import sys
 import time
 from datetime import date
+from urllib.parse import quote
 
 from monitor_amc import check_amc
 from monitor_instagram import check_instagram
+import monitor_email
 from dates import movie_watch_dates
 from config import (MOVIES, IG_CHECK_EVERY_HOURS, FAILURE_ALERT_COOLDOWN_HOURS,
                     AMC_FAIL_STREAK_FOR_ALERT, AMC_CHECK_EVERY_MINUTES)
@@ -213,6 +215,82 @@ def ig_diff_and_alert(posts: list[dict], dry_run: bool) -> int:
     return sent
 
 
+def email_diff_and_alert(emails: list[dict], dry_run: bool) -> int:
+    """Dune Insider email watch.
+
+    Task 1 (definitive): forward every new matching email to Telegram in full.
+    Task 2 (keyword): if it contains an on-sale phrase, also fire a Pushover
+    siren. The first run baselines existing matches (records them, no alert) so
+    we don't blast the backlog — mirrors the Instagram behaviour."""
+    if not emails:
+        # Nothing matched (or the fetch was empty) — don't baseline an empty set
+        # over an existing one; just leave state alone.
+        return 0
+
+    state = load_state()
+    if "email_seen" not in state:
+        state["email_seen"] = sorted(e["msg_id"] for e in emails)
+        if not dry_run:
+            save_state(state)
+        print(f"  · baseline set ({len(emails)} existing email(s), no alert)")
+        return 0
+
+    seen = set(state["email_seen"])
+    # oldest first so, if several arrive at once, alerts land in reading order
+    new = [e for e in reversed(emails) if e["msg_id"] not in seen]
+    sent = 0
+    for e in new:
+        gmail_link = ("https://mail.google.com/mail/u/0/#search/rfc822msgid:"
+                      + quote(e["msg_id"].strip("<>")))
+        body = e["body"].strip()
+        if len(body) > 1200:
+            body = body[:1200] + "…"
+        lines = [
+            "📧 Dune Insider email",
+            f"From: {e['from']}",
+            f"Subject: {e['subject']}",
+            "",
+            body,
+        ]
+        if e["onsale"]:
+            lines += ["", f"🎟️ Possible ON-SALE signal: {', '.join(e['onsale'])}"]
+        lines += ["", f"Open in Gmail: {gmail_link}"]
+        message = "\n".join(lines)
+
+        if dry_run:
+            print("  --- would send ---")
+            print(message)
+            if e["onsale"]:
+                print(f"  --- would ESCALATE (Pushover): {', '.join(e['onsale'])}")
+            print("  ------------------")
+            continue
+
+        ok = telegram.send_message(message)
+        if ok and e["onsale"]:
+            pushover.send_emergency(
+                message=(f"Dune Insider: {e['subject']}\n"
+                         f"Signal: {', '.join(e['onsale'])}"),
+                title="🎟️ Dune tickets — on-sale email",
+                url=gmail_link,
+                url_title="Open email",
+            )
+        if ok:
+            seen.add(e["msg_id"])  # only mark seen once delivered → retry on fail
+            sent += 1
+            print(f"  ✓ alerted: email {e['subject'][:60]!r} "
+                  f"({len(e['onsale'])} on-sale hit(s))")
+        else:
+            print(f"  ! send failed, will retry next run: email {e['msg_id']}")
+
+    if not dry_run:
+        # Keep only delivered ids still inside the current search window, so the
+        # set stays bounded and an undelivered (failed) id is retried next run.
+        current = {e["msg_id"] for e in emails}
+        state["email_seen"] = sorted(seen & current)
+        save_state(state)
+    return sent
+
+
 def alert_failure(reason: str, dry_run: bool) -> None:
     """Telegram alert when the monitor looks broken (e.g. AMC URL/layout change
     or outage), throttled so a persistent problem doesn't spam every run."""
@@ -332,6 +410,17 @@ def run(dry_run: bool, debug: bool) -> None:
             st["ig_last_check"] = time.time()
             save_state(st)
 
+    print("Checking Dune Insider email...")
+    if not monitor_email.is_configured():
+        print("  · skipped (GMAIL_USER / GMAIL_APP_PASSWORD not set)")
+    else:
+        # Reading Gmail over IMAP is free and unmetered, so — unlike Instagram —
+        # we check every run for near real-time coverage of a ticket drop.
+        try:
+            total += email_diff_and_alert(monitor_email.check_email(), dry_run)
+        except Exception as e:
+            print(f"  ! Email check failed: {e}")
+
     print(f"\nDone. {total} alert(s) sent.")
 
 
@@ -362,6 +451,27 @@ def main() -> None:
         else:
             print("Failed — see error above. Check TELEGRAM_TOKEN / "
                   "TELEGRAM_CHAT_ID.")
+        return
+
+    if "--test-email" in args:
+        # Inspect what the Gmail watch currently matches (no alerts sent). Use
+        # this to see a real WB email's format and tune EMAIL_ONSALE_PHRASES.
+        if not monitor_email.is_configured():
+            print("GMAIL_USER / GMAIL_APP_PASSWORD not set.")
+            return
+        try:
+            emails = monitor_email.check_email()
+        except Exception as e:
+            print(f"Email check failed: {e}")
+            return
+        print(f"{len(emails)} matching email(s) in the last window:\n")
+        for e in emails:
+            print(f"--- {e['date']} | from {e['from']}")
+            print(f"Subject: {e['subject']}")
+            print(f"On-sale keyword hits: {e['onsale'] or '(none)'}")
+            preview = e["body"][:800]
+            print(preview + ("…" if len(e["body"]) > 800 else ""))
+            print()
         return
 
     if "--test-pushover" in args:
