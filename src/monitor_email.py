@@ -73,8 +73,11 @@ def _clean_text(raw: str) -> str:
     text = html.unescape(text)
     text = _JUNK_RE.sub("", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
+    # Drop trailing space per line, then collapse runs of blank lines (marketing
+    # preheaders pad with dozens) down to a single blank line.
+    text = re.sub(r"[ \t]+\n", "\n", text)
     text = re.sub(r"\n[ \t]+", "\n", text)
-    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = re.sub(r"\n\s*\n\s*(?:\n\s*)*", "\n\n", text)
     return text.strip()
 
 
