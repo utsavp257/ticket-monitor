@@ -53,17 +53,25 @@ def _decode(value: str | None) -> str:
 
 
 _TAG_RE = re.compile(r"<[^>]+>")
+# Invisible spacer/zero-width/combining chars that marketing preheaders pad
+# with (figure space, ZWJ/ZWNJ, BOM, combining marks). Strip runs of them so
+# the preview and keyword scan see real words, not decorative filler.
+_JUNK_RE = re.compile(
+    "[\u200b-\u200f\u202a-\u202e\u2007\u202f\u2060\ufeff\u0300-\u036f]+")
 
 
-def _html_to_text(raw: str) -> str:
-    """Cheap HTML→text: drop script/style, turn common block tags into
-    newlines, strip the rest. Good enough for keyword scans and a readable
-    Telegram preview without pulling in an HTML-parser dependency."""
+def _clean_text(raw: str) -> str:
+    """Normalize a text or HTML fragment to readable plain text. Drops
+    script/style, turns block tags into newlines, strips remaining tags,
+    unescapes entities and removes invisible filler. Safe on real plain text
+    too (WB's text/plain part is itself full of tags/junk), so we run every
+    part through it rather than trusting the Content-Type."""
     raw = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", raw)
     raw = re.sub(r"(?i)<br\s*/?>", "\n", raw)
     raw = re.sub(r"(?i)</(p|div|tr|li|h[1-6]|table)>", "\n", raw)
     text = _TAG_RE.sub(" ", raw)
     text = html.unescape(text)
+    text = _JUNK_RE.sub("", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r"\n[ \t]+", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
@@ -81,10 +89,17 @@ def _part_text(part: Message) -> str:
         return ""
 
 
-def _body_text(msg: Message) -> str:
-    """Extract readable text: prefer text/plain parts, fall back to stripped
-    text/html. Skips attachments."""
-    plain: list[str] = []
+def _letters(s: str) -> int:
+    return sum(c.isalpha() for c in s)
+
+
+def _extract_text(msg: Message) -> tuple[str, str]:
+    """Return (preview, scan_text). `preview` is the more substantive of the
+    cleaned text/plain vs text/html alternatives (marketing mail often ships a
+    junk plain part, so we can't just prefer plain). `scan_text` is BOTH parts
+    combined — keyword detection reads everything so an on-sale phrase that
+    lives only in the HTML part is never missed. Attachments are skipped."""
+    plains: list[str] = []
     htmls: list[str] = []
     if msg.is_multipart():
         for part in msg.walk():
@@ -95,17 +110,20 @@ def _body_text(msg: Message) -> str:
                 continue
             ctype = part.get_content_type()
             if ctype == "text/plain":
-                plain.append(_part_text(part))
+                plains.append(_part_text(part))
             elif ctype == "text/html":
                 htmls.append(_part_text(part))
     elif msg.get_content_type() == "text/html":
         htmls.append(_part_text(msg))
     else:
-        plain.append(_part_text(msg))
+        plains.append(_part_text(msg))
 
-    if any(p.strip() for p in plain):
-        return "\n".join(p for p in plain if p.strip()).strip()
-    return _html_to_text("\n".join(htmls))
+    plain_clean = _clean_text("\n".join(plains))
+    html_clean = _clean_text("\n".join(htmls))
+    preview = (plain_clean if _letters(plain_clean) >= _letters(html_clean)
+               else html_clean)
+    scan_text = f"{plain_clean}\n{html_clean}"
+    return preview, scan_text
 
 
 def onsale_hits(text: str) -> list[str]:
@@ -155,14 +173,16 @@ def check_email() -> list[dict]:
             msg_id = (msg.get("Message-ID") or f"uid:{uid.decode()}").strip()
             subject = _decode(msg.get("Subject"))
             frm = parseaddr(_decode(msg.get("From")))[1]
-            body = _body_text(msg)
+            preview, scan_text = _extract_text(msg)
             out.append({
                 "msg_id": msg_id,
                 "from": frm,
                 "subject": subject,
                 "date": _decode(msg.get("Date")),
-                "body": body,
-                "onsale": onsale_hits(f"{subject}\n{body}"),
+                "body": preview,
+                # scan BOTH parts (subject + plain + html) so a phrase living
+                # only in the HTML alternative is still caught.
+                "onsale": onsale_hits(f"{subject}\n{scan_text}"),
             })
         return out
     finally:
