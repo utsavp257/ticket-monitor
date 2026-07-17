@@ -21,8 +21,8 @@
       "11:00pm": false
     },
     "Dune: Part Three|2026-12-20": {
-      "7:00pm": true,
-      "11:00pm": true
+      "7:00pm": false,
+      "11:00pm": false
     },
     "The Odyssey|2026-07-28": {
       "10:00am": false,
@@ -73,9 +73,9 @@
   "email_seen": [
     "<9d6bb457-ccbd-4a4d-9ced-792bd83c8bbd@ind1s06mta0157.xt.local>"
   ],
-  "ig_last_check": 1784311030.1011088,
+  "ig_last_check": 1784311074.7949123,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1784310999.55267,
+  "amc_last_check": 1784311050.608181,
   "apify_token_index": 212,
   "amc_fail_streak": 0,
   "amc_api_confirmed": true,
