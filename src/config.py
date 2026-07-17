@@ -26,12 +26,18 @@ through the scraping code.
 #                 "new"            - siren on a new available showtime
 #                 "new_then_seats" - siren on new available showtimes; once a new
 #                                    show has appeared, also siren on seat-frees
+#                 "any_new"        - siren on ANY new showtime/day, even one that
+#                                    appears already sold out (a new listing IS
+#                                    the on-sale signal), and on later seat-frees
 MOVIES = {
     "Dune: Part Three": {
         "aliases": ["dune: part three", "dune part three"],
         "from_date": "2026-12-15",
         "weekdays": [0, 1, 2, 3, 4, 5, 6],  # every day, not just Tue/Wed
-        "escalate": "new_then_seats",       # siren on new shows, then seat-frees
+        # Siren the moment ANY new Dune show/day is listed — presale drops often
+        # appear sold-out first, so "new available" alone missed them (Telegram
+        # fired, phone stayed silent). Also sirens on later seat-frees.
+        "escalate": "any_new",
     },
     "The Odyssey": {
         "aliases": ["the odyssey"],
@@ -107,9 +113,12 @@ AMC_FAIL_STREAK_FOR_ALERT = 2
 # often, only actually hit AMC this often — keeps our footprint low so the
 # shared GitHub-runner IP doesn't get blocked. Lower it when a release is
 # imminent and you need tighter timing (accepting more block risk).
-# Set to 30 while the movies are months out — minimal footprint to let AMC's
-# block cool off. Drop toward 5 as Jul (Odyssey) / Dec (Dune) approach.
-AMC_CHECK_EVERY_MINUTES = 30
+# NOTE: while the AMC API is live (amc_api_confirmed), this throttle is bypassed
+# entirely — the API doesn't IP-block, so we check on every invocation, and the
+# .github/workflows/monitor.yml loop invokes us every 60s. This value only gates
+# the HTML-scrape fallback. Set to 1 so that fallback also polls every minute
+# during the Dune presale window (accepting more block risk on the scrape path).
+AMC_CHECK_EVERY_MINUTES = 1
 
 # AMC Lincoln Square 13 slug — used to resolve its numeric id via the official
 # API (api.amctheatres.com). The API is used when AMC_VENDOR_KEY is set; it's

@@ -75,6 +75,10 @@ def _escalation_times(item, cur, new_times, freed, armed_map) -> list[str]:
     - 'new_then_seats': escalate on new available showtimes; a new show of any
       kind 'arms' the movie, after which seat-frees (sold-out -> available) also
       escalate. Before it's armed, nothing escalates.
+    - 'any_new': escalate on ANY new showtime/day — even one that appears already
+      sold out. A new listing appearing at all is the on-sale signal (presale
+      drops often list sold-out, then free up), so we ring the phone immediately
+      instead of waiting for availability. Seat-frees also escalate thereafter.
     """
     movie = item["movie"]
     policy = _escalate_policy(movie)
@@ -88,6 +92,12 @@ def _escalation_times(item, cur, new_times, freed, armed_map) -> list[str]:
             armed_map[movie] = True
         times = list(new_available)
         if armed_map.get(movie) and freed:  # only siren seat-frees once armed
+            times += freed
+    elif policy == "any_new":
+        if new_times:                      # any new listing arms the movie
+            armed_map[movie] = True
+        times = list(new_times)            # available OR sold-out — all of them
+        if freed:                          # plus any seat-frees
             times += freed
     else:
         times = new_available
@@ -124,10 +134,21 @@ def diff_and_alert(results: list[dict], dry_run: bool) -> int:
             continue
         ok = telegram.send_message(message)
         if escalate:
+            avail = [t for t in escalate if not cur[t]]
+            sold = [t for t in escalate if cur[t]]
+            if avail:
+                body = f"Grab now: {', '.join(avail)}"
+                if sold:
+                    body += f"\nAlso new (sold out): {', '.join(sold)}"
+                title = "🎟️ IMAX seats available"
+            else:
+                # a brand-new show/day that listed sold-out — still worth ringing
+                body = f"New show(s) listed (sold out): {', '.join(sold)}"
+                title = "🎬 New Dune show listed"
             pushover.send_emergency(
                 message=(f"{item['movie']} IMAX — {item['weekday']} "
-                         f"{item['date']}\nGrab now: {', '.join(escalate)}"),
-                title="🎟️ IMAX seats available",
+                         f"{item['date']}\n{body}"),
+                title=title,
                 url=item["url"],
                 url_title="Book on AMC",
             )

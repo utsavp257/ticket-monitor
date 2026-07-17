@@ -2,10 +2,21 @@ name: Ticket Monitor
 
 on:
   schedule:
-    # Every 30 minutes. GitHub's scheduler is best-effort and often delays
-    # runs by several minutes under load, so going lower than this buys little
-    # and risks getting the runner IP bot-blocked by AMC/Fandango faster.
-    - cron: "*/30 * * * *"
+    # PRIMARY cadence comes from an EXTERNAL cron that pings this workflow every
+    # 60s (GitHub's own scheduler can't fire faster than ~5 min and is delayed
+    # under load). This built-in */5 schedule is just a backstop so coverage
+    # degrades to ~5-min if the external pinger ever dies.
+    - cron: "*/5 * * * *"
+
+  # The external every-60s cronjob triggers a run via GitHub's API. Support both
+  # dispatch endpoints so it works however the cronjob is configured:
+  #   • repository_dispatch — POST /repos/<owner>/<repo>/dispatches
+  #       body: {"event_type":"poll"}   (no `types:` filter = accept any type)
+  #   • workflow_dispatch    — POST /repos/<owner>/<repo>/actions/workflows/monitor.yml/dispatches
+  #       body: {"ref":"main"}
+  # Either way send headers: Authorization: Bearer <PAT with actions:write>,
+  # Accept: application/vnd.github+json. The workflow file must already be on main.
+  repository_dispatch:
 
   workflow_dispatch:
     inputs:
@@ -34,7 +45,14 @@ on:
         type: boolean
         default: false
 
-# Avoid overlapping runs stepping on the committed state file.
+# DON'T cancel-in-progress here: a job's total wall-time (checkout + setup +
+# pip + the ≤55s poll + state commit) exceeds the 60s ping interval, so
+# cancelling the running job on each new ping would mean NO run ever finishes or
+# commits. Instead rely on GitHub's queue semantics for a concurrency group:
+# at most one run in-progress + one pending, and a newer ping supersedes the
+# older pending one. So the current run always completes and commits, and the
+# freshest ping is always queued next — that's the "next one clears" behaviour,
+# safely. The ≤55s poll timeout keeps any single run from bleeding over.
 concurrency:
   group: ticket-monitor
   cancel-in-progress: false
@@ -85,7 +103,13 @@ jobs:
           elif [ "${{ inputs.dry_run }}" = "true" ]; then
             python src/main.py --dry-run
           else
-            python src/main.py
+            # An external cron pings this workflow every 60s, so each run is a
+            # SINGLE poll. Hard-cap the poll at 55s (< the 1-min ping) so a hung
+            # check (slow AMC/IMAP) is killed with headroom and can't bleed into
+            # the next minute — the next ping just starts a clean run. `timeout`
+            # exits 124 when it kills the process; swallow it (and any error) so
+            # one slow/failed poll doesn't red-fail the job.
+            timeout 55 python src/main.py || echo "poll timed out/errored — next ping clears it"
           fi
 
       # Persist state by committing it back. Runs can land close together, so a
