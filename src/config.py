@@ -32,7 +32,7 @@ through the scraping code.
 MOVIES = {
     "Dune: Part Three": {
         "aliases": ["dune: part three", "dune part three"],
-        "from_date": "2026-12-15",
+        "from_date": "2026-12-21",  # only watch shows after Dec 20 (better seats)
         "weekdays": [0, 1, 2, 3, 4, 5, 6],  # every day, not just Tue/Wed
         # Siren the moment ANY new Dune show/day is listed — presale drops often
         # appear sold-out first, so "new available" alone missed them (Telegram
