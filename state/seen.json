@@ -75,9 +75,9 @@
   ],
   "ig_last_check": 1784435444.6911092,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1784440938.868603,
+  "amc_last_check": 1784441001.7560227,
   "apify_token_index": 231,
-  "amc_fail_streak": 0,
+  "amc_fail_streak": 1,
   "amc_api_confirmed": true,
   "amc_theatre_id": 2116
 }
