@@ -263,3 +263,7 @@ _No showtimes listed._
 ## Saturday 2027-01-02
 
 _No showtimes listed._
+
+## Sunday 2027-01-03
+
+_No showtimes listed._
