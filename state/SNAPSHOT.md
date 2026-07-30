@@ -66,6 +66,32 @@ Machine-readable version: `state/snapshot.json`.
 | Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145622115 |
 | Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145622118 |
 
+## Wednesday 2026-08-05
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316365 |
+| Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316469 |
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316389 |
+| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 144316366 |
+| Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316468 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316388 |
+| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316367 |
+| Spider-Man: Brand New Day | 5:30pm | standard | 🟢 available |  | 144316467 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316387 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316368 |
+| Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟢 available |  | 144316484 |
+| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316470 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316390 |
+| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316369 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696880 |
+| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822128 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696881 |
+| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822121 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696882 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696883 |
+
 ## Tuesday 2026-08-11
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -222,6 +248,13 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283830 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283836 |
+
+## Thursday 2026-12-31
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283838 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
 
 ## Friday 2027-01-01
 
