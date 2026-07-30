@@ -256,10 +256,6 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283838 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
 
-## Friday 2027-01-01
-
-_No showtimes listed._
-
 ## Saturday 2027-01-02
 
 _No showtimes listed._
