@@ -172,6 +172,15 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 7:00pm | standard | 🟢 available |  | 145073211 |
 | Tony | 10:00pm | standard | 🟢 available |  | 145073212 |
 
+## Monday 2026-12-21
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 145283752 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283754 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283756 |
+| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283758 |
+
 ## Tuesday 2026-12-22
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -248,6 +257,10 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
 
 ## Friday 2027-01-01
+
+_No showtimes listed._
+
+## Saturday 2027-01-02
 
 _No showtimes listed._
 
