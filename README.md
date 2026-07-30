@@ -24,6 +24,15 @@ It never re-alerts on shows you've already been told about, and it only ever
 fires on a real showtime tied to the movie — never on a stray title mention
 (e.g. a "The Odyssey Bundle" promo).
 
+**Data timeline.** Every API check also writes its *complete* pull — every
+showtime AMC returned for the watched dates, all movies and formats — to
+[`state/SNAPSHOT.md`](state/SNAPSHOT.md) (readable tables with 🟢/🟠/🔴
+status) and `state/snapshot.json` (machine-readable). Both are deterministic,
+so they're only committed when the data actually changed. That makes the git
+history of those files the full audit trail: open `state/SNAPSHOT.md` on
+GitHub and hit **History** to see every listing change and sell-out flip with
+its timestamp, or diff locally with `git log -p state/SNAPSHOT.md`.
+
 **Can't-miss escalation.** A **Pushover emergency alert** (re-sirens every 30s,
 overriding silent/DND, until acknowledged) fires per the movie's `escalate`
 policy in `MOVIES`:
@@ -206,5 +215,6 @@ own machine (residential IP) on a cron/launchd timer instead of GitHub Actions.
 | `src/monitor_amc.py` | AMC Lincoln Square source |
 | `src/telegram.py` | Notifications |
 | `src/state.py` | Remembers seen showtimes so you only get changes |
+| `src/snapshot.py` | Writes each run's full API pull to `state/` (data timeline) |
 | `src/main.py` | Entry point, change-diffing, CLI flags |
 | `.github/workflows/monitor.yml` | Runs it every 30 min |

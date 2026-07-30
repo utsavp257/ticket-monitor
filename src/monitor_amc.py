@@ -18,6 +18,7 @@ from dates import movie_watch_dates
 from scrape import fetch, find_shows, count_listings
 from state import load_state, save_state
 import amc_api
+import snapshot
 
 
 def check_amc(debug: bool = False, movies: dict | None = None):
@@ -56,6 +57,7 @@ def _check_via_api(movies: dict):
             date_movies[d.isoformat()].append((movie, aliases))
 
     results: list[dict] = []
+    pulls: dict[str, list] = {}
     ok = 0
     total = 0
     for iso in sorted(date_movies):
@@ -66,12 +68,22 @@ def _check_via_api(movies: dict):
             continue
         ok += 1
         total += len(showtimes)
+        pulls[iso] = showtimes
         wd = date.fromisoformat(iso).strftime("%A")
         for movie, aliases in date_movies[iso]:
             shows = amc_api.match_shows(showtimes, aliases, imax_only=IMAX_ONLY)
             if shows:
                 results.append({"movie": movie, "date": iso, "weekday": wd,
                                 "url": amc_url(iso), "shows": shows})
+
+    # Record the full pull so state/'s git history doubles as a data timeline
+    # (see snapshot.py). Skip when every fetch failed — never wipe the last
+    # good snapshot with nothing.
+    if pulls:
+        try:
+            snapshot.write(pulls)
+        except Exception as e:
+            print(f"  ! snapshot write failed: {str(e).splitlines()[0]}")
     # source=api: 0 matching shows on far-future dates is normal, NOT "broken";
     # only all-calls-failing (ok==0) signals a problem.
     health = {"source": "api", "dates_total": len(date_movies),
