@@ -259,3 +259,7 @@ Machine-readable version: `state/snapshot.json`.
 ## Friday 2027-01-01
 
 _No showtimes listed._
+
+## Saturday 2027-01-02
+
+_No showtimes listed._
