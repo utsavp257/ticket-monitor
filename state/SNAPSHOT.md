@@ -26,7 +26,7 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316465 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316385 |
 | Spider-Man: Brand New Day | 12:00pm | standard | 🟢 available |  | 145073232 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 144316361 |
+| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316361 |
 | Spider-Man: Brand New Day | 1:00pm | RealD 3D | 🟢 available |  | 144518640 |
 | Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316464 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316384 |

@@ -244,7 +244,7 @@
    "time": "12:00pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
