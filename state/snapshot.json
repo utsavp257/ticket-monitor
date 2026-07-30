@@ -1362,7 +1362,7 @@
    "time": "10:45pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "EVENT",
