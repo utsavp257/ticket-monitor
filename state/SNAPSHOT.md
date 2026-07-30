@@ -92,50 +92,6 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696883 |
 
-## Tuesday 2026-08-11
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Moana | 10:00am | standard | 🟢 available |  | 145503237 |
-| Nimrods Early Access – Green Day Intro + Bonus Performance | 7:00pm | standard | 🟠 almost sold out |  | 145058060 |
-| One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
-| One Night Only | 1:45pm | standard | 🟢 available |  | 145480842 |
-| One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
-| One Night Only | 7:45pm | standard | 🟢 available |  | 145480845 |
-| One Night Only | 10:45pm | standard | 🟢 available |  | 145480846 |
-| Practical Magic | 7:30pm | standard | 🟠 almost sold out |  | 145493951 |
-| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316321 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316344 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 144316322 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316343 |
-| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316323 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316342 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316324 |
-| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316345 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145508645 |
-| Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611019 |
-| Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611020 |
-| Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611021 |
-| Super Troopers 3 | 8:00pm | standard | 🟢 available |  | 144611042 |
-| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611022 |
-| Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 145073217 |
-| Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 145073207 |
-| Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 145073215 |
-| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 145073216 |
-| Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696904 |
-| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145480776 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696905 |
-| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145480774 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696906 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480775 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696907 |
-| Tony | 10:00am | standard | 🟢 available |  | 145073205 |
-| Tony | 1:00pm | standard | 🟢 available |  | 145073204 |
-| Tony | 4:00pm | standard | 🟢 available |  | 145073203 |
-| Tony | 7:00pm | standard | 🟢 available |  | 145073201 |
-| Tony | 10:00pm | standard | 🟢 available |  | 145073202 |
-
 ## Wednesday 2026-08-12
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -190,15 +146,6 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283765 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145283768 |
 
-## Wednesday 2026-12-23
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 145283773 |
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283778 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283781 |
-| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145283785 |
-
 ## Thursday 2026-12-24
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -242,23 +189,12 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
 
-## Wednesday 2026-12-30
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283830 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283836 |
-
 ## Thursday 2026-12-31
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283838 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
-
-## Friday 2027-01-01
-
-_No showtimes listed._
 
 ## Saturday 2027-01-02
 
