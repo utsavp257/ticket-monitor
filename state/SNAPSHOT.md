@@ -164,7 +164,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696909 |
 | The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145480777 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696910 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
+| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145480778 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696911 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
