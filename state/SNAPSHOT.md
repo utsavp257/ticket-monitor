@@ -80,9 +80,13 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316470 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316390 |
 | Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316369 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696880 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822128 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696881 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822121 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696882 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696883 |
 
 ## Tuesday 2026-08-11
 
@@ -147,13 +151,9 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 144872571 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 144872572 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 144872573 |
-| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696908 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145480779 |
-| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696909 |
 | The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145480777 |
-| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696910 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
-| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696911 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
