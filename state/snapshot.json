@@ -997,7 +997,7 @@
    "time": "3:00pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
