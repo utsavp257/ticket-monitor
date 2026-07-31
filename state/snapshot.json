@@ -1143,7 +1143,7 @@
    "format": "70mm",
    "id": 144696880,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "10:00am"
   },
   {
@@ -1175,7 +1175,7 @@
    "format": "70mm",
    "id": 144696881,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "2:00pm"
   },
   {
@@ -1207,7 +1207,7 @@
    "format": "70mm",
    "id": 144696882,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "6:00pm"
   },
   {
@@ -1239,7 +1239,7 @@
    "format": "70mm",
    "id": 144696883,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "10:00pm"
   }
  ],

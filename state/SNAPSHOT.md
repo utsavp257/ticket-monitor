@@ -84,13 +84,13 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316470 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316390 |
 | Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316369 |
-| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696880 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696880 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822128 |
-| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696881 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696881 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822121 |
-| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696882 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696882 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
-| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696883 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696883 |
 
 ## Tuesday 2026-08-11
 
