@@ -82,8 +82,9 @@
    "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
     "LASERATAMC",
-    "OPENCAPTION",
     "RESERVEDSEATING"
    ],
    "canceled": false,
@@ -796,9 +797,10 @@
    "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
     "DISNEYRWDS",
     "LASERATAMC",
-    "OPENCAPTION",
     "RESERVEDSEATING"
    ],
    "canceled": false,
