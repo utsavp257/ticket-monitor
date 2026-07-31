@@ -7,65 +7,6 @@ each commit's timestamp is the pull time. Browse it on GitHub via this
 file's *History*, or locally with `git log -p state/SNAPSHOT.md`.
 Machine-readable version: `state/snapshot.json`.
 
-## Tuesday 2026-08-04
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Hadestown: The Musical | 11:30am | standard | 🟢 available |  | 145622137 |
-| I Want Your Sex | 10:00am | standard | 🟢 available |  | 145622116 |
-| I Want Your Sex | 6:00pm | standard | 🟢 available |  | 145622119 |
-| I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145622102 |
-| Minions & Monsters | 9:00am | standard | 🟢 available |  | 145555073 |
-| Minions & Monsters | 1:45pm | standard | 🟢 available |  | 145622125 |
-| Moana | 9:00am | standard | 🟢 available |  | 145622111 |
-| Sheep in the Box | 10:30am | standard | 🟢 available |  | 145622126 |
-| Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145622127 |
-| Spider-Man: Brand New Day | 2:15am | standard | 🟢 available |  | 145555116 |
-| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316360 |
-| Spider-Man: Brand New Day | 9:30am | standard | 🟢 available |  | 144518641 |
-| Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316465 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316385 |
-| Spider-Man: Brand New Day | 12:00pm | standard | 🟢 available |  | 145073232 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316361 |
-| Spider-Man: Brand New Day | 1:00pm | RealD 3D | 🟢 available |  | 144518640 |
-| Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316464 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316384 |
-| Spider-Man: Brand New Day | 3:30pm | standard | 🟢 available |  | 145073231 |
-| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316362 |
-| Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟢 available |  | 144518647 |
-| Spider-Man: Brand New Day | 5:30pm | standard | 🟢 available |  | 144316463 |
-| Spider-Man: Brand New Day | 6:00pm | standard | 🟢 available |  | 145622138 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316383 |
-| Spider-Man: Brand New Day | 7:00pm | standard | 🟢 available |  | 145073230 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316363 |
-| Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟢 available |  | 144316485 |
-| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 145622117 |
-| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316466 |
-| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145622139 |
-| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316386 |
-| Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145073233 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316364 |
-| The Invite | 9:00am | standard | 🟢 available |  | 145622104 |
-| The Invite | 3:00pm | standard | 🟢 available |  | 145622140 |
-| The Invite | 7:30pm | standard | 🟢 available |  | 145622128 |
-| The Invite | 10:30pm | standard | 🟢 available |  | 145622129 |
-| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 143822192 |
-| The Odyssey | 10:15am | standard | 🟢 available |  | 145555092 |
-| The Odyssey | 11:45am | standard | 🟢 available |  | 145555119 |
-| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822129 |
-| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822185 |
-| The Odyssey | 2:15pm | standard | 🟢 available |  | 145555091 |
-| The Odyssey | 3:45pm | standard | 🟢 available |  | 145555118 |
-| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822126 |
-| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822186 |
-| The Odyssey | 6:15pm | standard | 🟢 available |  | 145555090 |
-| The Odyssey | 7:45pm | standard | 🟢 available |  | 145555117 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822127 |
-| The Odyssey | 9:45pm | standard | 🟢 available |  | 145622097 |
-| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822187 |
-| Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145622115 |
-| Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145622118 |
-
 ## Wednesday 2026-08-05
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
