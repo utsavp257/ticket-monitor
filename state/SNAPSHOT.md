@@ -136,6 +136,42 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 7:00pm | standard | 🟢 available |  | 145073201 |
 | Tony | 10:00pm | standard | 🟢 available |  | 145073202 |
 
+## Wednesday 2026-08-12
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| One Night Only | 10:45am | standard | 🟢 available |  | 145480838 |
+| One Night Only | 1:45pm | standard | 🟢 available |  | 145480837 |
+| One Night Only | 4:45pm | standard | 🟢 available |  | 145480839 |
+| One Night Only | 7:45pm | standard | 🟢 available |  | 145480840 |
+| One Night Only | 10:45pm | standard | 🟢 available |  | 145480841 |
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316348 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316347 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316346 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316349 |
+| Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611023 |
+| Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611024 |
+| Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611025 |
+| Super Troopers 3 | 8:00pm | standard | 🟢 available |  | 144611026 |
+| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611027 |
+| Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 144872575 |
+| Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 144872574 |
+| Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 144872571 |
+| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 144872572 |
+| Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 144872573 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696908 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145480779 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696909 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145480777 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696910 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696911 |
+| Tony | 10:00am | standard | 🟢 available |  | 145073208 |
+| Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
+| Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
+| Tony | 7:00pm | standard | 🟢 available |  | 145073211 |
+| Tony | 10:00pm | standard | 🟢 available |  | 145073212 |
+
 ## Monday 2026-12-21
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
