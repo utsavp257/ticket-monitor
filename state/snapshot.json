@@ -636,7 +636,7 @@
    "format": "70mm",
    "id": 143822192,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "10:00am"
   },
   {
@@ -704,7 +704,7 @@
    "format": "70mm",
    "id": 143822185,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "2:00pm"
   },
   {
@@ -772,7 +772,7 @@
    "format": "70mm",
    "id": 143822186,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "6:00pm"
   },
   {
@@ -858,7 +858,7 @@
    "format": "70mm",
    "id": 143822187,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "10:00pm"
   },
   {
@@ -1704,7 +1704,7 @@
    "format": "70mm",
    "id": 144696904,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "10:00am"
   },
   {
@@ -1736,7 +1736,7 @@
    "format": "70mm",
    "id": 144696905,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "2:00pm"
   },
   {
@@ -1768,7 +1768,7 @@
    "format": "70mm",
    "id": 144696906,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "6:00pm"
   },
   {
@@ -1800,7 +1800,7 @@
    "format": "70mm",
    "id": 144696907,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "10:00pm"
   },
   {

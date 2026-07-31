@@ -49,20 +49,20 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 3:00pm | standard | 🟢 available |  | 145622140 |
 | The Invite | 7:30pm | standard | 🟢 available |  | 145622128 |
 | The Invite | 10:30pm | standard | 🟢 available |  | 145622129 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 143822192 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 143822192 |
 | The Odyssey | 10:15am | standard | 🟢 available |  | 145555092 |
 | The Odyssey | 11:45am | standard | 🟢 available |  | 145555119 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822129 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822185 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822185 |
 | The Odyssey | 2:15pm | standard | 🟢 available |  | 145555091 |
 | The Odyssey | 3:45pm | standard | 🟢 available |  | 145555118 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822126 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822186 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822186 |
 | The Odyssey | 6:15pm | standard | 🟢 available |  | 145555090 |
 | The Odyssey | 7:45pm | standard | 🟢 available |  | 145555117 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822127 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 145622097 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822187 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 143822187 |
 | Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145622115 |
 | Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145622118 |
 
@@ -123,13 +123,13 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 145073215 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 145073216 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696904 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696904 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145480776 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696905 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696905 |
 | The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145480774 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696906 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696906 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480775 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696907 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696907 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073205 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073204 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073203 |
