@@ -1555,6 +1555,23 @@
    "time": "10:15pm"
   },
   {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 144696904,
+   "movie": "The Odyssey",
+   "soldOut": true,
+   "time": "10:00am"
+  },
+  {
    "almostSoldOut": false,
    "attributes": [
     "70MM",
@@ -1568,6 +1585,23 @@
    "movie": "The Odyssey",
    "soldOut": false,
    "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 144696905,
+   "movie": "The Odyssey",
+   "soldOut": true,
+   "time": "2:00pm"
   },
   {
    "almostSoldOut": false,
@@ -1590,6 +1624,23 @@
     "70MM",
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 144696906,
+   "movie": "The Odyssey",
+   "soldOut": true,
+   "time": "6:00pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
     "RESERVEDSEATING"
    ],
    "canceled": false,
@@ -1598,6 +1649,23 @@
    "movie": "The Odyssey",
    "soldOut": false,
    "time": "8:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 144696907,
+   "movie": "The Odyssey",
+   "soldOut": true,
+   "time": "10:00pm"
   },
   {
    "almostSoldOut": false,
