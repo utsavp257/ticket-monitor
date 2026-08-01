@@ -69,12 +69,11 @@ Machine-readable version: `state/snapshot.json`.
 | Hadestown: The Musical | 11:00am | standard | 🟢 available |  | 145693040 |
 | Hadestown: The Musical | 2:30pm | standard | 🟢 available |  | 145693037 |
 | I Want Your Sex | 10:00am | standard | 🟢 available |  | 145693030 |
-| I Want Your Sex | 1:45pm | standard | 🟢 available |  | 145697817 |
-| I Want Your Sex | 3:15pm | standard | 🟢 available |  | 145697815 |
 | I Want Your Sex | 6:00pm | standard | 🟢 available |  | 145693028 |
 | I Want Your Sex | 7:15pm | standard | 🟢 available |  | 145693009 |
 | I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145693019 |
 | Minions & Monsters | 9:15am | standard | 🟢 available |  | 145692999 |
+| Minions & Monsters | 1:45pm | standard | 🟢 available |  | 145693033 |
 | Moana | 10:00am | standard | 🟢 available |  | 145693013 |
 | Sheep in the Box | 10:30am | standard | 🟢 available |  | 145693035 |
 | Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145693034 |
@@ -119,6 +118,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 145693010 |
 | Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145693027 |
+| Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145693026 |
 
 ## Tuesday 2026-08-11
 
