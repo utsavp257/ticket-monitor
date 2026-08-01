@@ -40,21 +40,6 @@
    ],
    "canceled": false,
    "format": "standard",
-   "id": 145697816,
-   "movie": "I Want Your Sex",
-   "soldOut": false,
-   "time": "1:30pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "CLOSEDCAPTION",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
    "id": 145622119,
    "movie": "I Want Your Sex",
    "soldOut": false,
@@ -92,6 +77,21 @@
    "movie": "Minions & Monsters",
    "soldOut": false,
    "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145622125,
+   "movie": "Minions & Monsters",
+   "soldOut": false,
+   "time": "1:45pm"
   },
   {
    "almostSoldOut": false,
