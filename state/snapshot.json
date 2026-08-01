@@ -2364,6 +2364,22 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145695298,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -2376,6 +2392,22 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "11:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145695299,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "12:30pm"
   },
   {
    "almostSoldOut": false,
@@ -2396,6 +2428,22 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145695300,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "AMCCLUBROCKERS",
     "LASERATAMC",
     "OPENCAPTION",
@@ -2407,6 +2455,22 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145695301,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "7:30pm"
   },
   {
    "almostSoldOut": false,
@@ -2423,6 +2487,22 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145695302,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "11:00pm"
   },
   {
    "almostSoldOut": false,
