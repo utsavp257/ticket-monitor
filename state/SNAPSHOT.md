@@ -169,15 +169,10 @@ Machine-readable version: `state/snapshot.json`.
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480839 |
 | One Night Only | 7:45pm | standard | 🟢 available |  | 145480840 |
 | One Night Only | 10:45pm | standard | 🟢 available |  | 145480841 |
-| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 145695298 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316348 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 145695299 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316347 |
-| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 145695300 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316346 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 145695301 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316349 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145695302 |
 | Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611023 |
 | Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611024 |
 | Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611025 |
