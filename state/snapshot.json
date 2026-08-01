@@ -2665,7 +2665,7 @@
    "time": "10:15pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "70MM",
     "AMCARTISANFILMS",
