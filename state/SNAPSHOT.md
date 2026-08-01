@@ -13,10 +13,10 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Hadestown: The Musical | 11:30am | standard | 🟢 available |  | 145622137 |
 | I Want Your Sex | 10:00am | standard | 🟢 available |  | 145622116 |
+| I Want Your Sex | 1:30pm | standard | 🟢 available |  | 145697816 |
 | I Want Your Sex | 6:00pm | standard | 🟢 available |  | 145622119 |
 | I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145622102 |
 | Minions & Monsters | 9:00am | standard | 🟢 available |  | 145555073 |
-| Minions & Monsters | 1:45pm | standard | 🟢 available |  | 145622125 |
 | Moana | 9:00am | standard | 🟢 available |  | 145622111 |
 | Sheep in the Box | 10:30am | standard | 🟢 available |  | 145622126 |
 | Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145622127 |
