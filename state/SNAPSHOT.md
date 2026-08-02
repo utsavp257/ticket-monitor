@@ -44,7 +44,7 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145622139 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316386 |
 | Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145073233 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316364 |
+| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316364 |
 | The Invite | 9:00am | standard | 🟢 available |  | 145622104 |
 | The Invite | 3:00pm | standard | 🟢 available |  | 145622140 |
 | The Invite | 7:30pm | standard | 🟢 available |  | 145622128 |
