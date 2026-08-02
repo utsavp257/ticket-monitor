@@ -407,7 +407,7 @@
    "time": "6:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -588,7 +588,7 @@
    "time": "3:00pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
