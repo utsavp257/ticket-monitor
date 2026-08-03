@@ -20,7 +20,6 @@ Machine-readable version: `state/snapshot.json`.
 | Moana | 9:00am | standard | 🟢 available |  | 145622111 |
 | Sheep in the Box | 10:30am | standard | 🟢 available |  | 145622126 |
 | Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145622127 |
-| Spider-Man: Brand New Day | 2:15am | standard | 🟢 available |  | 145555116 |
 | Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316360 |
 | Spider-Man: Brand New Day | 9:30am | standard | 🟢 available |  | 144518641 |
 | Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316465 |
@@ -49,16 +48,20 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 3:00pm | standard | 🟢 available |  | 145622140 |
 | The Invite | 7:30pm | standard | 🟠 almost sold out |  | 145622128 |
 | The Invite | 10:30pm | standard | 🟢 available |  | 145622129 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 143822192 |
 | The Odyssey | 10:15am | standard | 🟢 available |  | 145555092 |
 | The Odyssey | 11:45am | standard | 🟢 available |  | 145555119 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822129 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822185 |
 | The Odyssey | 2:15pm | standard | 🟢 available |  | 145555091 |
 | The Odyssey | 3:45pm | standard | 🟢 available |  | 145555118 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822126 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822186 |
 | The Odyssey | 6:15pm | standard | 🟢 available |  | 145555090 |
 | The Odyssey | 7:45pm | standard | 🟢 available |  | 145555117 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822127 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 145622097 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822187 |
 | Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145622115 |
 | Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145622118 |
 
@@ -129,6 +132,7 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Moana | 10:00am | standard | 🟢 available |  | 145503237 |
 | Nimrods Early Access – Green Day Intro + Bonus Performance | 7:00pm | standard | 🟠 almost sold out |  | 145058060 |
+| Nimrods Early Access – Green Day Intro + Bonus Performance | 10:15pm | standard | 🟢 available |  | 145705376 |
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
 | One Night Only | 1:45pm | standard | 🟢 available |  | 145480842 |
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
@@ -195,9 +199,13 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 144872571 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 144872572 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 144872573 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696908 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480779 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696909 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480777 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696910 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696911 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
