@@ -1019,6 +1019,23 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145693014,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "2:15am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "DOLBYCINEMAATAMCPRIME",
@@ -1499,23 +1516,6 @@
    "time": "10:30pm"
   },
   {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
-   "id": 144696880,
-   "movie": "The Odyssey",
-   "soldOut": false,
-   "time": "10:00am"
-  },
-  {
    "almostSoldOut": false,
    "attributes": [
     "AMCARTISANFILMS",
@@ -1563,23 +1563,6 @@
    "movie": "The Odyssey",
    "soldOut": false,
    "time": "12:30pm"
-  },
-  {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
-   "id": 144696881,
-   "movie": "The Odyssey",
-   "soldOut": false,
-   "time": "2:00pm"
   },
   {
    "almostSoldOut": false,
@@ -1630,23 +1613,6 @@
    "movie": "The Odyssey",
    "soldOut": false,
    "time": "4:30pm"
-  },
-  {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
-   "id": 144696882,
-   "movie": "The Odyssey",
-   "soldOut": false,
-   "time": "6:00pm"
   },
   {
    "almostSoldOut": false,
@@ -1715,23 +1681,6 @@
    "movie": "The Odyssey",
    "soldOut": false,
    "time": "9:45pm"
-  },
-  {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
-   "id": 144696883,
-   "movie": "The Odyssey",
-   "soldOut": false,
-   "time": "10:00pm"
   },
   {
    "almostSoldOut": false,
