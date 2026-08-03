@@ -132,7 +132,6 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Moana | 10:00am | standard | 🟢 available |  | 145503237 |
 | Nimrods Early Access – Green Day Intro + Bonus Performance | 7:00pm | standard | 🟠 almost sold out |  | 145058060 |
-| Nimrods Early Access – Green Day Intro + Bonus Performance | 10:15pm | standard | 🟢 available |  | 145705376 |
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
 | One Night Only | 1:45pm | standard | 🟢 available |  | 145480842 |
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
