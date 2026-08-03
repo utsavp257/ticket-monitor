@@ -1844,6 +1844,25 @@
    "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "EVENT",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145705376,
+   "movie": "Nimrods Early Access \u2013 Green Day Intro + Bonus Performance",
+   "soldOut": false,
+   "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "LASERATAMC",
