@@ -78,7 +78,6 @@ Machine-readable version: `state/snapshot.json`.
 | Moana | 10:00am | standard | 🟢 available |  | 145693013 |
 | Sheep in the Box | 10:30am | standard | 🟢 available |  | 145693035 |
 | Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145693034 |
-| Spider-Man: Brand New Day | 2:15am | standard | 🟢 available |  | 145693014 |
 | Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316365 |
 | Spider-Man: Brand New Day | 9:30am | standard | 🟢 available |  | 145693025 |
 | Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316469 |
@@ -108,16 +107,20 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 4:15pm | standard | 🟢 available |  | 145693011 |
 | The Invite | 7:30pm | standard | 🟢 available |  | 145693031 |
 | The Invite | 10:30pm | standard | 🟢 available |  | 145693032 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696880 |
 | The Odyssey | 10:15am | standard | 🟢 available |  | 145693022 |
 | The Odyssey | 11:45am | standard | 🟢 available |  | 145693017 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822128 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696881 |
 | The Odyssey | 2:15pm | standard | 🟢 available |  | 145693021 |
 | The Odyssey | 3:45pm | standard | 🟢 available |  | 145693016 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822121 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696882 |
 | The Odyssey | 6:15pm | standard | 🟢 available |  | 145693020 |
 | The Odyssey | 7:45pm | standard | 🟢 available |  | 145693015 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 145693010 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696883 |
 | Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145693027 |
 
 ## Tuesday 2026-08-11
