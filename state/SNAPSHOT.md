@@ -175,24 +175,18 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
-| Minions & Monsters | 9:00am | standard | 🟢 available |  | 145724451 |
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480838 |
 | One Night Only | 1:45pm | standard | 🟢 available |  | 145480837 |
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480839 |
 | One Night Only | 7:45pm | standard | 🟢 available |  | 145480840 |
 | One Night Only | 10:45pm | standard | 🟢 available |  | 145480841 |
 | Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 145695298 |
-| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 145724485 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316348 |
 | Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 145695299 |
-| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 145724484 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316347 |
 | Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 145695300 |
-| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 145724488 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316346 |
 | Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145695301 |
-| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 145724487 |
-| Spider-Man: Brand New Day | 9:15pm | standard | 🟢 available |  | 145724462 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316349 |
 | Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145695302 |
 | Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611023 |
@@ -205,30 +199,17 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 144872571 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 144872572 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 144872573 |
-| The Invite | 10:00am | standard | 🟢 available |  | 145724461 |
-| The Invite | 12:45pm | standard | 🟢 available |  | 145724465 |
-| The Invite | 3:30pm | standard | 🟢 available |  | 145724464 |
-| The Invite | 6:15pm | standard | 🟢 available |  | 145724463 |
-| The Invite | 11:00pm | standard | 🟢 available |  | 145724480 |
 | The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696908 |
-| The Odyssey | 11:00am | standard | 🟢 available |  | 145724481 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480779 |
 | The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696909 |
-| The Odyssey | 3:00pm | standard | 🟢 available |  | 145724483 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480777 |
 | The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696910 |
-| The Odyssey | 7:00pm | standard | 🟢 available |  | 145724482 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
 | The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696911 |
-| Tony | 9:00am | standard | 🟢 available |  | 145724447 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
-| Tony | 12:00pm | standard | 🟢 available |  | 145724448 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
-| Tony | 3:00pm | standard | 🟢 available |  | 145724446 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
-| Tony | 6:00pm | standard | 🟢 available |  | 145724444 |
 | Tony | 7:00pm | standard | 🟢 available |  | 145073211 |
-| Tony | 9:00pm | standard | 🟢 available |  | 145724445 |
 | Tony | 10:00pm | standard | 🟢 available |  | 145073212 |
 
 ## Monday 2026-12-21
