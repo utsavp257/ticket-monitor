@@ -2479,6 +2479,22 @@
    ],
    "canceled": false,
    "format": "standard",
+   "id": 145724451,
+   "movie": "Minions & Monsters",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
    "id": 145480838,
    "movie": "One Night Only",
    "soldOut": false,
@@ -2574,6 +2590,22 @@
    ],
    "canceled": false,
    "format": "standard",
+   "id": 145724485,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
    "id": 144316348,
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
@@ -2594,6 +2626,22 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724484,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "1:30pm"
   },
   {
    "almostSoldOut": false,
@@ -2631,6 +2679,22 @@
    "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724488,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "5:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
     "LASERATAMC",
     "OPENCAPTION",
     "RESERVEDSEATING"
@@ -2657,6 +2721,38 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724487,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "8:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724462,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "9:15pm"
   },
   {
    "almostSoldOut": false,
@@ -2851,6 +2947,90 @@
    "time": "10:15pm"
   },
   {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724461,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724465,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724464,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724463,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "6:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724480,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "11:00pm"
+  },
+  {
    "almostSoldOut": true,
    "attributes": [
     "70MM",
@@ -2866,6 +3046,22 @@
    "movie": "The Odyssey",
    "soldOut": true,
    "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724481,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "11:00am"
   },
   {
    "almostSoldOut": true,
@@ -2900,6 +3096,23 @@
    "time": "2:00pm"
   },
   {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724483,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "3:00pm"
+  },
+  {
    "almostSoldOut": true,
    "attributes": [
     "70MM",
@@ -2930,6 +3143,23 @@
    "movie": "The Odyssey",
    "soldOut": true,
    "time": "6:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724482,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "7:00pm"
   },
   {
    "almostSoldOut": true,
@@ -2976,10 +3206,46 @@
    ],
    "canceled": false,
    "format": "standard",
+   "id": 145724447,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
    "id": 145073208,
    "movie": "Tony",
    "soldOut": false,
    "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724448,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "12:00pm"
   },
   {
    "almostSoldOut": false,
@@ -3012,10 +3278,46 @@
    ],
    "canceled": false,
    "format": "standard",
+   "id": 145724446,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "3:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
    "id": 145073210,
    "movie": "Tony",
    "soldOut": false,
    "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724444,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "6:00pm"
   },
   {
    "almostSoldOut": false,
@@ -3033,6 +3335,24 @@
    "movie": "Tony",
    "soldOut": false,
    "time": "7:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724445,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "9:00pm"
   },
   {
    "almostSoldOut": false,
