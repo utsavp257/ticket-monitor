@@ -32,14 +32,14 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 3:30pm | standard | 🟢 available |  | 145073231 |
 | Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316362 |
 | Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟢 available |  | 144518647 |
-| Spider-Man: Brand New Day | 5:30pm | standard | 🟢 available |  | 144316463 |
+| Spider-Man: Brand New Day | 5:30pm | standard | 🟠 almost sold out |  | 144316463 |
 | Spider-Man: Brand New Day | 6:00pm | standard | 🟠 almost sold out |  | 145622138 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟠 almost sold out |  | 144316383 |
 | Spider-Man: Brand New Day | 7:00pm | standard | 🟠 almost sold out |  | 145073230 |
 | Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316363 |
 | Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟠 almost sold out |  | 144316485 |
 | Spider-Man: Brand New Day | 8:30pm | standard | 🟠 almost sold out |  | 145622117 |
-| Spider-Man: Brand New Day | 9:00pm | standard | 🟠 almost sold out |  | 144316466 |
+| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316466 |
 | Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145622139 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316386 |
 | Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145073233 |
@@ -313,13 +313,6 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283820 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283821 |
-
-## Tuesday 2026-12-29
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
 
 ## Wednesday 2026-12-30
 
