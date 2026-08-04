@@ -7,128 +7,66 @@ each commit's timestamp is the pull time. Browse it on GitHub via this
 file's *History*, or locally with `git log -p state/SNAPSHOT.md`.
 Machine-readable version: `state/snapshot.json`.
 
-## Tuesday 2026-08-04
+## Wednesday 2026-08-05
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
-| Hadestown: The Musical | 11:30am | standard | 🟢 available |  | 145622137 |
-| I Want Your Sex | 10:00am | standard | 🟢 available |  | 145622116 |
-| I Want Your Sex | 1:30pm | standard | 🟢 available |  | 145697816 |
-| I Want Your Sex | 6:00pm | standard | 🟠 almost sold out |  | 145622119 |
-| I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145622102 |
-| Minions & Monsters | 9:00am | standard | 🟢 available |  | 145555073 |
-| Moana | 9:00am | standard | 🟢 available |  | 145622111 |
-| Sheep in the Box | 10:30am | standard | 🟢 available |  | 145622126 |
-| Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145622127 |
-| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316360 |
-| Spider-Man: Brand New Day | 9:30am | standard | 🟢 available |  | 144518641 |
-| Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316465 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316385 |
-| Spider-Man: Brand New Day | 12:00pm | standard | 🟢 available |  | 145073232 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316361 |
-| Spider-Man: Brand New Day | 1:00pm | RealD 3D | 🟢 available |  | 144518640 |
-| Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316464 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316384 |
-| Spider-Man: Brand New Day | 3:30pm | standard | 🟢 available |  | 145073231 |
-| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316362 |
-| Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟢 available |  | 144518647 |
-| Spider-Man: Brand New Day | 5:30pm | standard | 🟠 almost sold out |  | 144316463 |
-| Spider-Man: Brand New Day | 6:00pm | standard | 🟠 almost sold out |  | 145622138 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟠 almost sold out |  | 144316383 |
-| Spider-Man: Brand New Day | 7:00pm | standard | 🟠 almost sold out |  | 145073230 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316363 |
-| Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟠 almost sold out |  | 144316485 |
-| Spider-Man: Brand New Day | 8:30pm | standard | 🟠 almost sold out |  | 145622117 |
-| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316466 |
-| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145622139 |
-| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316386 |
-| Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145073233 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316364 |
-| The Invite | 9:00am | standard | 🟢 available |  | 145622104 |
-| The Invite | 3:00pm | standard | 🟢 available |  | 145622140 |
-| The Invite | 7:30pm | standard | 🟠 almost sold out |  | 145622128 |
-| The Invite | 10:30pm | standard | 🟢 available |  | 145622129 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 143822192 |
-| The Odyssey | 10:15am | standard | 🟢 available |  | 145555092 |
-| The Odyssey | 11:45am | standard | 🟢 available |  | 145555119 |
-| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822129 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822185 |
-| The Odyssey | 2:15pm | standard | 🟢 available |  | 145555091 |
-| The Odyssey | 3:45pm | standard | 🟢 available |  | 145555118 |
-| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822126 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822186 |
-| The Odyssey | 6:15pm | standard | 🟠 almost sold out |  | 145555090 |
-| The Odyssey | 7:45pm | standard | 🟢 available |  | 145555117 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822127 |
-| The Odyssey | 9:45pm | standard | 🟢 available |  | 145622097 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822187 |
-| Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145622115 |
-| Toy Story 5 | 3:15pm | standard | 🟢 available |  | 145622118 |
-
-## Tuesday 2026-08-11
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Minions & Monsters | 9:00am | standard | 🟢 available |  | 145724438 |
-| Moana | 10:00am | standard | 🟢 available |  | 145503237 |
-| Nimrods Early Access – Green Day Intro + Bonus Performance | 7:00pm | standard | 🟠 almost sold out |  | 145058060 |
-| Nimrods Early Access – Green Day Intro + Bonus Performance | 10:15pm | standard | 🟢 available |  | 145705376 |
-| One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
-| One Night Only | 1:45pm | standard | 🟢 available |  | 145480842 |
-| One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
-| One Night Only | 7:45pm | standard | 🟢 available |  | 145480845 |
-| One Night Only | 10:45pm | standard | 🟢 available |  | 145480846 |
-| Practical Magic | 1:15pm | standard | 🟢 available |  | 145724450 |
-| Practical Magic | 4:15pm | standard | 🟢 available |  | 145724449 |
-| Practical Magic | 7:30pm | standard | 🟠 almost sold out |  | 145493951 |
-| Practical Magic | 10:15pm | standard | 🟢 available |  | 145724486 |
-| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316321 |
-| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 145724478 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316344 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 144316322 |
-| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 145724477 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316343 |
-| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316323 |
-| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 145724476 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 144316342 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316324 |
-| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 145724479 |
-| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316345 |
-| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145508645 |
-| Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611019 |
-| Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611020 |
-| Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611021 |
-| Super Troopers 3 | 8:00pm | standard | 🟢 available |  | 144611042 |
-| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611022 |
-| Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 145073217 |
-| Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 145073207 |
-| Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 145073215 |
-| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 144872596 |
-| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 145073216 |
-| Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
-| The Invite | 1:45pm | standard | 🟢 available |  | 145724467 |
-| The Invite | 4:30pm | standard | 🟢 available |  | 145724466 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696904 |
-| The Odyssey | 11:00am | standard | 🟢 available |  | 145724489 |
-| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480776 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696905 |
-| The Odyssey | 3:00pm | standard | 🟢 available |  | 145724491 |
-| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480774 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696906 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480775 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696907 |
-| The Odyssey | 10:15pm | standard | 🟢 available |  | 145724468 |
-| Tony | 9:00am | standard | 🟢 available |  | 145724456 |
-| Tony | 10:00am | standard | 🟢 available |  | 145073205 |
-| Tony | 11:00am | standard | 🟢 available |  | 145724459 |
-| Tony | 12:00pm | standard | 🟢 available |  | 145724455 |
-| Tony | 1:00pm | standard | 🟢 available |  | 145073204 |
-| Tony | 3:00pm | standard | 🟢 available |  | 145724454 |
-| Tony | 4:00pm | standard | 🟢 available |  | 145073203 |
-| Tony | 6:00pm | standard | 🟢 available |  | 145724453 |
-| Tony | 7:00pm | standard | 🟠 almost sold out |  | 145073201 |
-| Tony | 9:00pm | standard | 🟢 available |  | 145724452 |
-| Tony | 10:00pm | standard | 🟢 available |  | 145073202 |
+| Hadestown: The Musical | 11:00am | standard | 🟢 available |  | 145693040 |
+| Hadestown: The Musical | 2:30pm | standard | 🟢 available |  | 145693037 |
+| I Want Your Sex | 10:00am | standard | 🟢 available |  | 145693030 |
+| I Want Your Sex | 1:45pm | standard | 🟢 available |  | 145697817 |
+| I Want Your Sex | 3:15pm | standard | 🟢 available |  | 145697815 |
+| I Want Your Sex | 6:00pm | standard | 🟠 almost sold out |  | 145693028 |
+| I Want Your Sex | 7:15pm | standard | 🟠 almost sold out |  | 145693009 |
+| I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145693019 |
+| Minions & Monsters | 9:15am | standard | 🟢 available |  | 145692999 |
+| Moana | 10:00am | standard | 🟢 available |  | 145693013 |
+| Sheep in the Box | 10:30am | standard | 🟢 available |  | 145693035 |
+| Sheep in the Box | 4:15pm | standard | 🟢 available |  | 145693034 |
+| Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316365 |
+| Spider-Man: Brand New Day | 9:30am | standard | 🟢 available |  | 145693025 |
+| Spider-Man: Brand New Day | 10:30am | standard | 🟢 available |  | 144316469 |
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316389 |
+| Spider-Man: Brand New Day | 12:00pm | standard | 🟢 available |  | 145693003 |
+| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316366 |
+| Spider-Man: Brand New Day | 1:00pm | RealD 3D | 🟢 available |  | 145693024 |
+| Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316468 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316388 |
+| Spider-Man: Brand New Day | 3:30pm | standard | 🟢 available |  | 145693001 |
+| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316367 |
+| Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟢 available |  | 145693023 |
+| Spider-Man: Brand New Day | 5:30pm | standard | 🟢 available |  | 144316467 |
+| Spider-Man: Brand New Day | 6:00pm | standard | 🟠 almost sold out |  | 145693038 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟠 almost sold out |  | 144316387 |
+| Spider-Man: Brand New Day | 7:00pm | standard | 🟠 almost sold out |  | 145693000 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316368 |
+| Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟢 available |  | 144316484 |
+| Spider-Man: Brand New Day | 8:30pm | standard | 🟠 almost sold out |  | 145693029 |
+| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316470 |
+| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145693039 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316390 |
+| Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145693002 |
+| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 144316369 |
+| The Invite | 9:00am | standard | 🟢 available |  | 145693018 |
+| The Invite | 1:15pm | standard | 🟢 available |  | 145693012 |
+| The Invite | 4:15pm | standard | 🟢 available |  | 145693011 |
+| The Invite | 7:30pm | standard | 🟠 almost sold out |  | 145693031 |
+| The Invite | 10:30pm | standard | 🟢 available |  | 145693032 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696880 |
+| The Odyssey | 10:15am | standard | 🟢 available |  | 145693022 |
+| The Odyssey | 11:45am | standard | 🟢 available |  | 145693017 |
+| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 143822128 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696881 |
+| The Odyssey | 2:15pm | standard | 🟢 available |  | 145693021 |
+| The Odyssey | 3:45pm | standard | 🟢 available |  | 145693016 |
+| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822121 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696882 |
+| The Odyssey | 6:15pm | standard | 🟢 available |  | 145693020 |
+| The Odyssey | 7:45pm | standard | 🟢 available |  | 145693015 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822122 |
+| The Odyssey | 9:45pm | standard | 🟢 available |  | 145693010 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696883 |
+| Toy Story 5 | 12:30pm | standard | 🟢 available |  | 145693027 |
 
 ## Wednesday 2026-08-12
 
@@ -217,6 +155,14 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283781 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145283785 |
 
+## Thursday 2026-12-24
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 145283789 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283793 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283796 |
+
 ## Saturday 2026-12-26
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -245,13 +191,6 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
 
-## Wednesday 2026-12-30
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283830 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283836 |
-
 ## Thursday 2026-12-31
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -264,5 +203,9 @@ Machine-readable version: `state/snapshot.json`.
 _No showtimes listed._
 
 ## Saturday 2027-01-02
+
+_No showtimes listed._
+
+## Sunday 2027-01-03
 
 _No showtimes listed._
