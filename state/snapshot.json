@@ -341,7 +341,7 @@
    "time": "4:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -455,7 +455,7 @@
    "time": "8:30pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -3356,7 +3356,7 @@
    "format": "70mm",
    "id": 144696908,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "10:00am"
   },
   {
