@@ -74,7 +74,7 @@ Machine-readable version: `state/snapshot.json`.
 | I Want Your Sex | 10:00am | standard | 🟢 available |  | 145693030 |
 | I Want Your Sex | 1:45pm | standard | 🟢 available |  | 145697817 |
 | I Want Your Sex | 3:15pm | standard | 🟢 available |  | 145697815 |
-| I Want Your Sex | 6:00pm | standard | 🟢 available |  | 145693028 |
+| I Want Your Sex | 6:00pm | standard | 🟠 almost sold out |  | 145693028 |
 | I Want Your Sex | 7:15pm | standard | 🟠 almost sold out |  | 145693009 |
 | I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145693019 |
 | Minions & Monsters | 9:15am | standard | 🟢 available |  | 145692999 |
