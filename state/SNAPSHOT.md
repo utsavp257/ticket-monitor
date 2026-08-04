@@ -227,7 +227,8 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 144872573 |
 | The Invite | 10:00am | standard | 🟢 available |  | 145724461 |
 | The Invite | 12:45pm | standard | 🟢 available |  | 145724465 |
-| The Invite | 6:30pm | standard | 🟢 available |  | 145724463 |
+| The Invite | 3:30pm | standard | 🟢 available |  | 145724464 |
+| The Invite | 6:15pm | standard | 🟢 available |  | 145724463 |
 | The Invite | 11:00pm | standard | 🟢 available |  | 145724480 |
 | The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696908 |
 | The Odyssey | 11:00am | standard | 🟢 available |  | 145724481 |

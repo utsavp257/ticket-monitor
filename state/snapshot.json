@@ -3314,6 +3314,23 @@
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145724464,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
     "LASERATAMC",
     "OPENCAPTION",
     "RESERVEDSEATING"
@@ -3323,7 +3340,7 @@
    "id": 145724463,
    "movie": "The Invite",
    "soldOut": false,
-   "time": "6:30pm"
+   "time": "6:15pm"
   },
   {
    "almostSoldOut": false,
