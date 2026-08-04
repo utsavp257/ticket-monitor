@@ -292,7 +292,7 @@
    "time": "3:00pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -324,7 +324,7 @@
    "time": "4:00pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -341,7 +341,7 @@
    "time": "4:30pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -455,7 +455,7 @@
    "time": "8:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -776,7 +776,7 @@
    "time": "6:15pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
@@ -3404,7 +3404,7 @@
    "format": "70mm",
    "id": 144696909,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "2:00pm"
   },
   {
@@ -3453,7 +3453,7 @@
    "format": "70mm",
    "id": 144696910,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "6:00pm"
   },
   {
@@ -3502,7 +3502,7 @@
    "format": "70mm",
    "id": 144696911,
    "movie": "The Odyssey",
-   "soldOut": true,
+   "soldOut": false,
    "time": "10:00pm"
   },
   {

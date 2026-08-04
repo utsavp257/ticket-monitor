@@ -29,17 +29,17 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 1:00pm | RealD 3D | 🟢 available |  | 144518640 |
 | Spider-Man: Brand New Day | 2:00pm | standard | 🟢 available |  | 144316464 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316384 |
-| Spider-Man: Brand New Day | 3:30pm | standard | 🟢 available |  | 145073231 |
+| Spider-Man: Brand New Day | 3:30pm | standard | 🟠 almost sold out |  | 145073231 |
 | Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316362 |
-| Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟢 available |  | 144518647 |
-| Spider-Man: Brand New Day | 5:30pm | standard | 🟢 available |  | 144316463 |
+| Spider-Man: Brand New Day | 4:30pm | RealD 3D | 🟠 almost sold out |  | 144518647 |
+| Spider-Man: Brand New Day | 5:30pm | standard | 🟠 almost sold out |  | 144316463 |
 | Spider-Man: Brand New Day | 6:00pm | standard | 🟠 almost sold out |  | 145622138 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟠 almost sold out |  | 144316383 |
 | Spider-Man: Brand New Day | 7:00pm | standard | 🟠 almost sold out |  | 145073230 |
 | Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316363 |
 | Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟠 almost sold out |  | 144316485 |
 | Spider-Man: Brand New Day | 8:30pm | standard | 🟠 almost sold out |  | 145622117 |
-| Spider-Man: Brand New Day | 9:00pm | standard | 🟠 almost sold out |  | 144316466 |
+| Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316466 |
 | Spider-Man: Brand New Day | 9:30pm | standard | 🟠 almost sold out |  | 145622139 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316386 |
 | Spider-Man: Brand New Day | 10:30pm | standard | 🟢 available |  | 145073233 |
@@ -58,7 +58,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 143822126 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822186 |
 | The Odyssey | 6:15pm | standard | 🟠 almost sold out |  | 145555090 |
-| The Odyssey | 7:45pm | standard | 🟢 available |  | 145555117 |
+| The Odyssey | 7:45pm | standard | 🟠 almost sold out |  | 145555117 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 143822127 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 145622097 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 143822187 |
@@ -232,13 +232,13 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696908 |
 | The Odyssey | 11:00am | standard | 🟢 available |  | 145724481 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480779 |
-| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696909 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696909 |
 | The Odyssey | 3:00pm | standard | 🟢 available |  | 145724483 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480777 |
-| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696910 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696910 |
 | The Odyssey | 7:00pm | standard | 🟢 available |  | 145724482 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
-| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696911 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696911 |
 | Tony | 9:00am | standard | 🟢 available |  | 145724447 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
 | Tony | 12:00pm | standard | 🟢 available |  | 145724448 |
