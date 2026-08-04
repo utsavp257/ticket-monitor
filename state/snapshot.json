@@ -341,7 +341,7 @@
    "time": "4:30pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
@@ -455,7 +455,7 @@
    "time": "8:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
