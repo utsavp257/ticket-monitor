@@ -75,7 +75,7 @@ Machine-readable version: `state/snapshot.json`.
 | I Want Your Sex | 1:45pm | standard | 🟢 available |  | 145697817 |
 | I Want Your Sex | 3:15pm | standard | 🟢 available |  | 145697815 |
 | I Want Your Sex | 6:00pm | standard | 🟢 available |  | 145693028 |
-| I Want Your Sex | 7:15pm | standard | 🟠 almost sold out |  | 145693009 |
+| I Want Your Sex | 7:15pm | standard | 🟢 available |  | 145693009 |
 | I Want Your Sex | 10:15pm | standard | 🟢 available |  | 145693019 |
 | Minions & Monsters | 9:15am | standard | 🟢 available |  | 145692999 |
 | Moana | 10:00am | standard | 🟢 available |  | 145693013 |
@@ -99,7 +99,7 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 7:00pm | standard | 🟠 almost sold out |  | 145693000 |
 | Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316368 |
 | Spider-Man: Brand New Day | 8:00pm | RealD 3D | 🟢 available |  | 144316484 |
-| Spider-Man: Brand New Day | 8:30pm | standard | 🟠 almost sold out |  | 145693029 |
+| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 145693029 |
 | Spider-Man: Brand New Day | 9:00pm | standard | 🟢 available |  | 144316470 |
 | Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 145693039 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316390 |
@@ -108,7 +108,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 9:00am | standard | 🟢 available |  | 145693018 |
 | The Invite | 1:15pm | standard | 🟢 available |  | 145693012 |
 | The Invite | 4:15pm | standard | 🟢 available |  | 145693011 |
-| The Invite | 7:30pm | standard | 🟠 almost sold out |  | 145693031 |
+| The Invite | 7:30pm | standard | 🟢 available |  | 145693031 |
 | The Invite | 10:30pm | standard | 🟢 available |  | 145693032 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696880 |
 | The Odyssey | 10:15am | standard | 🟢 available |  | 145693022 |
