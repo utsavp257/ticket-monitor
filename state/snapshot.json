@@ -422,7 +422,7 @@
    "time": "7:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
