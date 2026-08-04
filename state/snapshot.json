@@ -1282,7 +1282,7 @@
    "time": "5:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
