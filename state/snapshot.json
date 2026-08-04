@@ -3704,7 +3704,7 @@
  ],
  "2026-12-21": [
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
