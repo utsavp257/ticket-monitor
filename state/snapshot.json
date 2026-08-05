@@ -2184,10 +2184,10 @@
    ],
    "canceled": false,
    "format": "standard",
-   "id": 145724487,
+   "id": 145724462,
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
-   "time": "8:30pm"
+   "time": "8:00pm"
   },
   {
    "almostSoldOut": false,
@@ -2200,10 +2200,10 @@
    ],
    "canceled": false,
    "format": "standard",
-   "id": 145724462,
+   "id": 145724487,
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
-   "time": "9:15pm"
+   "time": "8:45pm"
   },
   {
    "almostSoldOut": false,
