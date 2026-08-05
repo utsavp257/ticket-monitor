@@ -280,8 +280,8 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
+| Avengers: Doomsday - Infinity Vision | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
+| Avengers: Doomsday - Infinity Vision | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
 
 ## Wednesday 2026-12-30
 
