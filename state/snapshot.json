@@ -502,7 +502,7 @@
    "time": "8:30pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "AONELIVE",
