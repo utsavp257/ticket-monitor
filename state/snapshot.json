@@ -562,7 +562,7 @@
    "time": "4:15pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCCLUBROCKERS",
     "LASERATAMC",
