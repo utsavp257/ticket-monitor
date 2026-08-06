@@ -64,11 +64,9 @@ on:
 # one starved run gate the others. Without a group, a stalled run harms only
 # itself and any ping that lands a runner polls immediately.
 #
-# The two things the group used to protect are handled elsewhere:
-#   • Duplicate alerts from a backlog draining at once -> the staleness guard,
-#     first step below.
-#   • git push races between overlapping runs -> the reset + merge_state.py +
-#     retry loop in the commit step.
+# What the group used to protect is handled elsewhere: git push races between
+# overlapping runs are absorbed by the reset + merge_state.py + retry loop in
+# the commit step. (Overlap is rare anyway — a poll is ~25s against a 60s ping.)
 
 permissions:
   contents: write
@@ -81,62 +79,38 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      # Staleness guard. Alert dedup lives in state/seen.json, which is only
-      # updated when a run COMMITS — so N runs polling concurrently off the
-      # same committed state all see the same showtime as "new" and all alert.
-      # That never happens at rest (25s of work per 60s ping), but it does when
-      # a capacity stall clears and GitHub releases the whole backlog at once.
+      # NOTE: there is deliberately no "skip this run if it sat in the queue"
+      # guard here. One was tried and removed the same day — see the commit
+      # history. Two reasons it was a bad idea:
       #
-      # A poll queued 12 minutes ago is worthless anyway: a fresher ping is
-      # right behind it. So a run that sat in the queue exits clean and frees
-      # the runner for the current one. Pickup is bimodal in practice — either
-      # ~5s or never — so 180s cleanly separates "fresh" from "backlog" without
-      # ever dropping a poll that was actually going to be useful.
+      #  1. It silently broke the monitor. `github.run_started_at` expands to an
+      #     empty string in this context, and GNU `date -d ""` doesn't error —
+      #     it returns midnight today. So the guard computed a ~20h queue age
+      #     and skipped the poll on EVERY run, while the job still reported
+      #     success. Green checkmarks, zero polling: the exact failure this repo
+      #     exists to prevent.
+      #  2. It was solving a problem that doesn't occur. The worry was a backlog
+      #     of delayed runs draining at once and all alerting off the same
+      #     committed state. But GitHub *cancels* runs it can't assign a runner
+      #     to (~15 min) rather than running them late, so the backlog never
+      #     drains — there is nothing to suppress.
       #
-      # Manual/test dispatches are exempt: a human clicking "Run workflow"
-      # wants it to run whenever it lands, however long that takes.
-      - name: Skip if this run is stale
-        id: fresh
-        env:
-          MANUAL: ${{ inputs.dry_run == true || inputs.test_pushover == true || inputs.test_escalation == true || inputs.test_email == true || inputs.discover_amc == true || inputs.probe_movie != '' }}
-        # FAIL OPEN. This step gates every poll, so a bug here (unparseable
-        # timestamp, date(1) quirk) must degrade to "run the poll", never to
-        # "skip it" — a duplicate alert is recoverable, a silent monitor isn't.
-        run: |
-          set +e
-          queued=$(date -u -d "${{ github.run_started_at }}" +%s 2>/dev/null)
-          now=$(date -u +%s)
-          if ! [ "$queued" -gt 0 ] 2>/dev/null; then
-            echo "Could not parse run_started_at ('${{ github.run_started_at }}') — assuming fresh."
-            exit 0
-          fi
-          age=$(( now - queued ))
-          echo "This run was queued ${age}s ago."
-          if [ "$MANUAL" = "true" ]; then
-            echo "Manual dispatch — running regardless of queue age."
-          elif [ "$age" -gt 180 ]; then
-            echo "Stale (>180s queued) — skipping the poll; a fresher run is behind this one."
-            echo "stale=true" >> "$GITHUB_OUTPUT"
-          fi
-          exit 0
-
+      # If you ever do need queue-age here: `github.run_started_at` is not a
+      # usable source, and any check must treat "can't determine the age" as
+      # fresh, validating the timestamp's format before handing it to date(1).
       - name: Checkout
-        if: steps.fresh.outputs.stale != 'true'
         uses: actions/checkout@v4
 
       - name: Setup Python
-        if: steps.fresh.outputs.stale != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
 
       - name: Install dependencies
-        if: steps.fresh.outputs.stale != 'true'
         run: pip install -r requirements.txt
 
       - name: Run monitor
-        if: steps.fresh.outputs.stale != 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -177,7 +151,7 @@ jobs:
       # reset to the latest remote, MERGE this run's state in, push, and retry.
       # Never fail the run over this — the next run reconciles via the merge.
       - name: Commit updated state
-        if: ${{ steps.fresh.outputs.stale != 'true' && (github.event_name == 'schedule' || inputs.dry_run != true) }}
+        if: ${{ github.event_name == 'schedule' || inputs.dry_run != true }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
