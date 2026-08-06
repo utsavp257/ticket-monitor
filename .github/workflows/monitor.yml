@@ -45,17 +45,30 @@ on:
         type: boolean
         default: false
 
-# DON'T cancel-in-progress here: a job's total wall-time (checkout + setup +
-# pip + the ≤55s poll + state commit) exceeds the 60s ping interval, so
-# cancelling the running job on each new ping would mean NO run ever finishes or
-# commits. Instead rely on GitHub's queue semantics for a concurrency group:
-# at most one run in-progress + one pending, and a newer ping supersedes the
-# older pending one. So the current run always completes and commits, and the
-# freshest ping is always queued next — that's the "next one clears" behaviour,
-# safely. The ≤55s poll timeout keeps any single run from bleeding over.
-concurrency:
-  group: ticket-monitor
-  cancel-in-progress: false
+# NO concurrency group — deliberately.
+#
+# There used to be one (group: ticket-monitor, cancel-in-progress: false), on
+# the theory that GitHub's queue semantics give you "at most one in-progress +
+# one pending, newest ping wins". That holds only while runners are plentiful.
+# When GitHub hosted-runner capacity is constrained, a job can sit unassigned
+# for ~15 minutes before GitHub gives up with "The job was not acquired by
+# Runner of type hosted even after multiple attempts" — and for that entire
+# window it OWNS the group. Every 60s ping behind it queues, gets superseded by
+# the next ping, and is cancelled. One stall therefore cost 15 minutes of
+# blackout instead of one minute. Observed 2026-08-06 during a GitHub Actions
+# capacity incident: ~86 of 100 consecutive runs cancelled, ~4 real polls/hour
+# instead of 60.
+#
+# Nothing inside a workflow can shorten that hold (timeout-minutes starts when
+# a job is PICKED UP, not when it's queued), so the only fix is to stop letting
+# one starved run gate the others. Without a group, a stalled run harms only
+# itself and any ping that lands a runner polls immediately.
+#
+# The two things the group used to protect are handled elsewhere:
+#   • Duplicate alerts from a backlog draining at once -> the staleness guard,
+#     first step below.
+#   • git push races between overlapping runs -> the reset + merge_state.py +
+#     retry loop in the commit step.
 
 permissions:
   contents: write
@@ -63,21 +76,67 @@ permissions:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    # A normal poll is ~25s wall-clock. This only exists to kill a job wedged
+    # in checkout/pip; the poll itself is separately capped at 55s below.
+    timeout-minutes: 5
 
     steps:
+      # Staleness guard. Alert dedup lives in state/seen.json, which is only
+      # updated when a run COMMITS — so N runs polling concurrently off the
+      # same committed state all see the same showtime as "new" and all alert.
+      # That never happens at rest (25s of work per 60s ping), but it does when
+      # a capacity stall clears and GitHub releases the whole backlog at once.
+      #
+      # A poll queued 12 minutes ago is worthless anyway: a fresher ping is
+      # right behind it. So a run that sat in the queue exits clean and frees
+      # the runner for the current one. Pickup is bimodal in practice — either
+      # ~5s or never — so 180s cleanly separates "fresh" from "backlog" without
+      # ever dropping a poll that was actually going to be useful.
+      #
+      # Manual/test dispatches are exempt: a human clicking "Run workflow"
+      # wants it to run whenever it lands, however long that takes.
+      - name: Skip if this run is stale
+        id: fresh
+        env:
+          MANUAL: ${{ inputs.dry_run == true || inputs.test_pushover == true || inputs.test_escalation == true || inputs.test_email == true || inputs.discover_amc == true || inputs.probe_movie != '' }}
+        # FAIL OPEN. This step gates every poll, so a bug here (unparseable
+        # timestamp, date(1) quirk) must degrade to "run the poll", never to
+        # "skip it" — a duplicate alert is recoverable, a silent monitor isn't.
+        run: |
+          set +e
+          queued=$(date -u -d "${{ github.run_started_at }}" +%s 2>/dev/null)
+          now=$(date -u +%s)
+          if ! [ "$queued" -gt 0 ] 2>/dev/null; then
+            echo "Could not parse run_started_at ('${{ github.run_started_at }}') — assuming fresh."
+            exit 0
+          fi
+          age=$(( now - queued ))
+          echo "This run was queued ${age}s ago."
+          if [ "$MANUAL" = "true" ]; then
+            echo "Manual dispatch — running regardless of queue age."
+          elif [ "$age" -gt 180 ]; then
+            echo "Stale (>180s queued) — skipping the poll; a fresher run is behind this one."
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
       - name: Checkout
+        if: steps.fresh.outputs.stale != 'true'
         uses: actions/checkout@v4
 
       - name: Setup Python
+        if: steps.fresh.outputs.stale != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
 
       - name: Install dependencies
+        if: steps.fresh.outputs.stale != 'true'
         run: pip install -r requirements.txt
 
       - name: Run monitor
+        if: steps.fresh.outputs.stale != 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -118,7 +177,7 @@ jobs:
       # reset to the latest remote, MERGE this run's state in, push, and retry.
       # Never fail the run over this — the next run reconciles via the merge.
       - name: Commit updated state
-        if: ${{ github.event_name == 'schedule' || inputs.dry_run != true }}
+        if: ${{ steps.fresh.outputs.stale != 'true' && (github.event_name == 'schedule' || inputs.dry_run != true) }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
