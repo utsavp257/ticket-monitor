@@ -18,7 +18,7 @@ Machine-readable version: `state/snapshot.json`.
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
 | One Night Only | 1:45pm | standard | 🟢 available |  | 145480842 |
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
-| One Night Only | 7:45pm | standard | 🟢 available |  | 145480845 |
+| One Night Only | 7:45pm | standard | 🟠 almost sold out |  | 145480845 |
 | One Night Only | 10:45pm | standard | 🟢 available |  | 145480846 |
 | Practical Magic | 1:15pm | standard | 🟢 available |  | 145724450 |
 | Practical Magic | 4:15pm | standard | 🟢 available |  | 145724449 |
