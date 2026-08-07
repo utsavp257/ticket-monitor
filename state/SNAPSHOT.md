@@ -109,16 +109,16 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 11:15am | standard | 🟢 available |  | 145724461 |
 | The Invite | 2:00pm | standard | 🟢 available |  | 145724465 |
 | The Invite | 11:00pm | standard | 🟢 available |  | 145724480 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696908 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696908 |
 | The Odyssey | 11:00am | standard | 🟢 available |  | 145724481 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480779 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696909 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696909 |
 | The Odyssey | 3:00pm | standard | 🟢 available |  | 145724483 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480777 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696910 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696910 |
 | The Odyssey | 7:00pm | standard | 🟢 available |  | 145724482 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696911 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696911 |
 | Tony | 9:00am | standard | 🟢 available |  | 145724447 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073208 |
 | Tony | 12:00pm | standard | 🟢 available |  | 145724448 |
