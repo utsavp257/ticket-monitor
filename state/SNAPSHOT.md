@@ -50,15 +50,15 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
 | The Invite | 1:45pm | standard | 🟢 available |  | 145724467 |
 | The Invite | 4:30pm | standard | 🟢 available |  | 145724466 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 144696904 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 144696904 |
 | The Odyssey | 11:00am | standard | 🟢 available |  | 145724489 |
 | The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145480776 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696905 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696905 |
 | The Odyssey | 3:00pm | standard | 🟢 available |  | 145724491 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480774 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696906 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696906 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480775 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696907 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 144696907 |
 | The Odyssey | 10:15pm | standard | 🟢 available |  | 145724468 |
 | Tony | 9:00am | standard | 🟢 available |  | 145724456 |
 | Tony | 10:00am | standard | 🟢 available |  | 145073205 |
