@@ -46,7 +46,7 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 145073207 |
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 145073215 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟠 almost sold out |  | 144872596 |
-| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟢 available |  | 145073216 |
+| Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟠 almost sold out |  | 145073216 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
 | The Invite | 1:45pm | standard | 🟢 available |  | 145724467 |
 | The Invite | 4:30pm | standard | 🟢 available |  | 145724466 |
