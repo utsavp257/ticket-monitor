@@ -134,6 +134,15 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145898466 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145898467 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145898468 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145898469 |
+| Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 145898508 |
+| Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 145898509 |
+| Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 145898510 |
+| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 145898511 |
+| Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 145898512 |
 | The End of Oak Street | 10:45am | standard | 🟢 available |  | 145157212 |
 | The End of Oak Street | 1:45pm | standard | 🟢 available |  | 145157211 |
 | The End of Oak Street | 4:45pm | standard | 🟢 available |  | 145157210 |
@@ -146,11 +155,16 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377454 |
 | The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711580 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377455 |
-| The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701501 |
-| The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701516 |
-| The Rivals of Amziah King | 3:30pm | standard | 🟢 available |  | 145701500 |
-| The Rivals of Amziah King | 6:30pm | standard | 🟢 available |  | 145701515 |
-| The Rivals of Amziah King | 9:30pm | standard | 🟢 available |  | 145701502 |
+| The Rivals of Amziah King | 9:45am | standard | 🟢 available |  | 145701501 |
+| The Rivals of Amziah King | 12:45pm | standard | 🟢 available |  | 145701516 |
+| The Rivals of Amziah King | 3:45pm | standard | 🟢 available |  | 145701500 |
+| The Rivals of Amziah King | 6:45pm | standard | 🟢 available |  | 145701515 |
+| The Rivals of Amziah King | 9:45pm | standard | 🟢 available |  | 145701502 |
+| Tony | 10:15am | standard | 🟢 available |  | 145898457 |
+| Tony | 1:15pm | standard | 🟢 available |  | 145898458 |
+| Tony | 4:15pm | standard | 🟢 available |  | 145898459 |
+| Tony | 7:15pm | standard | 🟢 available |  | 145898460 |
+| Tony | 10:15pm | standard | 🟢 available |  | 145898461 |
 
 ## Wednesday 2026-08-19
 
