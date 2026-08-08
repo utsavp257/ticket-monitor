@@ -166,6 +166,28 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 7:15pm | standard | 🟢 available |  | 145898460 |
 | Tony | 10:15pm | standard | 🟢 available |  | 145898461 |
 
+## Wednesday 2026-08-19
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| La La Land 10th Anniversary | 3:50pm | Dolby Cinema at AMC | 🟢 available |  | 145493949 |
+| La La Land 10th Anniversary | 7:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145493948 |
+| Point Break 35th Anniversary | 7:00pm | standard | 🟢 available |  | 144700959 |
+| Six: The Musical Live! | 7:00pm | standard | 🟢 available |  | 143205620 |
+| Spider-Man: Brand New Day | 4:00pm | standard | 🟢 available |  | 145878082 |
+| Spider-Man: Brand New Day | 7:30pm | standard | 🟢 available |  | 145878083 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145701521 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711581 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711582 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377457 |
+| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711583 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377458 |
+| The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701514 |
+| The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701497 |
+| The Rivals of Amziah King | 3:30pm | standard | 🟢 available |  | 145701513 |
+| The Rivals of Amziah King | 6:30pm | standard | 🟢 available |  | 145701498 |
+
 ## Monday 2026-12-21
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -249,6 +271,10 @@ Machine-readable version: `state/snapshot.json`.
 |---|---|---|---|---|---|
 | Avengers: Doomsday - Infinity Vision | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283838 |
 | Avengers: Doomsday - Infinity Vision | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
+
+## Friday 2027-01-01
+
+_No showtimes listed._
 
 ## Saturday 2027-01-02
 
