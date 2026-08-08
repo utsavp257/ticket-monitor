@@ -1813,7 +1813,7 @@
    "time": "6:00pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
