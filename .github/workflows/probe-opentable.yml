@@ -1,0 +1,33 @@
+name: OpenTable Probe
+
+# Feasibility probe only — manual trigger, no schedule, no external pinger.
+# Answers whether a GitHub-hosted runner's datacenter IP can read OpenTable's
+# public restaurant page and slot availability, before we design a scraper
+# around the assumption that it can. See scripts/probe_opentable.py.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Never fail the job: a block IS the result we're measuring, and a red X
+      # here would just look like a broken workflow.
+      - name: Probe OpenTable from the runner
+        run: python scripts/probe_opentable.py || echo "(probe reported a block — that's a finding, not a failure)"
