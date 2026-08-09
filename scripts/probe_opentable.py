@@ -148,20 +148,78 @@ def probe_availability(rid: str | None) -> None:
         print(f"  POST dapi/fe/gql -> {type(e).__name__}: {e}")
 
 
+def fetch_with_browser() -> str | None:
+    """Same page via real Chromium.
+
+    The requests attempt read-times-out rather than returning 403: TLS
+    completes and then OpenTable never answers. curl behaves identically from
+    a residential IP, which points at TLS/HTTP fingerprinting rather than IP
+    reputation — requests and curl both have obviously-not-a-browser
+    fingerprints. If that's the story, a real browser gets through from the
+    same runner and the fix is transport, not proxies. If Chromium also hangs,
+    it's the IP, and we'd need residential egress (Apify, as the Instagram
+    check already does).
+    """
+    banner("5. GET the restaurant page via Playwright Chromium")
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  playwright not installed — skipped")
+        return None
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(args=["--no-sandbox"])
+            page = browser.new_page(user_agent=UA, locale="en-US")
+            t0 = time.time()
+            resp = page.goto(RESTAURANT_URL, wait_until="domcontentloaded",
+                             timeout=45_000)
+            dt = time.time() - t0
+            status = resp.status if resp else None
+            html = page.content()
+            print(f"  status={status}  bytes={len(html)}  {dt:.2f}s")
+            hits = classify(html)
+            if hits:
+                print(f"  !! CHALLENGE PAGE — matched {hits}")
+                browser.close()
+                return None
+            print(f"  page mentions 'una pizza': {'una pizza' in html.lower()}")
+            # Slot buttons are the thing we'd actually scrape. Their presence
+            # (or a "no tables" message) proves the availability UI rendered.
+            for probe_text in ("No tables are available", "Select a time",
+                               "reservation", "party size"):
+                print(f"  contains {probe_text!r}: {probe_text.lower() in html.lower()}")
+            browser.close()
+            print("  => page is READABLE via a real browser from this runner")
+            return html
+    except Exception as e:
+        print(f"  BLOCKED/ERROR: {type(e).__name__}: {str(e)[:300]}")
+        return None
+
+
 def main() -> int:
     print("OpenTable feasibility probe")
     print(f"target: {RESTAURANT_URL}")
     egress_ip()
     html = fetch_restaurant_page()
-    if html is None:
-        banner("VERDICT")
-        print("  Restaurant page NOT readable from this IP.")
-        print("  A plain requests scraper on GitHub Actions will not work.")
-        return 1
-    ids = extract_ids(html)
-    probe_availability(ids.get("restaurantId") or ids.get("rid"))
+    if html is not None:
+        ids = extract_ids(html)
+        probe_availability(ids.get("restaurantId") or ids.get("rid"))
+
+    browser_html = fetch_with_browser()
+
     banner("VERDICT")
-    print("  Restaurant page readable. See section 4 for whether slot data is.")
+    print(f"  plain requests : {'READABLE' if html else 'blocked/timeout'}")
+    print(f"  real browser   : {'READABLE' if browser_html else 'blocked/timeout'}")
+    if browser_html and not html:
+        print("  => fingerprinting, not IP. Scrape with Playwright on Actions.")
+    elif html:
+        print("  => plain HTTP works; cheapest transport is fine.")
+    else:
+        print("  => runner IP appears blocked outright; needs residential egress.")
+    if browser_html:
+        ids = extract_ids(browser_html)
+        print(f"  ids from browser HTML: {ids}")
     return 0
 
 

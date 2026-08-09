@@ -27,6 +27,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # The probe compares plain-HTTP against a real browser fingerprint, so
+      # Chromium is required for the half that matters.
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
       # Never fail the job: a block IS the result we're measuring, and a red X
       # here would just look like a broken workflow.
       - name: Probe OpenTable from the runner
