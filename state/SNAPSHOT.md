@@ -69,7 +69,7 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 4:00pm | standard | 🟢 available |  | 145073203 |
 | Tony | 6:00pm | standard | 🟠 almost sold out |  | 145724453 |
 | Tony | 7:00pm | standard | 🟠 almost sold out |  | 145073201 |
-| Tony | 9:00pm | standard | 🟢 available |  | 145724452 |
+| Tony | 9:00pm | standard | 🟠 almost sold out |  | 145724452 |
 | Tony | 10:00pm | standard | 🟢 available |  | 145073202 |
 
 ## Wednesday 2026-08-12
