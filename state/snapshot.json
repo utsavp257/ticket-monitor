@@ -3161,46 +3161,6 @@
    "time": "6:30pm"
   }
  ],
- "2026-12-30": [
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "DOLBYCINEMAATAMCPRIME",
-    "EXCLDISDAY",
-    "INFINITYVI",
-    "RECLINERSEATING",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "Dolby Cinema at AMC",
-   "id": 145283830,
-   "movie": "Avengers: Doomsday - Infinity Vision",
-   "soldOut": false,
-   "time": "2:45pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "DOLBYCINEMAATAMCPRIME",
-    "EXCLDISDAY",
-    "INFINITYVI",
-    "RECLINERSEATING",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "Dolby Cinema at AMC",
-   "id": 145283836,
-   "movie": "Avengers: Doomsday - Infinity Vision",
-   "soldOut": false,
-   "time": "6:30pm"
-  }
- ],
  "2026-12-31": [
   {
    "almostSoldOut": false,
