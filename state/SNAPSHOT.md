@@ -170,12 +170,15 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 145922900 |
+| La La Land 10th Anniversary | 12:40pm | Dolby Cinema at AMC | 🟢 available |  | 145922899 |
 | La La Land 10th Anniversary | 3:50pm | Dolby Cinema at AMC | 🟢 available |  | 145493949 |
 | La La Land 10th Anniversary | 7:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145493948 |
 | Point Break 35th Anniversary | 7:00pm | standard | 🟢 available |  | 144700959 |
 | Six: The Musical Live! | 7:00pm | standard | 🟢 available |  | 143205620 |
 | Spider-Man: Brand New Day | 4:00pm | standard | 🟢 available |  | 145878082 |
 | Spider-Man: Brand New Day | 7:30pm | standard | 🟢 available |  | 145878083 |
+| Spider-Man: Brand New Day | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145922902 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145701521 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711581 |
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
