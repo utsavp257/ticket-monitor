@@ -98,7 +98,6 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145695302 |
 | Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611023 |
 | Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611024 |
-| Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611025 |
 | Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611027 |
 | Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 144872575 |
 | Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 144872574 |
@@ -125,6 +124,7 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 1:00pm | standard | 🟢 available |  | 145073209 |
 | Tony | 3:00pm | standard | 🟢 available |  | 145724446 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
+| Tony | 5:00pm | standard | 🟢 available |  | 145943346 |
 | Tony | 6:00pm | standard | 🟠 almost sold out |  | 145724444 |
 | Tony | 7:00pm | standard | 🟠 almost sold out |  | 145073211 |
 | Tony | 9:00pm | standard | 🟢 available |  | 145724445 |

@@ -1359,23 +1359,6 @@
    ],
    "canceled": false,
    "format": "standard",
-   "id": 144611025,
-   "movie": "Super Troopers 3",
-   "soldOut": false,
-   "time": "5:00pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
    "id": 144611027,
    "movie": "Super Troopers 3",
    "soldOut": false,
@@ -1796,6 +1779,16 @@
    "movie": "Tony",
    "soldOut": false,
    "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 145943346,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "5:00pm"
   },
   {
    "almostSoldOut": true,
