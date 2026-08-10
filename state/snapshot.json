@@ -164,6 +164,22 @@
    ],
    "canceled": false,
    "format": "standard",
+   "id": 145943345,
+   "movie": "Practical Magic",
+   "soldOut": false,
+   "time": "11:15am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "EVENT",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
    "id": 145724450,
    "movie": "Practical Magic",
    "soldOut": false,
@@ -265,7 +281,7 @@
    "time": "11:30am"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -426,57 +442,6 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "11:00pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
-   "id": 144611019,
-   "movie": "Super Troopers 3",
-   "soldOut": false,
-   "time": "11:00am"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
-   "id": 144611020,
-   "movie": "Super Troopers 3",
-   "soldOut": false,
-   "time": "2:00pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
-   "id": 144611021,
-   "movie": "Super Troopers 3",
-   "soldOut": false,
-   "time": "5:00pm"
   },
   {
    "almostSoldOut": false,
@@ -897,6 +862,24 @@
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145943344,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "2:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "LASERATAMC",
@@ -925,6 +908,24 @@
    "movie": "Tony",
    "soldOut": false,
    "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145943343,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "5:00pm"
   },
   {
    "almostSoldOut": true,

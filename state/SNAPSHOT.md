@@ -20,6 +20,7 @@ Machine-readable version: `state/snapshot.json`.
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480844 |
 | One Night Only | 7:45pm | standard | 🟠 almost sold out |  | 145480845 |
 | One Night Only | 10:45pm | standard | 🟢 available |  | 145480846 |
+| Practical Magic | 11:15am | standard | 🟢 available |  | 145943345 |
 | Practical Magic | 1:15pm | standard | 🟢 available |  | 145724450 |
 | Practical Magic | 4:15pm | standard | 🟢 available |  | 145724449 |
 | Practical Magic | 7:30pm | standard | 🟠 almost sold out |  | 145493951 |
@@ -27,7 +28,7 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 144316321 |
 | Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 145724478 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 144316344 |
-| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟢 available |  | 144316322 |
+| Spider-Man: Brand New Day | 12:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316322 |
 | Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 145724477 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 144316343 |
 | Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 144316323 |
@@ -37,9 +38,6 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 145724479 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 144316345 |
 | Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145508645 |
-| Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611019 |
-| Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611020 |
-| Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611021 |
 | Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611022 |
 | Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 145073217 |
 | Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 145073207 |
@@ -65,8 +63,10 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 11:00am | standard | 🟢 available |  | 145724459 |
 | Tony | 12:00pm | standard | 🟢 available |  | 145724455 |
 | Tony | 1:00pm | standard | 🟢 available |  | 145073204 |
+| Tony | 2:00pm | standard | 🟢 available |  | 145943344 |
 | Tony | 3:00pm | standard | 🟢 available |  | 145724454 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073203 |
+| Tony | 5:00pm | standard | 🟢 available |  | 145943343 |
 | Tony | 6:00pm | standard | 🟠 almost sold out |  | 145724453 |
 | Tony | 7:00pm | standard | 🟠 almost sold out |  | 145073201 |
 | Tony | 9:00pm | standard | 🟠 almost sold out |  | 145724452 |
