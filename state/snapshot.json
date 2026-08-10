@@ -483,22 +483,6 @@
    "attributes": [
     "AMCCLUBROCKERS",
     "AONELIVE",
-    "LASERATAMC",
-    "OPENCAPTION",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "standard",
-   "id": 144611042,
-   "movie": "Super Troopers 3",
-   "soldOut": false,
-   "time": "8:00pm"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "LASERATAMC",
@@ -591,6 +575,24 @@
    "movie": "Teenage Sex and Death at Camp Miasma",
    "soldOut": false,
    "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145912505,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "8:00pm"
   },
   {
    "almostSoldOut": false,

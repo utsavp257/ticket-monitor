@@ -40,13 +40,13 @@ Machine-readable version: `state/snapshot.json`.
 | Super Troopers 3 | 11:00am | standard | 🟢 available |  | 144611019 |
 | Super Troopers 3 | 2:00pm | standard | 🟢 available |  | 144611020 |
 | Super Troopers 3 | 5:00pm | standard | 🟢 available |  | 144611021 |
-| Super Troopers 3 | 8:00pm | standard | 🟢 available |  | 144611042 |
 | Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 144611022 |
 | Teenage Sex and Death at Camp Miasma | 10:15am | standard | 🟢 available |  | 145073217 |
 | Teenage Sex and Death at Camp Miasma | 1:15pm | standard | 🟢 available |  | 145073207 |
 | Teenage Sex and Death at Camp Miasma | 4:15pm | standard | 🟢 available |  | 145073215 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟠 almost sold out |  | 144872596 |
 | Teenage Sex and Death at Camp Miasma | 7:15pm | standard | 🟠 almost sold out |  | 145073216 |
+| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 145912505 |
 | Teenage Sex and Death at Camp Miasma | 10:15pm | standard | 🟢 available |  | 145073206 |
 | The Invite | 1:45pm | standard | 🟢 available |  | 145724467 |
 | The Invite | 4:30pm | standard | 🟢 available |  | 145724466 |
