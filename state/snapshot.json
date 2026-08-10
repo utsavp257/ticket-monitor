@@ -1783,7 +1783,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 145943346,
