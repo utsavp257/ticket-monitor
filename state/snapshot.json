@@ -1873,6 +1873,57 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939078,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "9:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939077,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939076,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -1921,6 +1972,22 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939079,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "AMCCLUBROCKERS",
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -1933,6 +2000,22 @@
    "movie": "Spider-Man: Brand New Day",
    "soldOut": false,
    "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939075,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "11:00pm"
   },
   {
    "almostSoldOut": false,

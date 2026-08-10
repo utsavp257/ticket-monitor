@@ -134,10 +134,15 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 145939078 |
+| La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 145939077 |
+| La La Land 10th Anniversary | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 145939076 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145898466 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145898467 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145898468 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 145939079 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145898469 |
+| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145939075 |
 | Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 145898508 |
 | Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 145898509 |
 | Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 145898510 |
