@@ -495,7 +495,7 @@
    "time": "1:15pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCCLUBROCKERS",
     "AONELIVE",
