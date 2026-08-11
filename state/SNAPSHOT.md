@@ -12,7 +12,7 @@ Machine-readable version: `state/snapshot.json`.
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
 | Minions & Monsters | 9:00am | standard | 🟢 available |  | 145724438 |
-| Moana | 10:00am | standard | 🟢 available |  | 145503237 |
+| Moana | 10:00am | standard | 🟠 almost sold out |  | 145503237 |
 | Nimrods Early Access – Green Day Intro + Bonus Performance | 7:00pm | standard | 🟠 almost sold out |  | 145058060 |
 | Nimrods Early Access – Green Day Intro + Bonus Performance | 10:15pm | standard | 🟢 available |  | 145705376 |
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480843 |
