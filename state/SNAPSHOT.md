@@ -50,7 +50,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 3:00pm | standard | 🟢 available |  | 145724483 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145480777 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696910 |
-| The Odyssey | 7:00pm | standard | 🟢 available |  | 145724482 |
+| The Odyssey | 7:00pm | standard | 🟠 almost sold out |  | 145724482 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145480778 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 144696911 |
 | Tony | 9:00am | standard | 🟢 available |  | 145724447 |
