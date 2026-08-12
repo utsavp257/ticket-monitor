@@ -15,7 +15,7 @@ Machine-readable version: `state/snapshot.json`.
 | One Night Only | 10:45am | standard | 🟢 available |  | 145480838 |
 | One Night Only | 1:45pm | standard | 🟢 available |  | 145480837 |
 | One Night Only | 4:45pm | standard | 🟢 available |  | 145480839 |
-| One Night Only | 7:45pm | standard | 🟢 available |  | 145480840 |
+| One Night Only | 7:45pm | standard | 🟠 almost sold out |  | 145480840 |
 | One Night Only | 10:45pm | standard | 🟢 available |  | 145480841 |
 | Spider-Man: Brand New Day | 9:00am | Dolby Cinema at AMC | 🟢 available |  | 145695298 |
 | Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 145724485 |
