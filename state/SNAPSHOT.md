@@ -59,7 +59,7 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 2:00pm | standard | 🟢 available |  | 146128773 |
 | Tony | 3:00pm | standard | 🟠 almost sold out |  | 145724446 |
 | Tony | 4:00pm | standard | 🟢 available |  | 145073210 |
-| Tony | 5:00pm | standard | 🟠 almost sold out |  | 145943346 |
+| Tony | 5:00pm | standard | 🟢 available |  | 145943346 |
 | Tony | 6:00pm | standard | 🟠 almost sold out |  | 145724444 |
 | Tony | 7:00pm | standard | 🟠 almost sold out |  | 145073211 |
 | Tony | 9:00pm | standard | 🟠 almost sold out |  | 145724445 |
