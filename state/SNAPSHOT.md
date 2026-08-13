@@ -275,8 +275,17 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| Avengers: Doomsday | 8:00am | standard | 🟢 available |  | 146174172 |
+| Avengers: Doomsday | 9:00am | standard | 🟢 available |  | 146174242 |
+| Avengers: Doomsday | 11:45am | standard | 🟢 available |  | 146174171 |
+| Avengers: Doomsday | 12:45pm | standard | 🟢 available |  | 146174241 |
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283807 |
+| Avengers: Doomsday | 3:30pm | standard | 🟢 available |  | 146174170 |
+| Avengers: Doomsday | 4:30pm | standard | 🟢 available |  | 146174244 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283809 |
+| Avengers: Doomsday | 7:15pm | standard | 🟢 available |  | 146174174 |
+| Avengers: Doomsday | 8:15pm | standard | 🟢 available |  | 146174243 |
+| Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174169 |
 
 ## Sunday 2026-12-27
 
