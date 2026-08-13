@@ -302,7 +302,7 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 9:00am | standard | 🟢 available |  | 146174242 |
 | Avengers: Doomsday | 11:45am | standard | 🟢 available |  | 146174171 |
 | Avengers: Doomsday | 12:45pm | standard | 🟢 available |  | 146174241 |
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283807 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283807 |
 | Avengers: Doomsday | 3:30pm | standard | 🟢 available |  | 146174170 |
 | Avengers: Doomsday | 4:30pm | standard | 🟢 available |  | 146174244 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283809 |
