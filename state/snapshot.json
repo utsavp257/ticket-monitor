@@ -2992,6 +2992,96 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174236,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174265,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "1:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 146174121,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "2:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174256,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174272,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "DISNEYRWDS",
@@ -3011,6 +3101,62 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174179,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174255,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174271,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "1:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "DISNEYRWDS",
@@ -3026,6 +3172,61 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "2:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174185,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174254,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174273,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "5:30pm"
   },
   {
    "almostSoldOut": true,
@@ -3049,6 +3250,62 @@
   {
    "almostSoldOut": false,
    "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174183,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174253,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174274,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
     "DISNEYRWDS",
@@ -3064,6 +3321,25 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174184,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
   }
  ],
  "2026-12-24": [
