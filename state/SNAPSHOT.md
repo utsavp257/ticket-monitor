@@ -410,16 +410,3 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 7:15pm | standard | 🟢 available |  | 146174144 |
 | Avengers: Doomsday | 8:15pm | standard | 🟢 available |  | 146174211 |
 | Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174140 |
-
-## Sunday 2027-01-03
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 9:00am | standard | 🟢 available |  | 146174208 |
-| Avengers: Doomsday | 11:45am | standard | 🟢 available |  | 146174139 |
-| Avengers: Doomsday | 12:45pm | standard | 🟢 available |  | 146174207 |
-| Avengers: Doomsday | 3:30pm | standard | 🟢 available |  | 146174138 |
-| Avengers: Doomsday | 4:30pm | standard | 🟢 available |  | 146174206 |
-| Avengers: Doomsday | 7:15pm | standard | 🟢 available |  | 146174136 |
-| Avengers: Doomsday | 8:15pm | standard | 🟢 available |  | 146174210 |
-| Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174137 |
