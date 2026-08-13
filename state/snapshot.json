@@ -3025,7 +3025,15 @@
  "2026-12-22": [
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174235,
@@ -3035,7 +3043,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174266,
@@ -3045,9 +3062,18 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "EXCLDISDAY",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146174122,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -3055,7 +3081,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174260,
@@ -3065,7 +3099,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174277,
@@ -3094,7 +3137,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174186,
@@ -3104,7 +3155,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174259,
@@ -3114,7 +3173,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174276,
@@ -3143,7 +3211,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174189,
@@ -3153,7 +3230,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174258,
@@ -3163,7 +3248,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174275,
@@ -3192,7 +3286,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174187,
@@ -3202,7 +3305,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174257,
@@ -3212,7 +3323,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174278,
@@ -3241,7 +3361,16 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "EXCLDISDAY",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174188,
@@ -5094,7 +5223,14 @@
  "2027-01-01": [
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174217,
@@ -5104,7 +5240,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174143,
@@ -5114,7 +5258,14 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174216,
@@ -5124,7 +5275,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174147,
@@ -5134,7 +5293,14 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174215,
@@ -5144,7 +5310,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174145,
@@ -5154,7 +5328,14 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174214,
@@ -5164,7 +5345,15 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
    "format": "standard",
    "id": 146174146,
