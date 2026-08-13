@@ -2763,6 +2763,56 @@
  "2026-12-22": [
   {
    "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174235,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174266,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "1:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174122,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "2:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174260,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174277,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -2782,6 +2832,36 @@
   },
   {
    "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174186,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174259,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174276,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "1:45pm"
+  },
+  {
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -2798,6 +2878,36 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "2:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174189,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174258,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174275,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "5:30pm"
   },
   {
    "almostSoldOut": true,
@@ -2820,6 +2930,36 @@
   },
   {
    "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174187,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174257,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174278,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:15pm"
+  },
+  {
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -2836,6 +2976,16 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174188,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
   }
  ],
  "2026-12-23": [
@@ -3089,6 +3239,36 @@
  "2026-12-28": [
   {
    "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174232,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174163,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174231,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -3107,6 +3287,26 @@
   },
   {
    "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174162,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174230,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
@@ -3122,6 +3322,36 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174160,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174233,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174161,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
   }
  ],
  "2026-12-29": [
@@ -3242,7 +3472,250 @@
    "time": "6:30pm"
   }
  ],
- "2027-01-01": [],
- "2027-01-02": [],
- "2027-01-03": []
+ "2027-01-01": [
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174217,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174143,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174216,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174147,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174215,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174145,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174214,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174146,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
+  }
+ ],
+ "2027-01-02": [
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174209,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174142,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174213,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174141,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174212,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174144,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174211,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174140,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
+  }
+ ],
+ "2027-01-03": [
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174208,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174139,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174207,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174138,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174206,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174136,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174210,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "8:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [],
+   "canceled": false,
+   "format": "standard",
+   "id": 146174137,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00pm"
+  }
+ ]
 }
