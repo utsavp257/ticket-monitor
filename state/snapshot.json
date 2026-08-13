@@ -4570,14 +4570,7 @@
  "2026-12-28": [
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174232,
@@ -4587,14 +4580,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "OPENCAPTION",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174163,
@@ -4604,14 +4590,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174231,
@@ -4639,15 +4618,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174162,
@@ -4657,14 +4628,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174230,
@@ -4692,15 +4656,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174160,
@@ -4710,14 +4666,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174233,
@@ -4727,15 +4676,7 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [
-    "AMCCLUBROCKERS",
-    "AONELIVE",
-    "CLOSEDCAPTION",
-    "DESCRIPTIVEVIDEO",
-    "DISNEYRWDS",
-    "LASERATAMC",
-    "RESERVEDSEATING"
-   ],
+   "attributes": [],
    "canceled": false,
    "format": "standard",
    "id": 146174161,
