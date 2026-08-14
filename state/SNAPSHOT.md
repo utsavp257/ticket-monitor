@@ -320,16 +320,7 @@ _No showtimes listed._
 
 ## Saturday 2027-01-02
 
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 9:00am | standard | 🟢 available |  | 146174209 |
-| Avengers: Doomsday | 11:45am | standard | 🟢 available |  | 146174142 |
-| Avengers: Doomsday | 12:45pm | standard | 🟢 available |  | 146174213 |
-| Avengers: Doomsday | 3:30pm | standard | 🟢 available |  | 146174141 |
-| Avengers: Doomsday | 4:30pm | standard | 🟢 available |  | 146174212 |
-| Avengers: Doomsday | 7:15pm | standard | 🟢 available |  | 146174144 |
-| Avengers: Doomsday | 8:15pm | standard | 🟢 available |  | 146174211 |
-| Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174140 |
+_No showtimes listed._
 
 ## Sunday 2027-01-03
 
