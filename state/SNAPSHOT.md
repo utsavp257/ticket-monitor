@@ -134,39 +134,6 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 7:15pm | standard | 🟢 available |  | 146141415 |
 | Tony | 10:15pm | standard | 🟢 available |  | 146141446 |
 
-## Tuesday 2026-08-25
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Idiots Q&A w/ Dave Franco, O'Shae Jackson Jr., & Mason Thames | 7:00pm | standard | 🟠 almost sold out |  | 145856680 |
-| Insidious: Out of the Further | 10:45am | standard | 🟢 available |  | 145480801 |
-| Insidious: Out of the Further | 1:45pm | standard | 🟢 available |  | 145480800 |
-| Insidious: Out of the Further | 4:45pm | standard | 🟢 available |  | 145480799 |
-| Insidious: Out of the Further | 7:45pm | standard | 🟢 available |  | 145480798 |
-| Insidious: Out of the Further | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145420119 |
-| Spa Weekend | 9:00am | standard | 🟢 available |  | 146172221 |
-| Spa Weekend | 11:30am | standard | 🟢 available |  | 146172214 |
-| Spa Weekend | 2:00pm | standard | 🟢 available |  | 146172220 |
-| Spa Weekend | 4:30pm | standard | 🟢 available |  | 146172219 |
-| Spa Weekend | 7:00pm | standard | 🟢 available |  | 146172218 |
-| Spa Weekend | 9:45pm | standard | 🟢 available |  | 146172215 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145939084 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145939083 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145939094 |
-| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145939085 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681744 |
-| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711599 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681745 |
-| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711600 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145674734 |
-| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711601 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681746 |
-| Tony | 10:15am | standard | 🟢 available |  | 146172149 |
-| Tony | 1:15pm | standard | 🟢 available |  | 146172150 |
-| Tony | 4:15pm | standard | 🟢 available |  | 146172151 |
-| Tony | 7:15pm | standard | 🟢 available |  | 146172152 |
-| Tony | 10:15pm | standard | 🟢 available |  | 146172146 |
-
 ## Wednesday 2026-08-26
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
