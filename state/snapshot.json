@@ -1973,6 +1973,473 @@
    "time": "10:15pm"
   }
  ],
+ "2026-08-25": [
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "INPERSNQA",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145856680,
+   "movie": "Idiots Q&A w/ Dave Franco, O'Shae Jackson Jr., & Mason Thames",
+   "soldOut": false,
+   "time": "7:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145480801,
+   "movie": "Insidious: Out of the Further",
+   "soldOut": false,
+   "time": "10:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145480800,
+   "movie": "Insidious: Out of the Further",
+   "soldOut": false,
+   "time": "1:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145480799,
+   "movie": "Insidious: Out of the Further",
+   "soldOut": false,
+   "time": "4:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145480798,
+   "movie": "Insidious: Out of the Further",
+   "soldOut": false,
+   "time": "7:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145420119,
+   "movie": "Insidious: Out of the Further",
+   "soldOut": false,
+   "time": "11:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172221,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172214,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "11:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172220,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "2:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172219,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172218,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "7:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172215,
+   "movie": "Spa Weekend",
+   "soldOut": false,
+   "time": "9:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145939084,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "11:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145939083,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "3:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145939094,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145939085,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145681744,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711599,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145681745,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "2:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711600,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145674734,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "6:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711601,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "8:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145681746,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172149,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "10:15am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172150,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "1:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172151,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "4:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172152,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146172146,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "10:15pm"
+  }
+ ],
  "2026-08-26": [
   {
    "almostSoldOut": false,
