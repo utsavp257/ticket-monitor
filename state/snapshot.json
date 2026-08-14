@@ -1,4 +1,1013 @@
 {
+ "2026-08-18": [
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939078,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "9:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939077,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939076,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141422,
+   "movie": "One Night Only",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141445,
+   "movie": "One Night Only",
+   "soldOut": false,
+   "time": "1:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141457,
+   "movie": "One Night Only",
+   "soldOut": false,
+   "time": "4:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141471,
+   "movie": "One Night Only",
+   "soldOut": false,
+   "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141423,
+   "movie": "One Night Only",
+   "soldOut": false,
+   "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "EVENT",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141468,
+   "movie": "Six: The Musical Live!",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "EVENT",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141454,
+   "movie": "Six: The Musical Live!",
+   "soldOut": false,
+   "time": "11:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "EVENT",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141456,
+   "movie": "Six: The Musical Live!",
+   "soldOut": false,
+   "time": "1:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141484,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898466,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "11:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141470,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141483,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "1:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898467,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "3:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141469,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141481,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "5:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898468,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939079,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141482,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "8:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898469,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145939075,
+   "movie": "Spider-Man: Brand New Day",
+   "soldOut": false,
+   "time": "11:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141448,
+   "movie": "Super Troopers 3",
+   "soldOut": false,
+   "time": "11:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141432,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "9:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898508,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "11:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898509,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "2:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141421,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898510,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "5:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141444,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "7:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898511,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "8:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141430,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "9:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING",
+    "THRLSCHLS"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141410,
+   "movie": "Teenage Sex and Death at Camp Miasma",
+   "soldOut": false,
+   "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145157212,
+   "movie": "The End of Oak Street",
+   "soldOut": false,
+   "time": "10:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145157211,
+   "movie": "The End of Oak Street",
+   "soldOut": false,
+   "time": "1:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145157210,
+   "movie": "The End of Oak Street",
+   "soldOut": false,
+   "time": "4:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145157209,
+   "movie": "The End of Oak Street",
+   "soldOut": false,
+   "time": "7:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145157213,
+   "movie": "The End of Oak Street",
+   "soldOut": false,
+   "time": "10:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "LASERATAMC",
+    "OPENCAPTION",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141431,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141428,
+   "movie": "The Invite",
+   "soldOut": false,
+   "time": "3:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145377452,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "10:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711578,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145377453,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "2:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711579,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "4:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145377454,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "6:00pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145711580,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "8:30pm"
+  },
+  {
+   "almostSoldOut": true,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 145377455,
+   "movie": "The Odyssey",
+   "soldOut": false,
+   "time": "10:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145701501,
+   "movie": "The Rivals of Amziah King",
+   "soldOut": false,
+   "time": "9:45am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145701516,
+   "movie": "The Rivals of Amziah King",
+   "soldOut": false,
+   "time": "12:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145701500,
+   "movie": "The Rivals of Amziah King",
+   "soldOut": false,
+   "time": "3:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145701515,
+   "movie": "The Rivals of Amziah King",
+   "soldOut": false,
+   "time": "6:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145701502,
+   "movie": "The Rivals of Amziah King",
+   "soldOut": false,
+   "time": "9:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141455,
+   "movie": "The Wrong Girls",
+   "soldOut": false,
+   "time": "7:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCCLUBROCKERS",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141467,
+   "movie": "The Wrong Girls",
+   "soldOut": false,
+   "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898457,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "10:15am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898458,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "1:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898459,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "4:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 146141429,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "6:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898460,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "7:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "AONELIVE",
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "LASERATAMC",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "standard",
+   "id": 145898461,
+   "movie": "Tony",
+   "soldOut": false,
+   "time": "10:15pm"
+  }
+ ],
  "2026-08-19": [
   {
    "almostSoldOut": false,
