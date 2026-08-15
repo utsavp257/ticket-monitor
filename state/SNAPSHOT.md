@@ -7,67 +7,70 @@ each commit's timestamp is the pull time. Browse it on GitHub via this
 file's *History*, or locally with `git log -p state/SNAPSHOT.md`.
 Machine-readable version: `state/snapshot.json`.
 
-## Wednesday 2026-08-19
+## Tuesday 2026-08-18
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
-| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 145922900 |
-| La La Land 10th Anniversary | 12:40pm | Dolby Cinema at AMC | 🟢 available |  | 145922899 |
-| La La Land 10th Anniversary | 3:50pm | Dolby Cinema at AMC | 🟢 available |  | 145493949 |
-| La La Land 10th Anniversary | 7:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145493948 |
-| One Night Only | 9:45am | standard | 🟢 available |  | 146141418 |
-| One Night Only | 12:45pm | standard | 🟢 available |  | 146141447 |
-| One Night Only | 3:45pm | standard | 🟢 available |  | 146141419 |
-| One Night Only | 9:45pm | standard | 🟢 available |  | 146141420 |
-| Point Break 35th Anniversary | 7:00pm | standard | 🟢 available |  | 144700959 |
-| Point Break 35th Anniversary | 10:00pm | standard | 🟢 available |  | 146141411 |
-| Six: The Musical Live! | 9:45am | standard | 🟢 available |  | 146141403 |
-| Six: The Musical Live! | 1:20pm | standard | 🟢 available |  | 146141477 |
-| Six: The Musical Live! | 7:00pm | standard | 🟢 available |  | 143205620 |
-| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 146141453 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 146141427 |
-| Spider-Man: Brand New Day | 12:30pm | standard | 🟢 available |  | 146141404 |
-| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 146141451 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 146141426 |
-| Spider-Man: Brand New Day | 4:00pm | standard | 🟢 available |  | 145878082 |
-| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 146141450 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 146141466 |
-| Spider-Man: Brand New Day | 7:30pm | standard | 🟢 available |  | 145878083 |
-| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 146141480 |
-| Spider-Man: Brand New Day | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145922902 |
-| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 146141439 |
-| Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 146141442 |
-| Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 146141441 |
-| Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 146141440 |
-| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 146141443 |
-| Teenage Sex and Death at Camp Miasma | 9:45pm | standard | 🟢 available |  | 146141406 |
-| Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 146141402 |
-| The End of Oak Street | 10:30am | standard | 🟢 available |  | 146141414 |
-| The End of Oak Street | 1:30pm | standard | 🟢 available |  | 146141413 |
-| The End of Oak Street | 4:30pm | standard | 🟢 available |  | 146141412 |
-| The End of Oak Street | 8:30pm | standard | 🟢 available |  | 146141452 |
-| The End of Oak Street | 10:00pm | standard | 🟢 available |  | 146141425 |
-| The Invite | 10:30am | standard | 🟢 available |  | 146141479 |
-| The Invite | 4:00pm | standard | 🟢 available |  | 146141478 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145701521 |
-| The Odyssey | 11:00am | standard | 🟢 available |  | 146141464 |
-| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711581 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
-| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711582 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377457 |
-| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711583 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377458 |
-| The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701514 |
-| The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701497 |
-| The Rivals of Amziah King | 3:30pm | standard | 🟢 available |  | 145701513 |
-| The Rivals of Amziah King | 6:30pm | standard | 🟢 available |  | 145701498 |
-| The Wrong Girls | 10:00pm | standard | 🟢 available |  | 146141465 |
-| Tony | 10:15am | standard | 🟢 available |  | 146141409 |
-| Tony | 1:15pm | standard | 🟢 available |  | 146141408 |
-| Tony | 3:15pm | standard | 🟢 available |  | 146141463 |
-| Tony | 4:15pm | standard | 🟢 available |  | 146141407 |
-| Tony | 7:15pm | standard | 🟢 available |  | 146141415 |
-| Tony | 10:15pm | standard | 🟢 available |  | 146141446 |
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 145939078 |
+| La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 145939077 |
+| La La Land 10th Anniversary | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 145939076 |
+| One Night Only | 10:00am | standard | 🟢 available |  | 146141422 |
+| One Night Only | 1:00pm | standard | 🟢 available |  | 146141445 |
+| One Night Only | 4:15pm | standard | 🟢 available |  | 146141457 |
+| One Night Only | 7:30pm | standard | 🟢 available |  | 146141471 |
+| One Night Only | 10:15pm | standard | 🟢 available |  | 146141423 |
+| Six: The Musical Live! | 10:00am | standard | 🟢 available |  | 146141468 |
+| Six: The Musical Live! | 11:00am | standard | 🟢 available |  | 146141454 |
+| Six: The Musical Live! | 1:45pm | standard | 🟢 available |  | 146141456 |
+| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 146141484 |
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145898466 |
+| Spider-Man: Brand New Day | 12:30pm | standard | 🟢 available |  | 146141470 |
+| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 146141483 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145898467 |
+| Spider-Man: Brand New Day | 4:00pm | standard | 🟢 available |  | 146141469 |
+| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 146141481 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145898468 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 145939079 |
+| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 146141482 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145898469 |
+| Spider-Man: Brand New Day | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145939075 |
+| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 146141448 |
+| Teenage Sex and Death at Camp Miasma | 9:30am | standard | 🟢 available |  | 146141432 |
+| Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 145898508 |
+| Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 145898509 |
+| Teenage Sex and Death at Camp Miasma | 4:00pm | standard | 🟢 available |  | 146141421 |
+| Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 145898510 |
+| Teenage Sex and Death at Camp Miasma | 7:00pm | standard | 🟢 available |  | 146141444 |
+| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 145898511 |
+| Teenage Sex and Death at Camp Miasma | 9:00pm | standard | 🟢 available |  | 146141430 |
+| Teenage Sex and Death at Camp Miasma | 10:00pm | standard | 🟢 available |  | 146141410 |
+| The End of Oak Street | 10:45am | standard | 🟢 available |  | 145157212 |
+| The End of Oak Street | 1:45pm | standard | 🟢 available |  | 145157211 |
+| The End of Oak Street | 4:45pm | standard | 🟢 available |  | 145157210 |
+| The End of Oak Street | 7:45pm | standard | 🟢 available |  | 145157209 |
+| The End of Oak Street | 10:45pm | standard | 🟢 available |  | 145157213 |
+| The Invite | 12:30pm | standard | 🟢 available |  | 146141431 |
+| The Invite | 3:30pm | standard | 🟢 available |  | 146141428 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145377452 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711578 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377453 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711579 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377454 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145711580 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377455 |
+| The Rivals of Amziah King | 9:45am | standard | 🟢 available |  | 145701501 |
+| The Rivals of Amziah King | 12:45pm | standard | 🟢 available |  | 145701516 |
+| The Rivals of Amziah King | 3:45pm | standard | 🟢 available |  | 145701500 |
+| The Rivals of Amziah King | 6:45pm | standard | 🟢 available |  | 145701515 |
+| The Rivals of Amziah King | 9:45pm | standard | 🟢 available |  | 145701502 |
+| The Wrong Girls | 7:00pm | standard | 🟢 available |  | 146141455 |
+| The Wrong Girls | 10:15pm | standard | 🟢 available |  | 146141467 |
+| Tony | 10:15am | standard | 🟢 available |  | 145898457 |
+| Tony | 1:15pm | standard | 🟢 available |  | 145898458 |
+| Tony | 4:15pm | standard | 🟢 available |  | 145898459 |
+| Tony | 6:15pm | standard | 🟢 available |  | 146141429 |
+| Tony | 7:15pm | standard | 🟢 available |  | 145898460 |
+| Tony | 10:15pm | standard | 🟢 available |  | 145898461 |
 
 ## Tuesday 2026-08-25
 
@@ -144,30 +147,6 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 9:15pm | standard | 🟢 available |  | 146174283 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283758 |
 | Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174192 |
-
-## Tuesday 2026-12-22
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 12:00am | standard | 🟢 available |  | 146174235 |
-| Avengers: Doomsday | 1:00am | standard | 🟢 available |  | 146174266 |
-| Avengers: Doomsday | 2:00am | Dolby Cinema at AMC | 🟢 available |  | 146174122 |
-| Avengers: Doomsday | 9:00am | standard | 🟢 available |  | 146174260 |
-| Avengers: Doomsday | 10:00am | standard | 🟢 available |  | 146174277 |
-| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 145283761 |
-| Avengers: Doomsday | 11:45am | standard | 🟢 available |  | 146174186 |
-| Avengers: Doomsday | 12:45pm | standard | 🟢 available |  | 146174259 |
-| Avengers: Doomsday | 1:45pm | standard | 🟢 available |  | 146174276 |
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283762 |
-| Avengers: Doomsday | 3:30pm | standard | 🟢 available |  | 146174189 |
-| Avengers: Doomsday | 4:30pm | standard | 🟢 available |  | 146174258 |
-| Avengers: Doomsday | 5:30pm | standard | 🟢 available |  | 146174275 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283765 |
-| Avengers: Doomsday | 7:15pm | standard | 🟢 available |  | 146174187 |
-| Avengers: Doomsday | 8:15pm | standard | 🟢 available |  | 146174257 |
-| Avengers: Doomsday | 9:15pm | standard | 🟢 available |  | 146174278 |
-| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145283768 |
-| Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174188 |
 
 ## Wednesday 2026-12-23
 
