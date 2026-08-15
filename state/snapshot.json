@@ -4335,9 +4335,17 @@
  "2027-01-01": [
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204121,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4345,9 +4353,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204119,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4355,9 +4371,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204120,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4365,9 +4389,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204110,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4377,9 +4409,17 @@
  "2027-01-02": [
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204113,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4387,9 +4427,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204111,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4397,9 +4445,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204112,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4407,9 +4463,17 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204114,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
