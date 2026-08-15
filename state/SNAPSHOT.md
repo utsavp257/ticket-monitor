@@ -120,7 +120,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
 | The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711582 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377457 |
-| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711583 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145711583 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377458 |
 | The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701514 |
 | The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701497 |
