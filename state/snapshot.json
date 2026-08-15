@@ -3750,6 +3750,24 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 146204090,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "10:15pm"
   }
  ],
  "2026-12-25": [
