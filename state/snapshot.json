@@ -4123,9 +4123,18 @@
  "2026-12-29": [
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "EXCLDISDAY",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204125,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4171,9 +4180,18 @@
   },
   {
    "almostSoldOut": false,
-   "attributes": [],
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "EXCLDISDAY",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
    "canceled": false,
-   "format": "standard",
+   "format": "Dolby Cinema at AMC",
    "id": 146204126,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
