@@ -4060,6 +4060,24 @@
    ],
    "canceled": false,
    "format": "Dolby Cinema at AMC",
+   "id": 146204123,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
    "id": 145283820,
    "movie": "Avengers: Doomsday",
    "soldOut": false,
@@ -4082,6 +4100,24 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 146204124,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "10:15pm"
   }
  ],
  "2026-12-29": [
