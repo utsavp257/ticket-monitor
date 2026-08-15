@@ -297,15 +297,19 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | standard | 🟢 available |  | 146204125 |
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283824 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283827 |
+| Avengers: Doomsday | 10:15pm | standard | 🟢 available |  | 146204126 |
 
 ## Wednesday 2026-12-30
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | standard | 🟢 available |  | 146204127 |
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283830 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283836 |
+| Avengers: Doomsday | 10:15pm | standard | 🟢 available |  | 146204116 |
 
 ## Thursday 2026-12-31
 
@@ -316,12 +320,27 @@ Machine-readable version: `state/snapshot.json`.
 
 ## Friday 2027-01-01
 
-_No showtimes listed._
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | standard | 🟢 available |  | 146204121 |
+| Avengers: Doomsday | 2:45pm | standard | 🟢 available |  | 146204119 |
+| Avengers: Doomsday | 6:30pm | standard | 🟢 available |  | 146204120 |
+| Avengers: Doomsday | 10:15pm | standard | 🟢 available |  | 146204110 |
 
 ## Saturday 2027-01-02
 
-_No showtimes listed._
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | standard | 🟢 available |  | 146204113 |
+| Avengers: Doomsday | 2:45pm | standard | 🟢 available |  | 146204111 |
+| Avengers: Doomsday | 6:30pm | standard | 🟢 available |  | 146204112 |
+| Avengers: Doomsday | 10:15pm | standard | 🟢 available |  | 146204114 |
 
 ## Sunday 2027-01-03
 
-_No showtimes listed._
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | standard | 🟢 available |  | 146204105 |
+| Avengers: Doomsday | 2:45pm | standard | 🟢 available |  | 146204115 |
+| Avengers: Doomsday | 6:30pm | standard | 🟢 available |  | 146204104 |
+| Avengers: Doomsday | 10:15pm | standard | 🟢 available |  | 146204106 |
