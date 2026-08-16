@@ -47,7 +47,7 @@ Machine-readable version: `state/snapshot.json`.
 | The End of Oak Street | 10:45am | standard | 🟢 available |  | 145157212 |
 | The End of Oak Street | 1:45pm | standard | 🟢 available |  | 145157211 |
 | The End of Oak Street | 4:45pm | standard | 🟢 available |  | 145157210 |
-| The End of Oak Street | 7:45pm | standard | 🟢 available |  | 145157209 |
+| The End of Oak Street | 7:45pm | standard | 🟠 almost sold out |  | 145157209 |
 | The End of Oak Street | 10:45pm | standard | 🟢 available |  | 145157213 |
 | The Invite | 12:30pm | standard | 🟢 available |  | 146141431 |
 | The Invite | 3:30pm | standard | 🟢 available |  | 146141428 |
