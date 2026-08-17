@@ -144,6 +144,8 @@ Machine-readable version: `state/snapshot.json`.
 | Insidious: Out of the Further | 4:45pm | standard | 🟢 available |  | 145480799 |
 | Insidious: Out of the Further | 7:45pm | standard | 🟢 available |  | 145480798 |
 | Insidious: Out of the Further | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145420119 |
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 146218809 |
+| La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 146218810 |
 | Spa Weekend | 9:00am | standard | 🟢 available |  | 146172221 |
 | Spa Weekend | 11:30am | standard | 🟢 available |  | 146172214 |
 | Spa Weekend | 2:00pm | standard | 🟢 available |  | 146172220 |
@@ -152,7 +154,9 @@ Machine-readable version: `state/snapshot.json`.
 | Spa Weekend | 9:45pm | standard | 🟢 available |  | 146172215 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145939084 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145939083 |
+| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218811 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145939094 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 146218812 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145939085 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681744 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711599 |
