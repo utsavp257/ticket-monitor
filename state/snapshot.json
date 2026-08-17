@@ -972,7 +972,7 @@
    "time": "6:15pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
