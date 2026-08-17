@@ -55,19 +55,18 @@ IMAX_ONLY = True
 # live). Add more, e.g. the Odyssey film's account, as needed.
 INSTAGRAM_ACCOUNTS = ["dunemovie"]
 
-# Instagram blocks datacenter IPs, so on CI we go through Apify (residential
-# proxies) when an APIFY_TOKEN is set; otherwise we try the free direct endpoint
-# (works locally, usually 429s on CI). Free Apify credits are limited, so we
-# only actually hit Instagram every IG_CHECK_EVERY_HOURS hours, and we rotate
-# across up to three keys (APIFY_TOKEN, APIFY_TOKEN_2, APIFY_TOKEN_3) to spread
-# the load — see monitor_instagram.check_instagram.
+# Instagram blocks datacenter IPs, so on CI we go through Apify when an
+# APIFY_TOKEN is set; otherwise we try the direct endpoint (works locally,
+# usually 429s on CI). Apify usage costs money, so we only actually hit
+# Instagram every IG_CHECK_EVERY_HOURS hours, and we rotate across up to three
+# keys (APIFY_TOKEN, APIFY_TOKEN_2, APIFY_TOKEN_3) when more than one is
+# configured, to spread the load — see monitor_instagram.check_instagram.
 #
 # Cost budget: the actor (apify/instagram-scraper) is pay-per-result at
 # $2.70 / 1,000 results; one scrape = 1 account x 12 results. So monthly spend
 # ~= (730 / IG_CHECK_EVERY_HOURS) * 12 * $0.0027. At 1.9h that's ~384 scrapes/mo
-# ~= $12.4, which split across the 3 rotating keys is ~$4.15 each — under every
-# key's $5/mo free credit (and ~$12.4 of the combined $15 free). Raise this
-# number to spend less; lower it (more frequent checks) to spend more.
+# ~= $12.4. Raise this number to spend less; lower it (more frequent checks) to
+# spend more.
 APIFY_ACTOR = "apify~instagram-scraper"
 IG_CHECK_EVERY_HOURS = 1.9
 
@@ -134,6 +133,26 @@ AMC_THEATRE_ID = None
 PUSHOVER_RETRY = 30       # seconds between re-alerts (Pushover minimum is 30)
 PUSHOVER_EXPIRE = 1800    # give up re-alerting after 30 min if not acknowledged
 PUSHOVER_SOUND = "siren"  # built-in Pushover sound; "siren"/"persistent"/"alien"
+
+# Siren blackout windows: wall-clock ranges during which Pushover escalations
+# are SUPPRESSED. Telegram still sends, and state/arming still advance — only
+# the phone-ringing part is held. Use when you're already sitting on the
+# on-sale by hand and the siren is just noise.
+#
+# Start inclusive, end exclusive, "YYYY-MM-DD HH:MM" in SIREN_BLACKOUT_TZ.
+# Past windows are inert; delete them whenever. An empty list = never blackout.
+#
+# NOTE this is a real gag on the alert you built this repo for. A show that
+# first appears inside a window is armed and recorded silently, so it will not
+# re-siren afterwards (it is no longer "new"); only genuinely new shows and
+# later seat-frees ring once the window closes.
+SIREN_BLACKOUTS = [
+    # Dune on-sale Tue Aug 18 2026 — buying by hand, don't want the distraction.
+    ("2026-08-18 10:00", "2026-08-18 13:00"),
+]
+# Windows are interpreted in this zone, so EDT/EST is handled for you (Aug 18
+# is EDT = UTC-4; the runner's clock is UTC, hence the explicit zone).
+SIREN_BLACKOUT_TZ = "America/New_York"
 
 # --- Which days do we care about? --------------------------------------------
 # Monday=0 ... Sunday=6. You asked for Tuesday and Wednesday.

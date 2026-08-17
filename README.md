@@ -97,19 +97,17 @@ For the GitHub Action, add the same two as repo secrets
 
 Instagram blocks GitHub's IPs, so IG alerts on the Action go through Apify:
 
-1. Create a free account at <https://console.apify.com>.
+1. Create an account at <https://console.apify.com>.
 2. Settings → Integrations → copy your **API token**.
 3. Add it as a repo secret named `APIFY_TOKEN`.
 
-To stretch the free tier further, create up to two more free Apify accounts and
-add their tokens as `APIFY_TOKEN_2` and `APIFY_TOKEN_3`. The monitor rotates the
-starting key each run (so the credit load spreads evenly) and falls back to the
-next key if one is exhausted or rate-limited — roughly tripling monthly credits.
-Only `APIFY_TOKEN` is required; the extras are optional.
+`APIFY_TOKEN_2` and `APIFY_TOKEN_3` are optional. When set, the monitor rotates
+the starting key each run (so usage spreads evenly) and falls back to the next
+key if one is exhausted or rate-limited. Only `APIFY_TOKEN` is required.
 
-Without any `APIFY_TOKEN` the IG check falls back to the free direct endpoint
+Without any `APIFY_TOKEN` the IG check falls back to the direct endpoint
 (works locally, usually blocked on CI). The check runs at most every
-`IG_CHECK_EVERY_HOURS` hours to stay within Apify's free credits.
+`IG_CHECK_EVERY_HOURS` hours to keep Apify usage down.
 
 ### Pushover (can't-miss escalation)
 

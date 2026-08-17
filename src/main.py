@@ -54,10 +54,18 @@ def compose_alert(item: dict, new_times: list[str], freed: list[str]) -> str:
         lines.append("🎟️ Seats opened up: " + ", ".join(_ordered(shows, freed)))
     available = [t for t in shows if not shows[t]["sold_out"]]
     if available:
-        lines.append(f"Earliest available: {_ordered(shows, available)[0]}")
+        # One tap-through per available showtime, straight to its seat picker
+        # (AMC's own purchaseUrl). During a heavy on-sale the date browse page
+        # is the part that 503s, so linking past it is the whole point.
+        # purchase_url is absent on the scrape fallback — degrade to time-only.
+        lines.append("🎟️ Available now — tap to book:")
+        for t in _ordered(shows, available):
+            url = shows[t].get("purchase_url")
+            lines.append(f"  • {t} → {url}" if url else f"  • {t}")
+        lines.append(f"Browse all: {item['url']}")
     else:
         lines.append("⚠️ All listed shows currently sold out.")
-    lines.append(f"Book: {item['url']}")
+        lines.append(f"Book: {item['url']}")
     return "\n".join(lines)
 
 
@@ -145,12 +153,18 @@ def diff_and_alert(results: list[dict], dry_run: bool) -> int:
                 # a brand-new show/day that listed sold-out — still worth ringing
                 body = f"New show(s) listed (sold out): {', '.join(sold)}"
                 title = "🎬 New Dune show listed"
+            # Point the siren's tap-through at a specific showtime's seat
+            # picker when we have one (prefer an available seat over a
+            # sold-out listing); fall back to the date page.
+            deep = next((shows_url for shows_url in
+                         (item["shows"][t].get("purchase_url")
+                          for t in (avail or escalate)) if shows_url), None)
             pushover.send_emergency(
                 message=(f"{item['movie']} IMAX — {item['weekday']} "
                          f"{item['date']}\n{body}"),
                 title=title,
-                url=item["url"],
-                url_title="Book on AMC",
+                url=deep or item["url"],
+                url_title="Book on AMC" if deep else "See showtimes",
             )
         if ok:
             saved[key] = cur  # only commit state once the alert is delivered

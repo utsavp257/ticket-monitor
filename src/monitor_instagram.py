@@ -27,9 +27,9 @@ UA = (
 
 def _apify_tokens() -> list[str]:
     """Apify API tokens in env-var order: APIFY_TOKEN, APIFY_TOKEN_2,
-    APIFY_TOKEN_3. Supplying several free-tier keys lets us rotate across them
-    (see check_instagram) and roughly triples our monthly credits. Empty/unset
-    vars and duplicates are dropped; a lone APIFY_TOKEN still works as before.
+    APIFY_TOKEN_3. Supplying more than one lets us rotate across them (see
+    check_instagram) so usage spreads evenly. Empty/unset vars and duplicates
+    are dropped; a lone APIFY_TOKEN still works as before.
     """
     tokens: list[str] = []
     for name in ("APIFY_TOKEN", "APIFY_TOKEN_2", "APIFY_TOKEN_3"):
@@ -42,10 +42,10 @@ def _apify_tokens() -> list[str]:
 def fetch_posts(username: str, tokens: list[str] | None = None) -> list[dict]:
     """Recent posts for a username: [{shortcode, timestamp, caption}].
 
-    Uses Apify (residential proxies) when any APIFY_TOKEN* is set — required
-    from CI, since Instagram blocks datacenter IPs. Falls back to Instagram's
-    free direct endpoint otherwise (fine locally, usually blocked on CI).
-    `tokens` is the rotated key order to try; defaults to env order.
+    Uses Apify when any APIFY_TOKEN* is set — required from CI, since Instagram
+    blocks datacenter IPs. Falls back to Instagram's direct endpoint otherwise
+    (fine locally, usually blocked on CI). `tokens` is the rotated key order to
+    try; defaults to env order.
     """
     if tokens is None:
         tokens = _apify_tokens()

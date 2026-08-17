@@ -13,14 +13,47 @@ user key). If they're absent it no-ops gracefully (so local/dry runs are fine).
 from __future__ import annotations
 
 import os
+from datetime import datetime
 
 import requests
 
-from config import PUSHOVER_RETRY, PUSHOVER_EXPIRE, PUSHOVER_SOUND
+from config import (PUSHOVER_RETRY, PUSHOVER_EXPIRE, PUSHOVER_SOUND,
+                    SIREN_BLACKOUTS, SIREN_BLACKOUT_TZ)
 
 
 def _creds() -> tuple[str | None, str | None]:
     return os.environ.get("PUSHOVER_TOKEN"), os.environ.get("PUSHOVER_USER")
+
+
+def _active_blackout() -> str | None:
+    """Description of the blackout window we're inside, or None.
+
+    Fails OPEN on any problem (bad tz database, malformed window): a spurious
+    siren is a nuisance, a silently swallowed one loses the ticket. So anything
+    we can't evaluate is treated as "not in a blackout".
+    """
+    if not SIREN_BLACKOUTS:
+        return None
+    try:
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo(SIREN_BLACKOUT_TZ)
+        now = datetime.now(tz)
+    except Exception as e:  # no tzdata, bad zone name — don't gag the siren
+        print(f"  ! blackout check skipped ({e}); siren allowed.")
+        return None
+    for window in SIREN_BLACKOUTS:
+        try:
+            start, end = window
+            # ZoneInfo resolves the UTC offset from the datetime itself, so
+            # attaching it via replace() gives the right EDT/EST offset.
+            s = datetime.strptime(start, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
+            e = datetime.strptime(end, "%Y-%m-%d %H:%M").replace(tzinfo=tz)
+        except (ValueError, TypeError) as exc:
+            print(f"  ! ignoring malformed SIREN_BLACKOUTS entry {window!r}: {exc}")
+            continue
+        if s <= now < e:
+            return f"{start} → {end} ({SIREN_BLACKOUT_TZ})"
+    return None
 
 
 def is_configured() -> bool:
@@ -43,6 +76,11 @@ def send_emergency(
     if not token or not user:
         print("  ! Pushover not configured (PUSHOVER_TOKEN / PUSHOVER_USER); "
               "not escalated.")
+        return False
+    blackout = _active_blackout()
+    if blackout:
+        print(f"  ⏸ siren suppressed — blackout {blackout}. "
+              f"Telegram still sent; state/arming unaffected.")
         return False
     data = {
         "token": token,

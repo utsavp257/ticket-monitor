@@ -133,9 +133,20 @@ def match_shows(showtimes: list[dict], aliases: list[str],
         meridiem = "am" if int(hh) < 12 else "pm"
         t = _fmt(_to_minutes(int(hh) % 12 or 12, int(mm), meridiem))
         sold_out = bool(s.get("isSoldOut"))
+        # Direct deep link to THIS showtime's seat picker. Skips the date
+        # browse page, which is the first thing to fall over during a big
+        # on-sale. Absent on the scrape fallback path, so always treat as
+        # optional downstream.
+        url = s.get("purchaseUrl") or s.get("mobilePurchaseUrl")
         if t not in shows:
-            shows[t] = {"minutes": minutes, "sold_out": sold_out}
+            shows[t] = {"minutes": minutes, "sold_out": sold_out,
+                        "purchase_url": url}
         else:
+            # Same time under two formats: the row counts as available if
+            # either instance has seats — so the link has to follow the
+            # available one, not its sold-out twin.
+            if shows[t]["sold_out"] and not sold_out:
+                shows[t]["purchase_url"] = url
             shows[t]["sold_out"] = shows[t]["sold_out"] and sold_out
     return shows
 
