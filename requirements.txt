@@ -1,2 +1,6 @@
 playwright
 requests
+# Ships the IANA zone database for zoneinfo, so SIREN_BLACKOUT_TZ resolves even
+# if the runner image has no system tzdata. Without it the blackout check fails
+# open (siren fires anyway) — this just makes the window actually apply.
+tzdata
