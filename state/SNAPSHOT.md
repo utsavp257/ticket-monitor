@@ -104,7 +104,7 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 146141442 |
 | Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 146141441 |
 | Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 146141440 |
-| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 146141443 |
+| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟠 almost sold out |  | 146141443 |
 | Teenage Sex and Death at Camp Miasma | 9:45pm | standard | 🟢 available |  | 146141406 |
 | Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 146141402 |
 | The End of Oak Street | 10:30am | standard | 🟢 available |  | 146141414 |
