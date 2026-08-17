@@ -175,9 +175,14 @@ Machine-readable version: `state/snapshot.json`.
 | Insidious: Out of the Further | 1:45pm | standard | 🟢 available |  | 145480804 |
 | Insidious: Out of the Further | 4:45pm | standard | 🟢 available |  | 145480803 |
 | Insidious: Out of the Further | 7:45pm | standard | 🟢 available |  | 145480802 |
+| Insidious: Out of the Further | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218817 |
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 146218813 |
+| La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 146218814 |
 | Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145939088 |
 | Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145939087 |
+| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218815 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145939086 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 146218816 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145939082 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681735 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711602 |
