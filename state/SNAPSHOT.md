@@ -17,7 +17,7 @@ Machine-readable version: `state/snapshot.json`.
 | One Night Only | 10:00am | standard | 🟢 available |  | 146141422 |
 | One Night Only | 1:00pm | standard | 🟢 available |  | 146141445 |
 | One Night Only | 4:15pm | standard | 🟢 available |  | 146141457 |
-| One Night Only | 7:30pm | standard | 🟢 available |  | 146141471 |
+| One Night Only | 7:30pm | standard | 🟠 almost sold out |  | 146141471 |
 | One Night Only | 10:15pm | standard | 🟢 available |  | 146141423 |
 | Six: The Musical Live! | 10:00am | standard | 🟢 available |  | 146141468 |
 | Six: The Musical Live! | 11:00am | standard | 🟢 available |  | 146141454 |
