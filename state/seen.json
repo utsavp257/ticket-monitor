@@ -83,6 +83,13 @@
       "2:00pm": false,
       "6:00pm": false,
       "10:00pm": false
+    },
+    "Dune: Part Three|2026-12-28": {
+      "9:00am": true,
+      "12:30pm": true,
+      "4:00pm": true,
+      "7:30pm": true,
+      "11:00pm": true
     }
   },
   "ig_seen": [
@@ -128,9 +135,12 @@
   ],
   "ig_last_check": 1787066426.8666227,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787067556.5434558,
+  "amc_last_check": 1787067625.6074035,
   "apify_token_index": 658,
   "amc_fail_streak": 0,
+  "escalation_armed": {
+    "Dune: Part Three": true
+  },
   "amc_api_confirmed": true,
   "amc_theatre_id": 2116
 }
