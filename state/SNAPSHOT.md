@@ -454,6 +454,12 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 146204111 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 146204112 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204114 |
+| Dune: Part Three | 2:30am | 70mm | 🔴 SOLD OUT | 🎬 | 146172038 |
+| Dune: Part Three | 9:00am | 70mm | 🔴 SOLD OUT | 🎬 | 146172054 |
+| Dune: Part Three | 12:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172055 |
+| Dune: Part Three | 4:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172044 |
+| Dune: Part Three | 7:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172045 |
+| Dune: Part Three | 11:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172046 |
 
 ## Sunday 2027-01-03
 
