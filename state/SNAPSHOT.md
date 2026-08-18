@@ -339,15 +339,6 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283796 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204090 |
 
-## Friday 2026-12-25
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 146204091 |
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283799 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283804 |
-| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204092 |
-
 ## Saturday 2026-12-26
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
