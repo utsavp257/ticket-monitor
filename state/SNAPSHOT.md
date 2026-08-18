@@ -350,15 +350,6 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146172081 |
 | Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146172036 |
 
-## Friday 2026-12-25
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 146204091 |
-| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283799 |
-| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283804 |
-| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204092 |
-
 ## Saturday 2026-12-26
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -437,6 +428,11 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283838 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283843 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204118 |
+| Dune: Part Three | 9:00am | 70mm | 🔴 SOLD OUT | 🎬 | 146172056 |
+| Dune: Part Three | 12:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172057 |
+| Dune: Part Three | 4:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172058 |
+| Dune: Part Three | 7:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172059 |
+| Dune: Part Three | 11:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172060 |
 
 ## Friday 2027-01-01
 
@@ -455,6 +451,12 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 146204111 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 146204112 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204114 |
+| Dune: Part Three | 2:30am | 70mm | 🔴 SOLD OUT | 🎬 | 146172038 |
+| Dune: Part Three | 9:00am | 70mm | 🔴 SOLD OUT | 🎬 | 146172054 |
+| Dune: Part Three | 12:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172055 |
+| Dune: Part Three | 4:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172044 |
+| Dune: Part Three | 7:30pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172045 |
+| Dune: Part Three | 11:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 146172046 |
 
 ## Sunday 2027-01-03
 
