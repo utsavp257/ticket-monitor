@@ -63,12 +63,12 @@ Machine-readable version: `state/snapshot.json`.
 | The Rivals of Amziah King | 3:45pm | standard | 🟢 available |  | 145701500 |
 | The Rivals of Amziah King | 6:45pm | standard | 🟢 available |  | 145701515 |
 | The Rivals of Amziah King | 9:45pm | standard | 🟢 available |  | 145701502 |
-| The Wrong Girls | 7:00pm | standard | 🟢 available |  | 146141455 |
+| The Wrong Girls | 7:00pm | standard | 🟠 almost sold out |  | 146141455 |
 | The Wrong Girls | 10:15pm | standard | 🟢 available |  | 146141467 |
 | Tony | 10:15am | standard | 🟢 available |  | 145898457 |
 | Tony | 1:15pm | standard | 🟢 available |  | 145898458 |
 | Tony | 4:15pm | standard | 🟢 available |  | 145898459 |
-| Tony | 6:15pm | standard | 🟢 available |  | 146141429 |
+| Tony | 6:15pm | standard | 🟠 almost sold out |  | 146141429 |
 | Tony | 7:15pm | standard | 🟠 almost sold out |  | 145898460 |
 | Tony | 10:15pm | standard | 🟢 available |  | 145898461 |
 
