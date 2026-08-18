@@ -339,6 +339,11 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 9:15pm | standard | 🟢 available |  | 146174274 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145283785 |
 | Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174184 |
+| Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146174304 |
+| Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146174315 |
+| Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146174314 |
+| Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146174313 |
+| Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146174305 |
 
 ## Thursday 2026-12-24
 
@@ -357,6 +362,11 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283799 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283804 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204092 |
+| Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146172085 |
+| Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146172074 |
+| Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146172075 |
+| Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146172076 |
+| Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146172077 |
 
 ## Saturday 2026-12-26
 
