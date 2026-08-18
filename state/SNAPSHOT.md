@@ -196,6 +196,70 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 7:15pm | standard | 🟢 available |  | 146172152 |
 | Tony | 10:15pm | standard | 🟢 available |  | 146172146 |
 
+## Wednesday 2026-08-26
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Insidious: Out of the Further | 10:45am | standard | 🟢 available |  | 145480805 |
+| Insidious: Out of the Further | 1:45pm | standard | 🟢 available |  | 145480804 |
+| Insidious: Out of the Further | 4:45pm | standard | 🟢 available |  | 145480803 |
+| Insidious: Out of the Further | 7:45pm | standard | 🟢 available |  | 145480802 |
+| Insidious: Out of the Further | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218817 |
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 146218813 |
+| La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 146218814 |
+| One Night Only | 12:05pm | standard | 🟢 available |  | 146283531 |
+| One Night Only | 7:30pm | standard | 🟢 available |  | 146283566 |
+| One Night Only | 10:30pm | standard | 🟢 available |  | 146283555 |
+| Spa Weekend | 9:30am | standard | 🟢 available |  | 146283529 |
+| Spa Weekend | 11:15am | standard | 🟢 available |  | 146283559 |
+| Spa Weekend | 2:00pm | standard | 🟢 available |  | 146283561 |
+| Spa Weekend | 4:30pm | standard | 🟢 available |  | 146283560 |
+| Spa Weekend | 7:00pm | standard | 🟢 available |  | 146283562 |
+| Spa Weekend | 10:15pm | standard | 🟢 available |  | 146283567 |
+| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 146283570 |
+| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 145939088 |
+| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 146283582 |
+| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 145939087 |
+| Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218815 |
+| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 146283583 |
+| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145939086 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 146218816 |
+| Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 146283584 |
+| Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145939082 |
+| Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 146283515 |
+| Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 146283516 |
+| Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 146283517 |
+| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟢 available |  | 146283518 |
+| Teenage Sex and Death at Camp Miasma | 9:00pm | standard | 🟢 available |  | 146283532 |
+| Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 146283514 |
+| The End of Oak Street | 9:30am | standard | 🟢 available |  | 146283544 |
+| The End of Oak Street | 12:10pm | standard | 🟢 available |  | 146283549 |
+| The End of Oak Street | 2:45pm | standard | 🟢 available |  | 146283545 |
+| The End of Oak Street | 5:30pm | standard | 🟢 available |  | 146283546 |
+| The End of Oak Street | 8:15pm | standard | 🟢 available |  | 146283547 |
+| The End of Oak Street | 11:00pm | standard | 🟢 available |  | 146283548 |
+| The Magic Faraway Tree | 10:30am | standard | 🟢 available |  | 146283581 |
+| The Magic Faraway Tree | 1:30pm | standard | 🟢 available |  | 146283568 |
+| The Magic Faraway Tree | 4:30pm | standard | 🟢 available |  | 146283569 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681735 |
+| The Odyssey | 11:00am | standard | 🟢 available |  | 146283591 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711602 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681736 |
+| The Odyssey | 3:00pm | standard | 🟢 available |  | 146283592 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711603 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145674735 |
+| The Odyssey | 7:00pm | standard | 🟢 available |  | 146283590 |
+| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711604 |
+| The Odyssey | 9:45pm | standard | 🟢 available |  | 146283558 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681737 |
+| The Rivals of Amziah King | 2:45pm | standard | 🟢 available |  | 146283530 |
+| Tony | 10:15am | standard | 🟢 available |  | 146283506 |
+| Tony | 1:15pm | standard | 🟢 available |  | 146283505 |
+| Tony | 4:15pm | standard | 🟢 available |  | 146283507 |
+| Tony | 6:15pm | standard | 🟢 available |  | 146283533 |
+| Tony | 7:15pm | standard | 🟢 available |  | 146283508 |
+| Tony | 10:15pm | standard | 🟢 available |  | 146283509 |
+
 ## Monday 2026-12-21
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -294,6 +358,16 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283807 |
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283809 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204094 |
+
+## Sunday 2026-12-27
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 7:15am | Dolby Cinema at AMC | 🟢 available |  | 146204097 |
+| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 146204095 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283813 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283817 |
+| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204122 |
 
 ## Monday 2026-12-28
 
