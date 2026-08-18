@@ -52,7 +52,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 12:30pm | standard | 🟢 available |  | 146141431 |
 | The Invite | 3:30pm | standard | 🟢 available |  | 146141428 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145377452 |
-| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711578 |
+| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145711578 |
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377453 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145711579 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377454 |
