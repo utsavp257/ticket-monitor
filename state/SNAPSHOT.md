@@ -131,7 +131,7 @@ Machine-readable version: `state/snapshot.json`.
 | Tony | 1:15pm | standard | 🟢 available |  | 146141408 |
 | Tony | 3:15pm | standard | 🟢 available |  | 146141463 |
 | Tony | 4:15pm | standard | 🟢 available |  | 146141407 |
-| Tony | 7:15pm | standard | 🟢 available |  | 146141415 |
+| Tony | 7:15pm | standard | 🟠 almost sold out |  | 146141415 |
 | Tony | 10:15pm | standard | 🟢 available |  | 146141446 |
 
 ## Tuesday 2026-08-25
