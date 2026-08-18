@@ -114,14 +114,14 @@ Machine-readable version: `state/snapshot.json`.
 | The End of Oak Street | 10:00pm | standard | 🟢 available |  | 146141425 |
 | The Invite | 10:30am | standard | 🟢 available |  | 146141479 |
 | The Invite | 4:00pm | standard | 🟢 available |  | 146141478 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145701521 |
+| The Odyssey | 10:00am | 70mm | 🔴 SOLD OUT | 🎬 | 145701521 |
 | The Odyssey | 11:00am | standard | 🟢 available |  | 146141464 |
 | The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711581 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
+| The Odyssey | 2:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 145377456 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145711582 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377457 |
+| The Odyssey | 6:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 145377457 |
 | The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145711583 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377458 |
+| The Odyssey | 10:00pm | 70mm | 🔴 SOLD OUT | 🎬 | 145377458 |
 | The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701514 |
 | The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701497 |
 | The Rivals of Amziah King | 3:30pm | standard | 🟢 available |  | 145701513 |
