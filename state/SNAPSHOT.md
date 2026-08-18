@@ -52,7 +52,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Invite | 12:30pm | standard | 🟢 available |  | 146141431 |
 | The Invite | 3:30pm | standard | 🟢 available |  | 146141428 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145377452 |
-| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145711578 |
+| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145711578 |
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377453 |
 | The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145711579 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377454 |
@@ -307,6 +307,12 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 9:15pm | standard | 🟢 available |  | 146174278 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283768 |
 | Avengers: Doomsday | 11:00pm | standard | 🟢 available |  | 146174188 |
+| Dune: Part Three | 2:30am | 70mm | 🟢 available | 🎬 | 146174297 |
+| Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146174311 |
+| Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146174310 |
+| Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146174289 |
+| Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146174288 |
+| Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146174312 |
 
 ## Wednesday 2026-12-23
 
@@ -349,6 +355,20 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146172082 |
 | Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146172081 |
 | Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146172036 |
+
+## Friday 2026-12-25
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 146204091 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283799 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283804 |
+| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204092 |
+| Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146172085 |
+| Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146172074 |
+| Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146172075 |
+| Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146172076 |
+| Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146172077 |
 
 ## Saturday 2026-12-26
 

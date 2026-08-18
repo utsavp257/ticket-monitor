@@ -685,7 +685,7 @@
    "time": "10:00am"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "70MM",
     "AMCARTISANFILMS",
@@ -4599,6 +4599,114 @@
    "movie": "Avengers: Doomsday",
    "soldOut": false,
    "time": "11:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174297,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "2:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174311,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174310,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174289,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174288,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "EXCLDISDAY",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146174312,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "11:00pm"
   }
  ],
  "2026-12-23": [
@@ -5181,6 +5289,165 @@
    "canceled": false,
    "format": "70mm",
    "id": 146172036,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "11:00pm"
+  }
+ ],
+ "2026-12-25": [
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 146204091,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "11:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145283799,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "2:45pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 145283804,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "6:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DISNEYRWDS",
+    "DOLBYCINEMAATAMCPRIME",
+    "INFINITYVI",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
+   "id": 146204092,
+   "movie": "Avengers: Doomsday",
+   "soldOut": false,
+   "time": "10:15pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146172085,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "9:00am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146172074,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "12:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146172075,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "4:00pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146172076,
+   "movie": "Dune: Part Three",
+   "soldOut": false,
+   "time": "7:30pm"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "70MM",
+    "AMCARTISANFILMS",
+    "AMCCLUBROCKERS",
+    "IMAX",
+    "IMAX70MM",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "70mm",
+   "id": 146172077,
    "movie": "Dune: Part Three",
    "soldOut": false,
    "time": "11:00pm"
