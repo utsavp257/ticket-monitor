@@ -745,7 +745,7 @@
    "format": "70mm",
    "id": 145377454,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "6:00pm"
   },
   {
@@ -777,7 +777,7 @@
    "format": "70mm",
    "id": 145377455,
    "movie": "The Odyssey",
-   "soldOut": false,
+   "soldOut": true,
    "time": "10:00pm"
   },
   {
