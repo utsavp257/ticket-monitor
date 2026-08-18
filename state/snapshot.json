@@ -954,7 +954,7 @@
    "time": "4:15pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "AMCARTISANFILMS",
     "AMCCLUBROCKERS",
