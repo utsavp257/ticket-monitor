@@ -6000,40 +6000,6 @@
    ],
    "canceled": false,
    "format": "70mm",
-   "id": 146172055,
-   "movie": "Dune: Part Three",
-   "soldOut": false,
-   "time": "12:30pm"
-  },
-  {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
-   "id": 146172044,
-   "movie": "Dune: Part Three",
-   "soldOut": false,
-   "time": "4:00pm"
-  },
-  {
-   "almostSoldOut": true,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
    "id": 146172045,
    "movie": "Dune: Part Three",
    "soldOut": false,
