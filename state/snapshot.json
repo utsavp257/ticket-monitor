@@ -976,7 +976,7 @@
    "canceled": false,
    "format": "standard",
    "id": 145856680,
-   "movie": "Idiots Q&A w/ Dave Franco, O'Shae Jackson Jr., & Mason Thames",
+   "movie": "Idiots Q&A w/ Dave Franco, O\u2019Shea Jackson Jr., & Mason Thames",
    "soldOut": false,
    "time": "7:00pm"
   },
@@ -5323,7 +5323,7 @@
    "time": "12:30pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "70MM",
     "AMCARTISANFILMS",
