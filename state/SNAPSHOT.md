@@ -236,7 +236,7 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 2:30am | 70mm | 🟢 available | 🎬 | 146174290 |
 | Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146174286 |
 | Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146174285 |
-| Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146174284 |
+| Dune: Part Three | 4:00pm | 70mm | 🟠 almost sold out | 🎬 | 146174284 |
 | Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146174287 |
 
 ## Tuesday 2026-12-22
