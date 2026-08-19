@@ -85,11 +85,11 @@
       "10:00pm": false
     },
     "Dune: Part Three|2026-12-28": {
-      "9:00am": true,
-      "12:30pm": true,
-      "4:00pm": true,
-      "7:30pm": true,
-      "11:00pm": true
+      "9:00am": false,
+      "12:30pm": false,
+      "4:00pm": false,
+      "7:30pm": false,
+      "11:00pm": false
     },
     "Dune: Part Three|2026-12-26": {
       "6:00am": false,
@@ -239,7 +239,7 @@
   ],
   "ig_last_check": 1787142136.135646,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787144539.1108932,
+  "amc_last_check": 1787144595.4792225,
   "apify_token_index": 669,
   "amc_fail_streak": 0,
   "escalation_armed": {
