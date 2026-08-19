@@ -5776,7 +5776,7 @@
    "format": "70mm",
    "id": 146172047,
    "movie": "Dune: Part Three",
-   "soldOut": true,
+   "soldOut": false,
    "time": "9:00am"
   },
   {
@@ -5793,7 +5793,7 @@
    "format": "70mm",
    "id": 146172048,
    "movie": "Dune: Part Three",
-   "soldOut": true,
+   "soldOut": false,
    "time": "12:30pm"
   },
   {
@@ -5810,7 +5810,7 @@
    "format": "70mm",
    "id": 146172049,
    "movie": "Dune: Part Three",
-   "soldOut": true,
+   "soldOut": false,
    "time": "4:00pm"
   },
   {
@@ -5827,7 +5827,7 @@
    "format": "70mm",
    "id": 146172039,
    "movie": "Dune: Part Three",
-   "soldOut": true,
+   "soldOut": false,
    "time": "7:30pm"
   },
   {
@@ -5844,7 +5844,7 @@
    "format": "70mm",
    "id": 146172040,
    "movie": "Dune: Part Three",
-   "soldOut": true,
+   "soldOut": false,
    "time": "11:00pm"
   }
  ]

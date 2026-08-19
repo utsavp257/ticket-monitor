@@ -181,11 +181,11 @@
       "11:00pm": true
     },
     "Dune: Part Three|2027-01-03": {
-      "9:00am": true,
-      "12:30pm": true,
-      "4:00pm": true,
-      "7:30pm": true,
-      "11:00pm": true
+      "9:00am": false,
+      "12:30pm": false,
+      "4:00pm": false,
+      "7:30pm": false,
+      "11:00pm": false
     },
     "The Odyssey|2026-09-01": {
       "10:00am": false,
@@ -239,7 +239,7 @@
   ],
   "ig_last_check": 1787142136.135646,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787144402.9674032,
+  "amc_last_check": 1787144433.331197,
   "apify_token_index": 669,
   "amc_fail_streak": 0,
   "escalation_armed": {
