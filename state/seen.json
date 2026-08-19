@@ -67,10 +67,10 @@
       "10:00pm": true
     },
     "The Odyssey|2026-08-19": {
-      "10:00am": true,
-      "2:00pm": true,
-      "6:00pm": true,
-      "10:00pm": true
+      "10:00am": false,
+      "2:00pm": false,
+      "6:00pm": false,
+      "10:00pm": false
     },
     "The Odyssey|2026-08-25": {
       "10:00am": false,
@@ -238,7 +238,7 @@
   ],
   "ig_last_check": 1787100915.8139448,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787106193.540062,
+  "amc_last_check": 1787106264.6020164,
   "apify_token_index": 663,
   "amc_fail_streak": 0,
   "escalation_armed": {
