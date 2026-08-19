@@ -293,7 +293,7 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 12:30pm | 70mm | 🟠 almost sold out | 🎬 | 146174315 |
 | Dune: Part Three | 4:00pm | 70mm | 🟠 almost sold out | 🎬 | 146174314 |
 | Dune: Part Three | 7:30pm | 70mm | 🟠 almost sold out | 🎬 | 146174313 |
-| Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146174305 |
+| Dune: Part Three | 11:00pm | 70mm | 🟠 almost sold out | 🎬 | 146174305 |
 
 ## Thursday 2026-12-24
 
@@ -422,7 +422,7 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 9:00am | 70mm | 🟢 available | 🎬 | 146172061 |
 | Dune: Part Three | 12:30pm | 70mm | 🟢 available | 🎬 | 146172050 |
 | Dune: Part Three | 4:00pm | 70mm | 🟢 available | 🎬 | 146172051 |
-| Dune: Part Three | 7:30pm | 70mm | 🟢 available | 🎬 | 146172052 |
+| Dune: Part Three | 7:30pm | 70mm | 🟠 almost sold out | 🎬 | 146172052 |
 | Dune: Part Three | 11:00pm | 70mm | 🟢 available | 🎬 | 146172053 |
 
 ## Saturday 2027-01-02
