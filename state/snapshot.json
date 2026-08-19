@@ -5479,23 +5479,6 @@
    ],
    "canceled": false,
    "format": "70mm",
-   "id": 146172038,
-   "movie": "Dune: Part Three",
-   "soldOut": true,
-   "time": "2:30am"
-  },
-  {
-   "almostSoldOut": false,
-   "attributes": [
-    "70MM",
-    "AMCARTISANFILMS",
-    "AMCCLUBROCKERS",
-    "IMAX",
-    "IMAX70MM",
-    "RESERVEDSEATING"
-   ],
-   "canceled": false,
-   "format": "70mm",
    "id": 146172054,
    "movie": "Dune: Part Three",
    "soldOut": true,
