@@ -246,9 +246,9 @@
   ],
   "ig_last_check": 1787190261.7735984,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787192902.946592,
+  "amc_last_check": 1787192956.161909,
   "apify_token_index": 676,
-  "amc_fail_streak": 0,
+  "amc_fail_streak": 1,
   "escalation_armed": {
     "Dune: Part Three": true
   },
