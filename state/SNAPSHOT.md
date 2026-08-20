@@ -294,7 +294,7 @@ Machine-readable version: `state/snapshot.json`.
 | Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145283809 |
 | Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204094 |
 | Dune: Part Three | 6:00am | 70mm | 🟢 available | 🎬 | 146172041 |
-| Dune: Part Three | 9:15am | 70mm | 🟢 available | 🎬 | 146172078 |
+| Dune: Part Three | 9:15am | 70mm | 🟠 almost sold out | 🎬 | 146172078 |
 | Dune: Part Three | 12:30pm | 70mm | 🟠 almost sold out | 🎬 | 146172079 |
 | Dune: Part Three | 4:00pm | 70mm | 🟠 almost sold out | 🎬 | 146172068 |
 | Dune: Part Three | 7:30pm | 70mm | 🟠 almost sold out | 🎬 | 146172069 |
