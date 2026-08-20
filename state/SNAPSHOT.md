@@ -18,6 +18,7 @@ Machine-readable version: `state/snapshot.json`.
 | Insidious: Out of the Further | 7:45pm | standard | 🟢 available |  | 145480798 |
 | Insidious: Out of the Further | 10:15pm | standard | 🟢 available |  | 146283575 |
 | Insidious: Out of the Further | 11:00pm | Dolby Cinema at AMC | 🟢 available |  | 145420119 |
+| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 146218809 |
 | La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 146218810 |
 | One Night Only | 12:05pm | standard | 🟢 available |  | 146283535 |
 | One Night Only | 9:45pm | standard | 🟢 available |  | 146283585 |

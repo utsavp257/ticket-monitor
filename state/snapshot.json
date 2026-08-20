@@ -128,6 +128,23 @@
    ],
    "canceled": false,
    "format": "Dolby Cinema at AMC",
+   "id": 146218809,
+   "movie": "La La Land 10th\u00a0Anniversary",
+   "soldOut": false,
+   "time": "9:30am"
+  },
+  {
+   "almostSoldOut": false,
+   "attributes": [
+    "CLOSEDCAPTION",
+    "DESCRIPTIVEVIDEO",
+    "DOLBYCINEMAATAMCPRIME",
+    "EVENT",
+    "RECLINERSEATING",
+    "RESERVEDSEATING"
+   ],
+   "canceled": false,
+   "format": "Dolby Cinema at AMC",
    "id": 146218810,
    "movie": "La La Land 10th\u00a0Anniversary",
    "soldOut": false,
