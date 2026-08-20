@@ -7,68 +7,6 @@ each commit's timestamp is the pull time. Browse it on GitHub via this
 file's *History*, or locally with `git log -p state/SNAPSHOT.md`.
 Machine-readable version: `state/snapshot.json`.
 
-## Wednesday 2026-08-19
-
-| Movie | Time | Format | Status | IMAX | Showtime id |
-|---|---|---|---|---|---|
-| La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 145922900 |
-| La La Land 10th Anniversary | 12:40pm | Dolby Cinema at AMC | 🟢 available |  | 145922899 |
-| La La Land 10th Anniversary | 3:50pm | Dolby Cinema at AMC | 🟢 available |  | 145493949 |
-| La La Land 10th Anniversary | 7:00pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 145493948 |
-| One Night Only | 9:45am | standard | 🟢 available |  | 146141418 |
-| One Night Only | 12:45pm | standard | 🟢 available |  | 146141447 |
-| One Night Only | 3:45pm | standard | 🟢 available |  | 146141419 |
-| One Night Only | 9:45pm | standard | 🟢 available |  | 146141420 |
-| Point Break 35th Anniversary | 7:00pm | standard | 🟢 available |  | 144700959 |
-| Point Break 35th Anniversary | 10:00pm | standard | 🟢 available |  | 146141411 |
-| Six: The Musical Live! | 9:45am | standard | 🟢 available |  | 146141403 |
-| Six: The Musical Live! | 1:20pm | standard | 🟢 available |  | 146141477 |
-| Six: The Musical Live! | 7:00pm | standard | 🟢 available |  | 143205620 |
-| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 146141453 |
-| Spider-Man: Brand New Day | 11:30am | standard | 🟢 available |  | 146141427 |
-| Spider-Man: Brand New Day | 12:30pm | standard | 🟢 available |  | 146141404 |
-| Spider-Man: Brand New Day | 1:30pm | standard | 🟢 available |  | 146141451 |
-| Spider-Man: Brand New Day | 3:00pm | standard | 🟢 available |  | 146141426 |
-| Spider-Man: Brand New Day | 4:00pm | standard | 🟢 available |  | 145878082 |
-| Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 146141450 |
-| Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 146141466 |
-| Spider-Man: Brand New Day | 7:30pm | standard | 🟠 almost sold out |  | 145878083 |
-| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 146141480 |
-| Spider-Man: Brand New Day | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 145922902 |
-| Super Troopers 3 | 11:00pm | standard | 🟢 available |  | 146141439 |
-| Teenage Sex and Death at Camp Miasma | 11:00am | standard | 🟢 available |  | 146141442 |
-| Teenage Sex and Death at Camp Miasma | 2:00pm | standard | 🟢 available |  | 146141441 |
-| Teenage Sex and Death at Camp Miasma | 5:00pm | standard | 🟢 available |  | 146141440 |
-| Teenage Sex and Death at Camp Miasma | 8:00pm | standard | 🟠 almost sold out |  | 146141443 |
-| Teenage Sex and Death at Camp Miasma | 9:45pm | standard | 🟢 available |  | 146141406 |
-| Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 146141402 |
-| The End of Oak Street | 10:30am | standard | 🟢 available |  | 146141414 |
-| The End of Oak Street | 1:30pm | standard | 🟢 available |  | 146141413 |
-| The End of Oak Street | 4:30pm | standard | 🟢 available |  | 146141412 |
-| The End of Oak Street | 8:30pm | standard | 🟠 almost sold out |  | 146141452 |
-| The End of Oak Street | 10:00pm | standard | 🟢 available |  | 146141425 |
-| The Invite | 10:30am | standard | 🟢 available |  | 146141479 |
-| The Invite | 4:00pm | standard | 🟢 available |  | 146141478 |
-| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145701521 |
-| The Odyssey | 11:00am | standard | 🟢 available |  | 146141464 |
-| The Odyssey | 12:30pm | 70mm | 🟠 almost sold out |  | 145711581 |
-| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377456 |
-| The Odyssey | 4:30pm | 70mm | 🟠 almost sold out |  | 145711582 |
-| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377457 |
-| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145711583 |
-| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145377458 |
-| The Rivals of Amziah King | 9:30am | standard | 🟢 available |  | 145701514 |
-| The Rivals of Amziah King | 12:30pm | standard | 🟢 available |  | 145701497 |
-| The Rivals of Amziah King | 3:30pm | standard | 🟢 available |  | 145701513 |
-| The Rivals of Amziah King | 6:30pm | standard | 🟢 available |  | 145701498 |
-| The Wrong Girls | 10:00pm | standard | 🟢 available |  | 146141465 |
-| Tony | 10:15am | standard | 🟢 available |  | 146141409 |
-| Tony | 1:15pm | standard | 🟢 available |  | 146141408 |
-| Tony | 3:15pm | standard | 🟢 available |  | 146141463 |
-| Tony | 4:15pm | standard | 🟢 available |  | 146141407 |
-| Tony | 7:15pm | standard | 🟠 almost sold out |  | 146141415 |
-| Tony | 10:15pm | standard | 🟢 available |  | 146141446 |
-
 ## Tuesday 2026-08-25
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
@@ -209,6 +147,29 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681721 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681722 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681711 |
+
+## Wednesday 2026-09-02
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Coyote vs. Acme | 10:30am | standard | 🟢 available |  | 145480834 |
+| Coyote vs. Acme | 1:15pm | standard | 🟢 available |  | 145480833 |
+| Coyote vs. Acme | 4:00pm | standard | 🟢 available |  | 145480831 |
+| Coyote vs. Acme | 6:45pm | standard | 🟢 available |  | 145480832 |
+| Coyote vs. Acme | 9:45pm | standard | 🟢 available |  | 145480835 |
+| Terminator 2: Judgment Day 35th Anniversary | 4:00pm | standard | 🟢 available |  | 144896703 |
+| Terminator 2: Judgment Day 35th Anniversary | 7:00pm | RealD 3D | 🟢 available |  | 144900407 |
+| The Dog Stars | 10:30am | standard | 🟢 available |  | 145692983 |
+| The Dog Stars | 1:30pm | standard | 🟢 available |  | 145692980 |
+| The Dog Stars | 4:30pm | standard | 🟢 available |  | 145692982 |
+| The Dog Stars | 10:30pm | standard | 🟢 available |  | 145692981 |
+| The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681712 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 145895506 |
+| The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681713 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145895507 |
+| The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681714 |
+| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145895508 |
+| The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681715 |
 
 ## Monday 2026-12-21
 
