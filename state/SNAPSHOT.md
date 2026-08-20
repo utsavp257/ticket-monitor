@@ -11,7 +11,7 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
-| Idiots Q&A w/ Dave Franco, O’Shea Jackson Jr., & Mason Thames | 7:00pm | standard | 🟠 almost sold out |  | 145856680 |
+| Idiots Q&A w/ Dave Franco, O’Shea Jackson Jr., & Mason Thames | 7:00pm | standard | 🔴 SOLD OUT |  | 145856680 |
 | Insidious: Out of the Further | 10:45am | standard | 🟢 available |  | 145480801 |
 | Insidious: Out of the Further | 1:45pm | standard | 🟢 available |  | 145480800 |
 | Insidious: Out of the Further | 4:45pm | standard | 🟢 available |  | 145480799 |
