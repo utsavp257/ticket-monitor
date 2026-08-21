@@ -76,7 +76,7 @@
       "10:00am": false,
       "2:00pm": false,
       "6:00pm": false,
-      "10:00pm": false
+      "10:00pm": true
     },
     "The Odyssey|2026-08-26": {
       "10:00am": false,
@@ -246,7 +246,7 @@
   ],
   "ig_last_check": 1787279659.7365031,
   "last_failure_alert": 1782345400.6122742,
-  "amc_last_check": 1787282895.118805,
+  "amc_last_check": 1787282953.7729566,
   "apify_token_index": 689,
   "amc_fail_streak": 0,
   "escalation_armed": {
