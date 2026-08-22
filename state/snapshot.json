@@ -3039,7 +3039,7 @@
    "time": "1:45pm"
   },
   {
-   "almostSoldOut": false,
+   "almostSoldOut": true,
    "attributes": [
     "CLOSEDCAPTION",
     "DESCRIPTIVEVIDEO",
