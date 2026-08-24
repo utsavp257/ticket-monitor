@@ -46,7 +46,7 @@ Machine-readable version: `state/snapshot.json`.
 | Teenage Sex and Death at Camp Miasma | 11:00pm | standard | 🟢 available |  | 146283520 |
 | The End of Oak Street | 1:00pm | standard | 🟢 available |  | 146283511 |
 | The End of Oak Street | 4:00pm | standard | 🟢 available |  | 146283510 |
-| The End of Oak Street | 7:30pm | standard | 🟢 available |  | 146283571 |
+| The End of Oak Street | 7:30pm | standard | 🟠 almost sold out |  | 146283571 |
 | The End of Oak Street | 10:30pm | standard | 🟢 available |  | 146283513 |
 | The Magic Faraway Tree | 10:30am | standard | 🟢 available |  | 146283596 |
 | The Magic Faraway Tree | 1:30pm | standard | 🟢 available |  | 146283573 |
