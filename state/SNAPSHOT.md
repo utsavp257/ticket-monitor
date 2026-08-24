@@ -81,7 +81,7 @@ Machine-readable version: `state/snapshot.json`.
 | La La Land 10th Anniversary | 9:30am | Dolby Cinema at AMC | 🟢 available |  | 146218813 |
 | La La Land 10th Anniversary | 12:45pm | Dolby Cinema at AMC | 🟢 available |  | 146218814 |
 | One Night Only | 12:05pm | standard | 🟢 available |  | 146283531 |
-| One Night Only | 7:30pm | standard | 🟢 available |  | 146283566 |
+| One Night Only | 7:30pm | standard | 🟠 almost sold out |  | 146283566 |
 | One Night Only | 10:30pm | standard | 🟢 available |  | 146283555 |
 | Spa Weekend | 9:30am | standard | 🟢 available |  | 146283529 |
 | Spa Weekend | 11:15am | standard | 🟢 available |  | 146283559 |
@@ -122,7 +122,7 @@ Machine-readable version: `state/snapshot.json`.
 | The Odyssey | 4:30pm | 70mm | 🟢 available |  | 145711603 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145674735 |
 | The Odyssey | 7:00pm | standard | 🟢 available |  | 146283590 |
-| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 145711604 |
+| The Odyssey | 8:30pm | 70mm | 🟠 almost sold out |  | 145711604 |
 | The Odyssey | 9:45pm | standard | 🟢 available |  | 146283558 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681737 |
 | The Rivals of Amziah King | 2:45pm | standard | 🟢 available |  | 146283530 |
