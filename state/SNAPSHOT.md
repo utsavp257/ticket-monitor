@@ -137,17 +137,61 @@ Machine-readable version: `state/snapshot.json`.
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
 |---|---|---|---|---|---|
+| Buddy | 1:30pm | standard | 🟢 available |  | 146502398 |
+| Buddy | 8:15pm | standard | 🟢 available |  | 146502387 |
+| Buddy | 10:30pm | standard | 🟢 available |  | 146502373 |
+| Coyote vs. Acme | 11:00am | standard | 🟢 available |  | 146502402 |
+| Coyote vs. Acme | 2:00pm | standard | 🟢 available |  | 146502401 |
+| Coyote vs. Acme | 2:50pm | standard | 🟢 available |  | 146502389 |
+| Coyote vs. Acme | 4:45pm | standard | 🟢 available |  | 146502400 |
+| Coyote vs. Acme | 7:30pm | standard | 🟢 available |  | 146502404 |
+| Coyote vs. Acme | 10:15pm | standard | 🟢 available |  | 146502403 |
+| Finding Emily | 12:00pm | standard | 🟢 available |  | 146502376 |
+| Finding Emily | 3:00pm | standard | 🟢 available |  | 146502375 |
+| Finding Emily | 6:00pm | standard | 🟢 available |  | 146502374 |
+| Finding Emily | 9:00pm | standard | 🟢 available |  | 146502377 |
+| Insidious: Out of the Further | 11:15am | standard | 🟢 available |  | 146502385 |
+| Insidious: Out of the Further | 2:15pm | standard | 🟢 available |  | 146502384 |
+| Insidious: Out of the Further | 5:15pm | standard | 🟢 available |  | 146502383 |
+| Insidious: Out of the Further | 8:00pm | standard | 🟢 available |  | 146502382 |
+| Insidious: Out of the Further | 10:45pm | standard | 🟢 available |  | 146502386 |
+| Spa Weekend | 10:00am | standard | 🟢 available |  | 146502394 |
+| Spa Weekend | 12:45pm | standard | 🟢 available |  | 146502395 |
+| Spa Weekend | 3:30pm | standard | 🟢 available |  | 146502396 |
+| Spider-Man: Brand New Day | 10:00am | standard | 🟢 available |  | 146502397 |
+| Spider-Man: Brand New Day | 11:00am | standard | 🟢 available |  | 146502370 |
+| Spider-Man: Brand New Day | 2:30pm | standard | 🟢 available |  | 146502369 |
+| Spider-Man: Brand New Day | 6:00pm | standard | 🟢 available |  | 146502372 |
+| Spider-Man: Brand New Day | 9:30pm | standard | 🟢 available |  | 146502393 |
+| Teenage Sex and Death at Camp Miasma | 10:45am | standard | 🟢 available |  | 146502381 |
+| Teenage Sex and Death at Camp Miasma | 1:45pm | standard | 🟢 available |  | 146502380 |
+| Teenage Sex and Death at Camp Miasma | 4:45pm | standard | 🟢 available |  | 146502378 |
+| Teenage Sex and Death at Camp Miasma | 7:45pm | standard | 🟢 available |  | 146502379 |
+| Teenage Sex and Death at Camp Miasma | 9:30pm | standard | 🟢 available |  | 146502371 |
 | Terminator 2: Judgment Day 35th Anniversary | 4:00pm | RealD 3D | 🟢 available |  | 144900406 |
 | Terminator 2: Judgment Day 35th Anniversary | 7:00pm | standard | 🟢 available |  | 144896702 |
+| Terminator 2: Judgment Day 35th Anniversary | 10:00pm | standard | 🟢 available |  | 146502399 |
 | The Dog Stars | 10:30am | standard | 🟢 available |  | 145693007 |
 | The Dog Stars | 1:30pm | standard | 🟢 available |  | 145693006 |
 | The Dog Stars | 4:30pm | standard | 🟢 available |  | 145693004 |
 | The Dog Stars | 7:30pm | standard | 🟢 available |  | 145693008 |
-| The Dog Stars | 10:30pm | standard | 🟢 available |  | 145693005 |
+| The Dog Stars | 10:45pm | standard | 🟢 available |  | 145693005 |
+| The End of Oak Street | 6:30pm | standard | 🟢 available |  | 146502392 |
+| The End of Oak Street | 10:45pm | standard | 🟢 available |  | 146502391 |
 | The Odyssey | 10:00am | 70mm | 🟠 almost sold out | 🎬 | 145681720 |
+| The Odyssey | 11:00am | standard | 🟢 available |  | 146502388 |
+| The Odyssey | 12:30pm | 70mm | 🟢 available |  | 146502361 |
 | The Odyssey | 2:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681721 |
+| The Odyssey | 4:30pm | 70mm | 🟢 available |  | 146502362 |
 | The Odyssey | 6:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681722 |
+| The Odyssey | 8:30pm | 70mm | 🟢 available |  | 146502363 |
 | The Odyssey | 10:00pm | 70mm | 🟠 almost sold out | 🎬 | 145681711 |
+| Tony | 10:00am | standard | 🟢 available |  | 146502367 |
+| Tony | 12:45pm | standard | 🟢 available |  | 146502366 |
+| Tony | 3:30pm | standard | 🟢 available |  | 146502365 |
+| Tony | 5:30pm | standard | 🟢 available |  | 146502390 |
+| Tony | 6:15pm | standard | 🟢 available |  | 146502364 |
+| Tony | 9:15pm | standard | 🟢 available |  | 146502368 |
 
 ## Wednesday 2026-09-02
 
