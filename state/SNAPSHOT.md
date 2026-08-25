@@ -35,7 +35,7 @@ Machine-readable version: `state/snapshot.json`.
 | Spider-Man: Brand New Day | 4:00pm | Dolby Cinema at AMC | 🟢 available |  | 146218811 |
 | Spider-Man: Brand New Day | 5:00pm | standard | 🟢 available |  | 146283593 |
 | Spider-Man: Brand New Day | 6:30pm | standard | 🟢 available |  | 145939094 |
-| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟢 available |  | 146218812 |
+| Spider-Man: Brand New Day | 7:30pm | Dolby Cinema at AMC | 🟠 almost sold out |  | 146218812 |
 | Spider-Man: Brand New Day | 8:30pm | standard | 🟢 available |  | 146283594 |
 | Spider-Man: Brand New Day | 10:00pm | standard | 🟢 available |  | 145939085 |
 | Teenage Sex and Death at Camp Miasma | 10:00am | standard | 🟢 available |  | 146283521 |
