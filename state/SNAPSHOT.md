@@ -348,6 +348,21 @@ Machine-readable version: `state/snapshot.json`.
 | Dune: Part Three | 7:30pm | 70mm | 🟠 almost sold out | 🎬 | 146172069 |
 | Dune: Part Three | 11:00pm | 70mm | 🟠 almost sold out | 🎬 | 146172070 |
 
+## Sunday 2026-12-27
+
+| Movie | Time | Format | Status | IMAX | Showtime id |
+|---|---|---|---|---|---|
+| Avengers: Doomsday | 7:15am | Dolby Cinema at AMC | 🟢 available |  | 146204097 |
+| Avengers: Doomsday | 11:00am | Dolby Cinema at AMC | 🟢 available |  | 146204095 |
+| Avengers: Doomsday | 2:45pm | Dolby Cinema at AMC | 🟢 available |  | 145283813 |
+| Avengers: Doomsday | 6:30pm | Dolby Cinema at AMC | 🟢 available |  | 145283817 |
+| Avengers: Doomsday | 10:15pm | Dolby Cinema at AMC | 🟢 available |  | 146204122 |
+| Dune: Part Three | 6:00am | 70mm | 🟢 available | 🎬 | 146172042 |
+| Dune: Part Three | 9:15am | 70mm | 🟠 almost sold out | 🎬 | 146172063 |
+| Dune: Part Three | 4:00pm | 70mm | 🟠 almost sold out | 🎬 | 146172065 |
+| Dune: Part Three | 7:30pm | 70mm | 🟠 almost sold out | 🎬 | 146172066 |
+| Dune: Part Three | 11:00pm | 70mm | 🟠 almost sold out | 🎬 | 146172067 |
+
 ## Monday 2026-12-28
 
 | Movie | Time | Format | Status | IMAX | Showtime id |
