@@ -47,7 +47,7 @@ Machine-readable version: `state/snapshot.json`.
 | The End of Oak Street | 12:10pm | standard | 🟢 available |  | 146283549 |
 | The End of Oak Street | 2:45pm | standard | 🟢 available |  | 146283545 |
 | The End of Oak Street | 5:30pm | standard | 🟢 available |  | 146283546 |
-| The End of Oak Street | 8:15pm | standard | 🟢 available |  | 146283547 |
+| The End of Oak Street | 8:15pm | standard | 🟠 almost sold out |  | 146283547 |
 | The End of Oak Street | 11:00pm | standard | 🟢 available |  | 146283548 |
 | The Magic Faraway Tree | 10:30am | standard | 🟢 available |  | 146283581 |
 | The Magic Faraway Tree | 1:30pm | standard | 🟢 available |  | 146283568 |
