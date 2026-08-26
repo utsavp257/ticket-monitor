@@ -6089,7 +6089,7 @@
    "time": "7:30pm"
   },
   {
-   "almostSoldOut": true,
+   "almostSoldOut": false,
    "attributes": [
     "70MM",
     "AMCARTISANFILMS",
